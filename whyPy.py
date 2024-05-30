@@ -8,7 +8,6 @@ from datetime import datetime
 
 # STmodel = SentenceTransformer("all-MiniLM-L6-v2")   // this is for comparsion of the outputs, dont really get used til the rest is tested/working 
 
-
 parser = argparse.ArgumentParser(description='run LLM botherer n times')
 parser.add_argument('iterations', type=int, nargs='?', default = 10, help='number of iterations (default: 10)')
 args = parser.parse_args()
@@ -54,20 +53,10 @@ for i, respo in enumerate(responses):
     indexed_responses.append((i, respo))
 print(indexed_responses)
 
-
 output_filename = f'whyPy_output_{modelName}_{time_stamp}.txt'
 with open(output_filename, 'w') as output_file:
     for index, response in indexed_responses:      
-        output_file.write()
-
-    
-      
-    
-
-
+        output_file.write(f'iteration {index}: \n {response}\n\n')
 
 # print(llm.invoke(impressPrompt))
 # print(llm.invoke(pitchPrompt))
-
-
-
