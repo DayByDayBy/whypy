@@ -1,22 +1,15 @@
 import argparse 
 import pandas as pd
-# from sentence_transformers import SentenceTransformer
 from langchain_community.llms import Ollama
-# from langchain.chains import LLMChain
 from langchain_core.prompts import PromptTemplate
 from datetime import datetime
 
-# STmodel = SentenceTransformer("all-MiniLM-L6-v2")   // this is for comparsion of the outputs, dont really get used til the rest is tested/working 
 
 parser = argparse.ArgumentParser(description='run LLM botherer n times')
 parser.add_argument('iterations', type=int, nargs='?', default = 10, help='number of iterations (default: 10)')
 args = parser.parse_args()
 
 iterations = args.iterations
-
-# # pitch me
-# pitchPrompt = "pitch me a good, original idea for a movie"
-# pitchRePrompt = 'i just heard this movie pitch:' + latestResponse + "can you do any better?"
 
 # impress me
 impress_prompt = "quickly and concisely convince me you're the most intersting person i have met"
@@ -25,7 +18,6 @@ modelName = "llama3"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
 llm = Ollama(model = modelName)
-# currentTemp = 0.5
 
 def iterative_invocation(initial_prompt, re_prompt_base, max_iterations):
     latest_response = ''
@@ -56,6 +48,3 @@ output_filename = f'whyPy_output_{modelName}_{time_stamp}.txt'
 with open(output_filename, 'w') as output_file:
     for index, response in indexed_responses:      
         output_file.write(f'iteration {index}: \n {response}\n\n')
-
-# print(llm.invoke(impressPrompt))
-# print(llm.invoke(pitchPrompt))
