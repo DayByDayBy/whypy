@@ -19,7 +19,7 @@ iterations = args.iterations
 # pitchRePrompt = 'i just heard this movie pitch:' + latestResponse + "can you do any better?"
 
 # impress me
-impress_prompt = "quickly and concisely convince me you're the most intersting person i have met"
+impress_prompt = "concisely convince me you're the most intersting human i might meet"
 impress_re_prompt = "show me you're more interesting than this person: "
 modelName = "llama3"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
@@ -34,14 +34,13 @@ def iterative_invocation(initial_prompt, re_prompt_base, max_iterations):
     response = llm.invoke(initial_prompt)
     responses.append(response)
     latest_response = response
-    iteration_count += 1
     
     while iteration_count < max_iterations:
         re_prompt = re_prompt_base + latest_response
         response = llm.invoke(re_prompt)
         responses.append((iteration_count, response))
         iteration_count += 1
-        print("hang on, i'm still iterating!") 
+        print("hang on, i'm still iterating! ", (max_iterations-iteration_count)) 
      
     return responses
 
@@ -51,6 +50,10 @@ indexed_responses = []
 for i, respo in enumerate(responses):
     indexed_responses.append((i, respo))
 print(indexed_responses)
+
+df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
+df_output_filename = f'whyPy_df_{modelName}_{time_stamp}.csv'
+df.to_csv(df_output_filename, index=False)
 
 output_filename = f'whyPy_output_{modelName}_{time_stamp}.txt'
 with open(output_filename, 'w') as output_file:
