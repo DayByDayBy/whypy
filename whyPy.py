@@ -6,6 +6,7 @@ from langchain_community.llms import Ollama
 from langchain_core.prompts import PromptTemplate
 from datetime import datetime
 
+
 # STmodel = SentenceTransformer("all-MiniLM-L6-v2")   // this is for comparsion of the outputs, dont really get used til the rest is tested/working 
 
 parser = argparse.ArgumentParser(description='run LLM botherer n times')
