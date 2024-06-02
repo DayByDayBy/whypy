@@ -53,10 +53,10 @@ for i, respo in enumerate(responses):
 print(indexed_responses)
 
 df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
-df_output_filename = f'whyPy_df_{modelName}_{time_stamp}.csv'
+df_output_filename = f'outputs/whyPy_df_{modelName}_{time_stamp}.csv'
 df.to_csv(df_output_filename, index=False)
 
-output_filename = f'whyPy_output_{modelName}_{time_stamp}.txt'
+output_filename = f'outputs/whyPy_output_{modelName}_{time_stamp}.txt'
 with open(output_filename, 'w') as output_file:
     for index, response in indexed_responses:      
         output_file.write(f'iteration {index}: \n {response}\n\n')
