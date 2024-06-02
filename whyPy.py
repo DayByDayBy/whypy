@@ -1,8 +1,8 @@
 import argparse 
 import pandas as pd
-# from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer
 from langchain_community.llms import Ollama
-# from langchain.chains import LLMChain
+from langchain.chains import LLMChain
 from langchain_core.prompts import PromptTemplate
 from datetime import datetime
 
@@ -20,9 +20,14 @@ iterations = args.iterations
 # pitchRePrompt = 'i just heard this movie pitch:' + latestResponse + "can you do any better?"
 
 # impress me
-impress_prompt = "concisely convince me you're the most intersting human i might meet"
-impress_re_prompt = "show me you're more interesting than this person: "
-modelName = "llama3"
+# impress_prompt = "concisely convince me you're the most intersting human i might meet"
+# impress_re_prompt = "show me you're more interesting than this person: "
+
+# turing 
+turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."
+turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "
+
+modelName = "llama2"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
 llm = Ollama(model = modelName)
@@ -41,11 +46,12 @@ def iterative_invocation(initial_prompt, re_prompt_base, max_iterations):
         response = llm.invoke(re_prompt)
         responses.append((iteration_count, response))
         iteration_count += 1
-        print("hang on, i'm still iterating! ", (max_iterations-iteration_count)) 
+        print("hang on, i'm still iterating! ", (max_iterations-iteration_count), "iterations to go") 
      
     return responses
 
-responses = iterative_invocation(impress_prompt, impress_re_prompt, iterations)
+# responses = iterative_invocation(impress_prompt, impress_re_prompt, iterations)
+responses = iterative_invocation(turing_prompt, turing_re_prompt, iterations)
 indexed_responses = []
 
 for i, respo in enumerate(responses):
@@ -56,7 +62,7 @@ df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
 df_output_filename = f'outputs/whyPy_df_{modelName}_{time_stamp}.csv'
 df.to_csv(df_output_filename, index=False)
 
-output_filename = f'outputs/whyPy_output_{modelName}_{time_stamp}.txt'
+output_filename = f'outputs/turing/whyPy_turing_output_{modelName}_{time_stamp}.txt'
 with open(output_filename, 'w') as output_file:
     for index, response in indexed_responses:      
         output_file.write(f'iteration {index}: \n {response}\n\n')
