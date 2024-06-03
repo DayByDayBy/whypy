@@ -15,9 +15,9 @@ args = parser.parse_args()
 
 iterations = args.iterations
 
-# # pitch me
-# pitchPrompt = "pitch me a good, original idea for a movie"
-# pitchRePrompt = 'i just heard this movie pitch:' + latestResponse + "can you do any better?"
+# pitch me
+# pitch_prompt = "pitch me a good, original idea for a movie"
+# pitch_re_prompt = 'pitch me a good, original idea for a movie that is totally different from and better than this one: '
 
 # impress me
 # impress_prompt = "concisely convince me you're the most intersting human i might meet"
@@ -66,6 +66,3 @@ output_filename = f'outputs/turing/whyPy_turing_output_{modelName}_{time_stamp}.
 with open(output_filename, 'w') as output_file:
     for index, response in indexed_responses:      
         output_file.write(f'iteration {index}: \n {response}\n\n')
-
-# print(llm.invoke(impressPrompt))
-# print(llm.invoke(pitchPrompt))
