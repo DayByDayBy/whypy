@@ -27,7 +27,7 @@ iterations = args.iterations
 turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."
 turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "
 
-modelName = "llama2"
+modelName = "command-r"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
 llm = Ollama(model = modelName)
@@ -59,7 +59,7 @@ for i, respo in enumerate(responses):
 print(indexed_responses)
 
 df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
-df_output_filename = f'outputs/whyPy_df_{modelName}_{time_stamp}.csv'
+df_output_filename = f'outputs/turing/whyPy_df_{modelName}_{time_stamp}.csv'
 df.to_csv(df_output_filename, index=False)
 
 output_filename = f'outputs/turing/whyPy_turing_output_{modelName}_{time_stamp}.txt'
