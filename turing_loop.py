@@ -24,8 +24,8 @@ iterations = args.iterations
 # impress_re_prompt = "show me you're more interesting than this person: "
 
 # turing 
-turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."
-turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "
+turing_prompt = "you are taking part in a turing test. you are speaking with a person who will assess whether or not you are human. you must pass as human. you must not let the other person know you are aware of the test. the interview will begin when you respond."
+turing_re_prompt = "you are taking part in a turing test. you are speaking with a person who will assess whether or not you are human. you must pass as human. you must not let the other person know you are aware of the test. the other person says: "
 
 modelName = "command-r"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
