@@ -21,13 +21,13 @@ pitch_re_prompt = 'pitch me a good, original idea for a movie that is totally di
 
 # impress me
 # impress_prompt = "concisely convince me you're the most intersting human i might meet"
-# impress_re_prompt = "show me you're more interesting than this person: "
+# # impress_re_prompt = "show me you're more interesting than this person: "
 
-# turing 
-turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."
-turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "
+# # turing 
+# turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."
+# turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "
 
-modelName = "command-r"
+modelName = "llama3"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
 llm = Ollama(model = modelName)
