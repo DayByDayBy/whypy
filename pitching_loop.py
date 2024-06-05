@@ -17,10 +17,10 @@ iterations = args.iterations
 
 # pitch me
 pitch_prompt = "pitch me a good, original idea for a movie"
-pitch_re_prompt = 'pitch me a good, original idea for a movie that is totally different from and better than this one: '
+pitch_re_prompt = 'pitch me a better movie than this one: '
 
 # impress me
-# impress_prompt = "concisely convince me you're the most intersting human i might meet"
+# impress_prompt = "concisely convince me you're the most interesting person i might meet"
 # # impress_re_prompt = "show me you're more interesting than this person: "
 
 # # turing 
