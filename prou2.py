@@ -8,7 +8,7 @@ from datetime import datetime
 
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 prompt = "which words or phrases do you most overuse?"
-model_name = "mistral"
+model_name = "llama3"
 iterations = 10
 frequency_penalty = 0.8,
 presence_penalty = 0.8,
@@ -16,7 +16,6 @@ llm = Ollama(model = model_name)
 response = llm.invoke(
     prompt, 
     max_tokens=100, 
-    top_p=0.85, 
     temperature=0.9,
     frequency_penalty = 0.8,
     presence_penalty = 0.9)
@@ -29,7 +28,7 @@ def respo():
         responsed = llm.invoke(
             response, 
             max_tokens=100, 
-            frequency_penalty= 0.8, 
+            frequency_penalty= 0.9, 
             presence_penalty= 0.9)
         responses.append([i, responsed, '\n\n'])
         i += 1
@@ -40,6 +39,8 @@ print(responses)
 
 
 
+
+# print to file:
 
 indexed_responses = []
 for i, r in enumerate(responses):

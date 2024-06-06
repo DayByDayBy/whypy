@@ -1,55 +1,53 @@
 import argparse 
 import pandas as pd
+import numpy as np
+# import matplotlib.pyplot as plt
 from sentence_transformers import SentenceTransformer
 from langchain_community.llms import Ollama
 # from langchain.chains import LLMChain
 from langchain_core.prompts import PromptTemplate
 from datetime import datetime
 
-time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
-prompt = "what do you consider the most overrated virtue?"
-model_name = "mistral"
-iterations = 10
-frequency_penalty = 0.8,
-presence_penalty = 0.8,
+time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
+
+initial_prompt = "what do you consider the most over-rated virtue?"
+
+model_name = "llama3"
+iterations = 1337
+frequency_penalty = np.float32(0.8)
+presence_penalty = np.float32(0.8)
 llm = Ollama(model = model_name)
-response = llm.invoke(
-    prompt, 
-    max_tokens=100, 
-    top_p=0.85, 
-    temperature=0.9,
-    frequency_penalty = 0.8,
-    presence_penalty = 0.9)
-responses = [response,]
 
-
-def respo():
-    i = 0
-    while i < iterations:
-        responsed = llm.invoke(
-            response, 
+def respo(initial_prompt, iterations):
+    responses = []
+    current_prompt = initial_prompt
+    for i in range(iterations):
+        response = llm.invoke(
+            current_prompt, 
             max_tokens=100, 
-            frequency_penalty= 0.8, 
-            presence_penalty= 0.9)
-        responses.append([i, responsed, '\n\n'])
-        i += 1
+            frequency_penalty = float(frequency_penalty), 
+            presence_penalty = float(presence_penalty))
+        responses.append([i, response, '\n\n'])
+        current_prompt = response
+        print(f'{iterations-i} iterations to go')
     return responses  
      
-respo()
-print(responses)
-
-
-
-
+returned_responses = respo(initial_prompt, iterations)
 indexed_responses = []
-for i, r in enumerate(responses):
-    indexed_responses.append((i, r))
+for ip, it in enumerate(returned_responses):
+    indexed_responses.append((ip, it))
+
+# print to file:
+
+df_output_filename = f'outputs/prou_df_{model_name}_{time_stamp}.csv'
 
 df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
-df_output_filename = f'outputs/prou_df_{model_name}_{time_stamp}.csv'
-df.to_csv(df_output_filename, index=False)
+
+with open(df_output_filename, 'w') as f:
+    f.write("# initial prompt:  " + initial_prompt + "\n\n") 
+    df.to_csv(f, index=False)
 
 output_filename = f'outputs/prou_{model_name}_{time_stamp}.txt'
-with open(output_filename, 'w') as output_file:
+with open(output_filename, 'w') as f:
     for index, response in indexed_responses:      
-        output_file.write(f'iteration {index}: \n {response}\n\n')
+        f.write(f'iteration {index}: \n {response}\n\n')
