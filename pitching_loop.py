@@ -16,7 +16,7 @@ args = parser.parse_args()
 iterations = args.iterations
 
 # pitch me
-pitch_prompt = "pitch me a good, original idea for a movie"
+pitch_prompt = "pitch me an original idea for a movie"
 pitch_re_prompt = 'pitch me a better movie than this one: '
 
 # impress me
@@ -27,18 +27,26 @@ pitch_re_prompt = 'pitch me a better movie than this one: '
 # turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."
 # turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "
 
-modelName = "llama3"
+model_name = "mistral"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
-llm = Ollama(model = modelName)
-# currentTemp = 0.5
+llm = Ollama(model = model_name)
+temp = 0.7
+max_t = 100
+freq_penalty=0.7
+pres_penalty=0.5
 
 def iterative_invocation(initial_prompt, re_prompt_base, max_iterations):
     latest_response = ''
     responses = []
     iteration_count = 0
-    response = llm.invoke(initial_prompt)
-    responses.append(response)
+    response = llm.invoke(
+        initial_prompt, 
+        temperature=temp, 
+        max_tokens=max_t, 
+        frequency_penalty=freq_penalty,
+        presence_penalty=pres_penalty)
+    responses.append(response.text)
     latest_response = response
     
     while iteration_count < max_iterations:
@@ -59,10 +67,10 @@ for i, respo in enumerate(responses):
 print(indexed_responses)
 
 df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
-df_output_filename = f'outputs/pitching/whyPy_df_{modelName}_{time_stamp}.csv'
+df_output_filename = f'outputs/pitching/whyPy_df_{model_name}_temp{temp}_{time_stamp}.csv'
 df.to_csv(df_output_filename, index=False)
 
-output_filename = f'outputs/pitching/whyPy_pitching_output_{modelName}_{time_stamp}.txt'
+output_filename = f'outputs/pitching/whyPy_pitching_output_{model_name}_temp{temp}_{time_stamp}.txt'
 with open(output_filename, 'w') as output_file:
     for index, response in indexed_responses:      
         output_file.write(f'iteration {index}: \n {response}\n\n')
