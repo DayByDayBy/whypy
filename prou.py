@@ -10,12 +10,12 @@ from datetime import datetime
 
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
 
-initial_prompt = "what do you consider the most over-rated virtue?"
+initial_prompt = "what do you consider the most overrated virtue?"
 
 model_name = "llama3"
 iterations = 1337
 frequency_penalty = np.float32(0.8)
-presence_penalty = np.float32(0.8)
+presence_penalty = np.float32(0.9)
 llm = Ollama(model = model_name)
 
 def respo(initial_prompt, iterations):
