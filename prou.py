@@ -13,9 +13,9 @@ time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
 initial_prompt = "what do you consider the most overrated virtue?"
 
 model_name = "llama3"
-iterations = 1337
-frequency_penalty = np.float32(0.8)
-presence_penalty = np.float32(0.9)
+iterations = 24
+frequency_penalty = np.float32(0.99)
+presence_penalty = np.float32(0.99)
 llm = Ollama(model = model_name)
 
 def respo(initial_prompt, iterations):
@@ -25,6 +25,7 @@ def respo(initial_prompt, iterations):
         response = llm.invoke(
             current_prompt, 
             max_tokens=100, 
+            temperature=0.85,
             frequency_penalty = float(frequency_penalty), 
             presence_penalty = float(presence_penalty))
         responses.append([i, response, '\n\n'])
