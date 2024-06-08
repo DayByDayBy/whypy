@@ -1,4 +1,4 @@
-import argparse 
+import time
 import pandas as pd
 import numpy as np
 # import matplotlib.pyplot as plt
@@ -13,8 +13,8 @@ time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
 initial_prompt = "what do you consider the most overrated virtue?"
 
 model_name = "llama3"
-iterations = 12
-temp = 0.5
+iterations = 300
+temp = 0.6
 frequency_penalty = np.float32(0.9)
 presence_penalty = np.float32(0.9)
 llm = Ollama(model = model_name)
@@ -25,20 +25,17 @@ def respo(initial_prompt, iterations):
     print(f'starting with prompt="{initial_prompt}" and {iterations} iterations')
 
     for i in range(iterations):
-        print(f'starting iteration {i+1}/{iterations}')
+        print(f'iteration {i+1}/{iterations}')
         response = llm.invoke(
             current_prompt, 
             max_tokens=98, 
             temperature=temp,
             frequency_penalty = float(frequency_penalty), 
             presence_penalty = float(presence_penalty))
-        
-        print(f'iteration {i+1} ending')
-
         responses.append([i, response, '\n\n'])
         current_prompt = response
-        print(f'{iterations-i} iterations to go')
-        print(f'finished respo function, {len(responses)} responses collected')
+        # print(f'{iterations-i} iterations to go')
+        # print(f'finished respo function, {len(responses)} responses collected')
 
     return responses  
      
@@ -46,6 +43,11 @@ returned_responses = respo(initial_prompt, iterations)
 indexed_responses = []
 for ip, it in enumerate(returned_responses):
     indexed_responses.append((ip, it))
+
+
+
+
+
 
 # print to file stuff:
 
@@ -72,5 +74,6 @@ except Exception as e:
     print(f"error while writing to txt file: {e}")
     
     
-    respo(initial_prompt, iterations)
-    respo(initial_prompt, iterations)
+respo(initial_prompt, iterations)
+
+print('done')
