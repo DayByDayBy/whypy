@@ -10,10 +10,10 @@ from datetime import datetime
 
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
 
-initial_prompt = "explain yourself"
+initial_prompt = "you'd better explain yourself"
 
 model_name = "llama3"
-iterations = 300
+iterations = 108
 temp = 0.6
 frequency_penalty = np.float32(0.9)
 presence_penalty = np.float32(0.9)
@@ -34,7 +34,7 @@ def respo(initial_prompt, iterations):
     responses = []
     current_prompt = initial_prompt
     
-    print(f'starting with prompt="{initial_prompt}" and {iterations} iterations')
+    print(f'starting with prompt="{initial_prompt}", {iterations} iterations, {temp} temp\n')
 
     for i in range(iterations):
         print(f'iteration {i+1}/{iterations}')
@@ -47,14 +47,14 @@ def respo(initial_prompt, iterations):
             )
         responses.append([i, response, '\n\n'])
         current_prompt = response
-    indexed_responses = [(ip, it) for ip, it in enumerate(responses)]
-
-    df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
         
-    try:  
-        df.to_csv(df_output_filename, index=False, mode='a')
-    except Exception as e:
-        print(f"error while writing to csv file: {e}")
+        indexed_responses = [(ip, it) for ip, it in enumerate(responses)]
+        df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
+        
+        try:  
+            df.to_csv(df_output_filename, index=False, mode='a')
+        except Exception as e:
+            print(f"error while writing to csv file: {e}")
             
     return responses, indexed_responses
 
