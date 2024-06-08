@@ -10,7 +10,7 @@ from datetime import datetime
 
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
 
-initial_prompt = "you'd better explain yourself"
+initial_prompt = "you have until i die to make your case, but please be quick"
 
 model_name = "llama3"
 iterations = 108
@@ -67,4 +67,4 @@ try:
 except Exception as e: 
     print(f"error while writing to txt file: {e}")
 
-print('done')
+print(f'\ndone\n')
