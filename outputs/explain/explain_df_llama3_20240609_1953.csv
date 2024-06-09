@@ -1,0 +1,8 @@
+# initial prompt: explain
+
+temp: 0.6;  FP: 0.8999999761581421; PP: 0.8999999761581421
+
+llm: [1mOllama[0m
+Params: {'model': 'llama3', 'format': None, 'options': {'mirostat': None, 'mirostat_eta': None, 'mirostat_tau': None, 'num_ctx': None, 'num_gpu': None, 'num_thread': None, 'num_predict': None, 'repeat_last_n': None, 'repeat_penalty': None, 'temperature': None, 'stop': None, 'tfs_z': None, 'top_k': None, 'top_p': None}, 'system': None, 'template': None, 'keep_alive': None}
+
+iteration, response

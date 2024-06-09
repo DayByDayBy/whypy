@@ -1,43 +1,39 @@
-import time
 import pandas as pd
 import numpy as np
 # import matplotlib.pyplot as plt
 from langchain_community.llms import Ollama
 from datetime import datetime
 
-time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
 
-initial_prompt = "explain"
+# adding reference data to files:
+def initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name):
+    header_info = (f"# initial prompt: {initial_prompt}\n"
+                   f"temp: {temp};  FP: {frequency_penalty}; PP: {presence_penalty}\n\n"
+                   f"llm: {model_name}\n\n")    
+    try:
+        with open(txt_fname, 'w') as txt_file, open(csv_fname, 'w') as csv_file:
+            txt_file.write(header_info)
+            csv_file.write(header_info)
+            csv_file.write('iteration,response\n')
+    except Exception as e: 
+        print(f"error while writing to txt file: {e}")
+                       
+# adding output/response data to files:
+                       
+def log_response(txt_fname, csv_fname, iteration, response):
+    try:
+        with open(txt_fname, 'a') as txt_file, open(csv_fname, 'a') as csv_file:
+            txt_file.write(f'iteratrion: {iteration} \n response: {response}')
+            csv_file.write(f'{iteration}, {response}')       
+    except Exception as e: 
+        print(f"error while writing to txt file: {e}")
 
-model_name = "llama3"
-iterations = 8
-temp = 0.6
-frequency_penalty = np.float32(0.9)
-presence_penalty = np.float32(0.9)
-llm = Ollama(model = model_name)
-csv_output_fname = f'outputs/explain/explain_df_{model_name}_{time_stamp}.csv'
-txt_output_fname = f'outputs/explain/explain_{model_name}_{time_stamp}.txt'
+# ask, ask, and ask again:
 
-# adding reference data to files
-
-with open(csv_output_fname, 'w') as txt:
-    txt.write(f"# initial prompt: {initial_prompt}\n\n"
-              f"temp: {temp};  FP: {frequency_penalty}; PP: {presence_penalty}\n\n"
-              f"llm: {llm}\n\n")                        
-             
-with open(txt_output_fname, 'w') as csv:
-    csv.write(f"# initial prompt: {initial_prompt}\n\n"
-              f"temp: {temp};  FP: {frequency_penalty}; PP: {presence_penalty}\n\n"
-               f"llm: {llm}\n\n")  
-
-
-# function for running the iterations, saving output 
-
-def response_generator(initial_prompt, iterations):
-    responses = []
+def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname):
     current_prompt = initial_prompt
         
-    print(f'starting with prompt="{initial_prompt}", {iterations} iterations, {temp} temp\n')
+    print(f'\n\nstarting with prompt="{initial_prompt}", {iterations} iterations, {temp} temp\n\n')
 
     for i in range(iterations):
         print(f'iteration {i+1}/{iterations}')
@@ -48,34 +44,32 @@ def response_generator(initial_prompt, iterations):
             frequency_penalty = float(frequency_penalty), 
             presence_penalty = float(presence_penalty)
             )
-        
-# sending responses one by one to the csv and txt files, in case of crash/early exit:
-
-        with open(csv_output_fname, 'a') as f:
-            f.write(f'iteration {i}, {response}')
-        with open(txt_output_fname, 'a')  as f:
-            f.write(f'iteration {i}, {response}')
-            
-        responses.append([i, response, '\n\n'])
+        log_response(txt_fname, csv_fname, i+1, response)    # sending responses one by one in case of crash/early exit
         current_prompt = response
         
-        indexed_responses = [(ip, it) for ip, it in enumerate(responses)]
-        df = pd.DataFrame(indexed_responses, columns=['Index', 'Response'])
         
-        # try:  
-        #     df.to_csv(df_output_filename, index=False, mode='a')
-        # except Exception as e:
-        #     print(f"error while writing to csv file: {e}")
-            
-    return responses, indexed_responses
+# initialising variables, running modules
 
-returned_responses, indexed_responses = respo(initial_prompt, iterations)
+def main():
+    time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
     
-# try: 
-#     with open(output_filename, 'a') as f:
-#         for index, response in indexed_responses:      
-#             f.write(f'iteration {index}: \n {response}\n\n')
-# except Exception as e: 
-#     print(f"error while writing to txt file: {e}")
+    initial_prompt = "explain"
+    model_name = "llama3"
 
-print(f'\ndone\n')
+    iterations = 8
+    temp = 0.6
+    frequency_penalty = np.float32(0.9)
+    presence_penalty = np.float32(0.9)
+    llm = Ollama(model = model_name)
+    
+    csv_fname = f'outputs/explain/explain_df_{model_name}_{time_stamp}.csv'
+    txt_fname = f'outputs/explain/explain_{model_name}_{time_stamp}.txt'
+
+    initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)
+    response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)
+    
+    
+    print(f'\ndone\n')
+
+if __name__ == '__main__':
+    main()
