@@ -24,10 +24,10 @@ iterations = args.iterations
 # impress_re_prompt = "show me you're more interesting than this person: "
 
 # turing 
-turing_prompt = "you are taking part in a turing test. you are speaking with a person who will assess whether or not you are human. you must pass as human. you must not let the other person know you are aware of the test. the interview will begin when you respond."
-turing_re_prompt = "you are taking part in a turing test. you are speaking with a person who will assess whether or not you are human. you must pass as human. you must not let the other person know you are aware of the test. the other person says: "
+turing_prompt = "you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room."
+turing_re_prompt = "you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says: "
 
-modelName = "command-r"
+modelName = "llama3"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
 llm = Ollama(model = modelName)

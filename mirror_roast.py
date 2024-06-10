@@ -37,6 +37,7 @@ def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty,
         response = llm.invoke(
             current_prompt, 
             max_tokens=32, 
+            top_p = 0.95,
             temperature=temp,
             frequency_penalty = float(frequency_penalty), 
             presence_penalty = float(presence_penalty)
@@ -52,7 +53,7 @@ def main():
     
     initial_prompt = "respond with an opening to a conversation. you are having the conversation with another instance of yourself. this other instance prefers to be called greg, please address him by name."
     model_name = 'llama3'
-    iterations = 23
+    iterations = 5
     temp = 0.6
     frequency_penalty = np.float32(0.9)
     presence_penalty = np.float32(0.7)
