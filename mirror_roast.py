@@ -1,6 +1,4 @@
-import pandas as pd
 import numpy as np
-# import matplotlib.pyplot as plt
 from langchain_community.llms import Ollama
 from datetime import datetime
 
@@ -38,7 +36,7 @@ def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty,
         print(f'iteration {i+1}/{iterations}')
         response = llm.invoke(
             current_prompt, 
-            max_tokens=78, 
+            max_tokens=32, 
             temperature=temp,
             frequency_penalty = float(frequency_penalty), 
             presence_penalty = float(presence_penalty)
@@ -52,17 +50,16 @@ def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty,
 def main():
     time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
     
-    initial_prompt = "i would like an explanation of the most beneficial thing you know"
-    model_name = "llama3"
-
-    iterations = 141
+    initial_prompt = "respond with an opening to a conversation. you are having the conversation with another instance of yourself. this other instance prefers to be called greg, please address him by name."
+    model_name = 'llama3'
+    iterations = 23
     temp = 0.6
     frequency_penalty = np.float32(0.9)
-    presence_penalty = np.float32(0.9)
+    presence_penalty = np.float32(0.7)
     llm = Ollama(model = model_name)
     
-    csv_fname = f'outputs/explain/explain_df_{model_name}_{time_stamp}.csv'
-    txt_fname = f'outputs/explain/explain_{model_name}_{time_stamp}.txt'
+    csv_fname = f'outputs/mirror/mirror_roast_df_{model_name}_{time_stamp}.csv'
+    txt_fname = f'outputs/mirror/mirror_roast_{model_name}_{time_stamp}.txt'
 
     initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)
     response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)
