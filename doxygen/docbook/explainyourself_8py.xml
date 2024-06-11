@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_explainyourself_8py" xml:lang="en-US">
+<title>explainyourself.py File Reference</title>
+<indexterm><primary>explainyourself.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceexplainyourself">explainyourself</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceexplainyourself_1a47f230f3ff45fc3725a5fb66c3da3182">explainyourself.initialize_output_files</link> (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceexplainyourself_1a2454ba4a481423cf9e8ac1d5f428d0a6">explainyourself.log_response</link> (txt_fname, csv_fname, iteration, response)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceexplainyourself_1aa08c88059599a1c28c767e4b246f4320">explainyourself.response_generator</link> (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceexplainyourself_1a8272001856f6ad0e38c90f9635ad2b0c">explainyourself.main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

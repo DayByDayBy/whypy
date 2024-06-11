@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacepitching__loop" xml:lang="en-US">
+<title>pitching_loop Namespace Reference</title>
+<indexterm><primary>pitching_loop</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa">iterative_invocation</link> (initial_prompt, re_prompt_base, max_iterations)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepitching__loop_1a90a0aea4f98de78c9c8893bad538c68b">parser</link> = argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1acd9848894558a3121ffb8304fe3ac043">type</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad637c32101462130ba284b241520e2b8">int</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a989f63cabf71e49f3a140ec1295cc822">nargs</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a811b991e7a586f124d7775137fc2e14f">default</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1aa8bdded0b6e23a4d6ff50fa9a4d92847">help</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad86819aa007ada6310c3299396b3cf93">args</link> = parser.parse_args()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637">iterations</link> = args.iterations</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73">pitch_prompt</link> = &quot;pitch me an original idea for a movie&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1a6354850bfe2f390a8237fca038623681">pitch_re_prompt</link> = &apos;pitch me a better movie than this one: &apos;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link> = &quot;mistral&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1aae28f1802f549cc7ee4745d70c7e1710">llm</link> = Ollama(model = <link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>)</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">temp</link> = 0.7</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad637c32101462130ba284b241520e2b8">int</link> <link linkend="_namespacepitching__loop_1a9b65cf563720359603ceb4ed90769694">max_t</link> = 100</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespacepitching__loop_1a9d2b3bf94ec3ae9d460b27ca1648ee0e">freq_penalty</link> = 0.7</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespacepitching__loop_1a108554aa06aa8994e000b4e0302cac13">pres_penalty</link> = 0.5</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a7afd06e8970eacfa22ab9c00e4ad1824">responses</link> = <link linkend="_namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa">iterative_invocation</link>(<link linkend="_namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73">pitch_prompt</link>, <link linkend="_namespacepitching__loop_1a6354850bfe2f390a8237fca038623681">pitch_re_prompt</link>, <link linkend="_namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637">iterations</link>)</para>
+</listitem>
+            <listitem><para>list <link linkend="_namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea">indexed_responses</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1aea9e967a622b96826324a437dab60119">df</link> = pd.DataFrame(<link linkend="_namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1ade50c445407952b5943dff49402d0150">df_output_filename</link> = f&apos;outputs/pitching/whyPy_df_{<link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>}_temp{<link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">temp</link>}_{<link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a416be6b378478cec32793e6120a9d0c9">index</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1a9a6d7ec56b62fd3780dbc5fa233a5d0f">output_filename</link> = f&apos;outputs/pitching/whyPy_pitching_output_{<link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>}_temp{<link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">temp</link>}_{<link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">time_stamp</link>}.txt&apos;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa"/><section>
+    <title>iterative_invocation()</title>
+<indexterm><primary>iterative_invocation</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>iterative_invocation</secondary></indexterm>
+<para><computeroutput>pitching_loop.iterative_invocation ( initial_prompt,  re_prompt_base,  max_iterations)</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00039">39</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacepitching__loop_1ad86819aa007ada6310c3299396b3cf93"/><section>
+    <title>args</title>
+<indexterm><primary>args</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>args</secondary></indexterm>
+<para><computeroutput>pitching_loop.args = parser.parse_args()</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00014">14</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a811b991e7a586f124d7775137fc2e14f"/><section>
+    <title>default</title>
+<indexterm><primary>default</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>default</secondary></indexterm>
+<para><computeroutput>pitching_loop.default</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00013">13</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1aea9e967a622b96826324a437dab60119"/><section>
+    <title>df</title>
+<indexterm><primary>df</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>df</secondary></indexterm>
+<para><computeroutput>pitching_loop.df = pd.DataFrame(<link linkend="_namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00069">69</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1ade50c445407952b5943dff49402d0150"/><section>
+    <title>df_output_filename</title>
+<indexterm><primary>df_output_filename</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>df_output_filename</secondary></indexterm>
+<para><computeroutput>pitching_loop.df_output_filename = f&apos;outputs/pitching/whyPy_df_{<link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>}_temp{<link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">temp</link>}_{<link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">time_stamp</link>}.csv&apos;</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00070">70</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a9d2b3bf94ec3ae9d460b27ca1648ee0e"/><section>
+    <title>freq_penalty</title>
+<indexterm><primary>freq_penalty</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>freq_penalty</secondary></indexterm>
+<para><computeroutput>float pitching_loop.freq_penalty = 0.7</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00036">36</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1aa8bdded0b6e23a4d6ff50fa9a4d92847"/><section>
+    <title>help</title>
+<indexterm><primary>help</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>help</secondary></indexterm>
+<para><computeroutput>pitching_loop.help</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00013">13</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a416be6b378478cec32793e6120a9d0c9"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>pitching_loop.index</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00071">71</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea"/><section>
+    <title>indexed_responses</title>
+<indexterm><primary>indexed_responses</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>indexed_responses</secondary></indexterm>
+<para><computeroutput>list pitching_loop.indexed_responses = []</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00063">63</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1ad637c32101462130ba284b241520e2b8"/><section>
+    <title>int</title>
+<indexterm><primary>int</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>int</secondary></indexterm>
+<para><computeroutput>pitching_loop.int</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00013">13</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637"/><section>
+    <title>iterations</title>
+<indexterm><primary>iterations</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>iterations</secondary></indexterm>
+<para><computeroutput>pitching_loop.iterations = args.iterations</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00016">16</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1aae28f1802f549cc7ee4745d70c7e1710"/><section>
+    <title>llm</title>
+<indexterm><primary>llm</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>llm</secondary></indexterm>
+<para><computeroutput>pitching_loop.llm = Ollama(model = <link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>)</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00033">33</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a9b65cf563720359603ceb4ed90769694"/><section>
+    <title>max_t</title>
+<indexterm><primary>max_t</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>max_t</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacepitching__loop_1ad637c32101462130ba284b241520e2b8">int</link> pitching_loop.max_t = 100</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00035">35</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d"/><section>
+    <title>model_name</title>
+<indexterm><primary>model_name</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>model_name</secondary></indexterm>
+<para><computeroutput>str pitching_loop.model_name = &quot;mistral&quot;</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00030">30</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a989f63cabf71e49f3a140ec1295cc822"/><section>
+    <title>nargs</title>
+<indexterm><primary>nargs</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>nargs</secondary></indexterm>
+<para><computeroutput>pitching_loop.nargs</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00013">13</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a9a6d7ec56b62fd3780dbc5fa233a5d0f"/><section>
+    <title>output_filename</title>
+<indexterm><primary>output_filename</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>output_filename</secondary></indexterm>
+<para><computeroutput>str pitching_loop.output_filename = f&apos;outputs/pitching/whyPy_pitching_output_{<link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>}_temp{<link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">temp</link>}_{<link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">time_stamp</link>}.txt&apos;</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00073">73</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a90a0aea4f98de78c9c8893bad538c68b"/><section>
+    <title>parser</title>
+<indexterm><primary>parser</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>parser</secondary></indexterm>
+<para><computeroutput>pitching_loop.parser = argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00012">12</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73"/><section>
+    <title>pitch_prompt</title>
+<indexterm><primary>pitch_prompt</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>pitch_prompt</secondary></indexterm>
+<para><computeroutput>str pitching_loop.pitch_prompt = &quot;pitch me an original idea for a movie&quot;</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00019">19</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a6354850bfe2f390a8237fca038623681"/><section>
+    <title>pitch_re_prompt</title>
+<indexterm><primary>pitch_re_prompt</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>pitch_re_prompt</secondary></indexterm>
+<para><computeroutput>str pitching_loop.pitch_re_prompt = &apos;pitch me a better movie than this one: &apos;</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00020">20</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a108554aa06aa8994e000b4e0302cac13"/><section>
+    <title>pres_penalty</title>
+<indexterm><primary>pres_penalty</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>pres_penalty</secondary></indexterm>
+<para><computeroutput>float pitching_loop.pres_penalty = 0.5</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00037">37</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a7afd06e8970eacfa22ab9c00e4ad1824"/><section>
+    <title>responses</title>
+<indexterm><primary>responses</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>responses</secondary></indexterm>
+<para><computeroutput>pitching_loop.responses = <link linkend="_namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa">iterative_invocation</link>(<link linkend="_namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73">pitch_prompt</link>, <link linkend="_namespacepitching__loop_1a6354850bfe2f390a8237fca038623681">pitch_re_prompt</link>, <link linkend="_namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637">iterations</link>)</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00062">62</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704"/><section>
+    <title>temp</title>
+<indexterm><primary>temp</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>temp</secondary></indexterm>
+<para><computeroutput>float pitching_loop.temp = 0.7</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00034">34</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1ab0916613600790ead026314753130e95"/><section>
+    <title>time_stamp</title>
+<indexterm><primary>time_stamp</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>time_stamp</secondary></indexterm>
+<para><computeroutput>pitching_loop.time_stamp = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00031">31</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespacepitching__loop_1acd9848894558a3121ffb8304fe3ac043"/><section>
+    <title>type</title>
+<indexterm><primary>type</primary><secondary>pitching_loop</secondary></indexterm>
+<indexterm><primary>pitching_loop</primary><secondary>type</secondary></indexterm>
+<para><computeroutput>pitching_loop.type</computeroutput></para><para>
+Definition at line <link linkend="_pitching__loop_8py_source_1l00013">13</link> of file <link linkend="_pitching__loop_8py_source">pitching_loop.py</link>.</para>
+</section>
+</section>
+</section>

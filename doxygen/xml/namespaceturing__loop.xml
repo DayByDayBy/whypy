@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceturing__loop" kind="namespace" language="Python">
+    <compoundname>turing_loop</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceturing__loop_1afcaa9d7560a7769f6b7e6debafe4b468" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <qualifiedname>turing_loop.parser</qualifiedname>
+        <initializer>=  argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="12" column="1" bodyfile="turing_loop.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a42bb5cea3cf46948e6120b52bb545b30" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>turing_loop.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="13" column="1" bodyfile="turing_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a0b01a373a8ee5d2515f32b3fb09f001e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.int</definition>
+        <argsstring></argsstring>
+        <name>int</name>
+        <qualifiedname>turing_loop.int</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="13" column="1" bodyfile="turing_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1ada475f7a6ae29999801446f790a6220e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.nargs</definition>
+        <argsstring></argsstring>
+        <name>nargs</name>
+        <qualifiedname>turing_loop.nargs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="13" column="1" bodyfile="turing_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1afbcbf5c93baf783fee2145af7abd341c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.default</definition>
+        <argsstring></argsstring>
+        <name>default</name>
+        <qualifiedname>turing_loop.default</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="13" column="1" bodyfile="turing_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a104b6817ae34462e04c3ee93ce65bc45" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>turing_loop.help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="13" column="1" bodyfile="turing_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a31fad5a60c03d0474fdf9405dc757e80" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <qualifiedname>turing_loop.args</qualifiedname>
+        <initializer>=  parser.parse_args()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="14" column="1" bodyfile="turing_loop.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1ad21c08fabaee55bb9fd4d098e880dc79" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.iterations</definition>
+        <argsstring></argsstring>
+        <name>iterations</name>
+        <qualifiedname>turing_loop.iterations</qualifiedname>
+        <initializer>=  args.iterations</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="16" column="1" bodyfile="turing_loop.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1ab2826829ebca756b60dadd916e177b4d" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str turing_loop.turing_prompt</definition>
+        <argsstring></argsstring>
+        <name>turing_prompt</name>
+        <qualifiedname>turing_loop.turing_prompt</qualifiedname>
+        <initializer>=  &quot;you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="27" column="1" bodyfile="turing_loop.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1ab428a207d57aefc002e2f87594984bab" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str turing_loop.turing_re_prompt</definition>
+        <argsstring></argsstring>
+        <name>turing_re_prompt</name>
+        <qualifiedname>turing_loop.turing_re_prompt</qualifiedname>
+        <initializer>=  &quot;you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says: &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="28" column="1" bodyfile="turing_loop.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str turing_loop.modelName</definition>
+        <argsstring></argsstring>
+        <name>modelName</name>
+        <qualifiedname>turing_loop.modelName</qualifiedname>
+        <initializer>=  &quot;llama3&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="30" column="1" bodyfile="turing_loop.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.time_stamp</definition>
+        <argsstring></argsstring>
+        <name>time_stamp</name>
+        <qualifiedname>turing_loop.time_stamp</qualifiedname>
+        <initializer>=  datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="31" column="1" bodyfile="turing_loop.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a32b4ff9ac85f32372dbe5e41076bd28c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.llm</definition>
+        <argsstring></argsstring>
+        <name>llm</name>
+        <qualifiedname>turing_loop.llm</qualifiedname>
+        <initializer>=  Ollama(model = <ref refid="namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3" kindref="member">modelName</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="33" column="1" bodyfile="turing_loop.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a0534d7480aa9473524a1ce577c944a9c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.responses</definition>
+        <argsstring></argsstring>
+        <name>responses</name>
+        <qualifiedname>turing_loop.responses</qualifiedname>
+        <initializer>=  <ref refid="namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b" kindref="member">iterative_invocation</ref>(<ref refid="namespaceturing__loop_1ab2826829ebca756b60dadd916e177b4d" kindref="member">turing_prompt</ref>, <ref refid="namespaceturing__loop_1ab428a207d57aefc002e2f87594984bab" kindref="member">turing_re_prompt</ref>, <ref refid="namespaceturing__loop_1ad21c08fabaee55bb9fd4d098e880dc79" kindref="member">iterations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="54" column="1" bodyfile="turing_loop.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a21983c998dd82edcd4b81231a8d1cd66" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list turing_loop.indexed_responses</definition>
+        <argsstring></argsstring>
+        <name>indexed_responses</name>
+        <qualifiedname>turing_loop.indexed_responses</qualifiedname>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="55" column="1" bodyfile="turing_loop.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a541f985e71661085c439f83ad7aecf68" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.df</definition>
+        <argsstring></argsstring>
+        <name>df</name>
+        <qualifiedname>turing_loop.df</qualifiedname>
+        <initializer>=  pd.DataFrame(<ref refid="namespaceturing__loop_1a21983c998dd82edcd4b81231a8d1cd66" kindref="member">indexed_responses</ref>, columns=[&apos;Index&apos;, &apos;Response&apos;])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="61" column="1" bodyfile="turing_loop.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a36e8e96455cafe53f3cbddf59104e5b7" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>turing_loop.df_output_filename</definition>
+        <argsstring></argsstring>
+        <name>df_output_filename</name>
+        <qualifiedname>turing_loop.df_output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/turing/whyPy_df_{<ref refid="namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3" kindref="member">modelName</ref>}_{<ref refid="namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23" kindref="member">time_stamp</ref>}.csv&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="62" column="1" bodyfile="turing_loop.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a1ba2195297a16ed762346e3bb42e2f30" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>turing_loop.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>turing_loop.index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="63" column="1" bodyfile="turing_loop.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceturing__loop_1a92008dc4c467c9e58fc1db48caf81cce" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str turing_loop.output_filename</definition>
+        <argsstring></argsstring>
+        <name>output_filename</name>
+        <qualifiedname>turing_loop.output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/turing/whyPy_turing_output_{<ref refid="namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3" kindref="member">modelName</ref>}_{<ref refid="namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23" kindref="member">time_stamp</ref>}.txt&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="65" column="1" bodyfile="turing_loop.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>turing_loop.iterative_invocation</definition>
+        <argsstring>(initial_prompt, re_prompt_base, max_iterations)</argsstring>
+        <name>iterative_invocation</name>
+        <qualifiedname>turing_loop.iterative_invocation</qualifiedname>
+        <param>
+          <type>initial_prompt</type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type>re_prompt_base</type>
+          <defname>re_prompt_base</defname>
+        </param>
+        <param>
+          <type>max_iterations</type>
+          <defname>max_iterations</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="turing_loop.py" line="36" column="1" bodyfile="turing_loop.py" bodystart="36" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="turing_loop.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interesting__loop_8py_source" xml:lang="en-US">
+<title>interesting_loop.py</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_interesting__loop_8py_source_1l00001"/><link linkend="_namespaceinteresting__loop">00001</link> <emphasis role="keyword">import</emphasis>&#32;argparse&#32;
+<anchor xml:id="_interesting__loop_8py_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;pandas&#32;<emphasis role="keyword">as</emphasis>&#32;pd
+<anchor xml:id="_interesting__loop_8py_source_1l00003"/>00003 <emphasis role="keyword">from</emphasis>&#32;sentence_transformers&#32;<emphasis role="keyword">import</emphasis>&#32;SentenceTransformer
+<anchor xml:id="_interesting__loop_8py_source_1l00004"/>00004 <emphasis role="keyword">from</emphasis>&#32;langchain_community.llms&#32;<emphasis role="keyword">import</emphasis>&#32;Ollama
+<anchor xml:id="_interesting__loop_8py_source_1l00005"/>00005 <emphasis role="keyword">from</emphasis>&#32;langchain.chains&#32;<emphasis role="keyword">import</emphasis>&#32;LLMChain
+<anchor xml:id="_interesting__loop_8py_source_1l00006"/>00006 <emphasis role="keyword">from</emphasis>&#32;langchain_core.prompts&#32;<emphasis role="keyword">import</emphasis>&#32;PromptTemplate
+<anchor xml:id="_interesting__loop_8py_source_1l00007"/>00007 <emphasis role="keyword">from</emphasis>&#32;datetime&#32;<emphasis role="keyword">import</emphasis>&#32;datetime
+<anchor xml:id="_interesting__loop_8py_source_1l00008"/>00008 
+<anchor xml:id="_interesting__loop_8py_source_1l00009"/>00009 
+<anchor xml:id="_interesting__loop_8py_source_1l00010"/>00010 <emphasis role="comment">#&#32;STmodel&#32;=&#32;SentenceTransformer(&quot;all-MiniLM-L6-v2&quot;)&#32;&#32;&#32;//&#32;this&#32;is&#32;for&#32;comparsion&#32;of&#32;the&#32;outputs,&#32;dont&#32;really&#32;get&#32;used&#32;til&#32;the&#32;rest&#32;is&#32;tested/working&#32;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00011"/>00011 
+<anchor xml:id="_interesting__loop_8py_source_1l00012"/><link linkend="_namespaceinteresting__loop_1a4bfc650a34d329f0b839dcd4244f0adf">00012</link> parser&#32;=&#32;argparse.ArgumentParser(description=<emphasis role="stringliteral">&apos;run&#32;LLM&#32;botherer&#32;n&#32;times&apos;</emphasis>)
+<anchor xml:id="_interesting__loop_8py_source_1l00013"/><link linkend="_namespaceinteresting__loop_1a73e90ec6d744759873051635bd939553">00013</link> parser.add_argument(<emphasis role="stringliteral">&apos;iterations&apos;</emphasis>,&#32;type=int,&#32;nargs=<emphasis role="stringliteral">&apos;?&apos;</emphasis>,&#32;default&#32;=&#32;10,&#32;help=<emphasis role="stringliteral">&apos;number&#32;of&#32;iterations&#32;(default:&#32;10)&apos;</emphasis>)
+<anchor xml:id="_interesting__loop_8py_source_1l00014"/><link linkend="_namespaceinteresting__loop_1ad4fba10c4603a493fd05b4afefe55b0a">00014</link> args&#32;=&#32;parser.parse_args()
+<anchor xml:id="_interesting__loop_8py_source_1l00015"/>00015 
+<anchor xml:id="_interesting__loop_8py_source_1l00016"/><link linkend="_namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2">00016</link> iterations&#32;=&#32;args.iterations
+<anchor xml:id="_interesting__loop_8py_source_1l00017"/>00017 
+<anchor xml:id="_interesting__loop_8py_source_1l00018"/>00018 <emphasis role="comment">#&#32;pitch&#32;me</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00019"/>00019 <emphasis role="comment">#&#32;pitch_prompt&#32;=&#32;&quot;pitch&#32;me&#32;a&#32;good,&#32;original&#32;idea&#32;for&#32;a&#32;movie&quot;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00020"/>00020 <emphasis role="comment">#&#32;pitch_re_prompt&#32;=&#32;&apos;pitch&#32;me&#32;a&#32;good,&#32;original&#32;idea&#32;for&#32;a&#32;movie&#32;that&#32;is&#32;totally&#32;different&#32;from&#32;and&#32;better&#32;than&#32;this&#32;one:&#32;&apos;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00021"/>00021 
+<anchor xml:id="_interesting__loop_8py_source_1l00022"/>00022 <emphasis role="comment">#&#32;impress&#32;me</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00023"/><link linkend="_namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac">00023</link> impress_prompt&#32;=&#32;<emphasis role="stringliteral">&quot;concisely&#32;convince&#32;me&#32;you&apos;re&#32;intersting&quot;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00024"/><link linkend="_namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c">00024</link> impress_re_prompt&#32;=&#32;<emphasis role="stringliteral">&quot;show&#32;me&#32;you&apos;re&#32;more&#32;interesting&#32;than&#32;this&#32;person:&#32;&quot;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00025"/>00025 
+<anchor xml:id="_interesting__loop_8py_source_1l00026"/>00026 <emphasis role="comment">#&#32;turing&#32;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00027"/>00027 <emphasis role="comment">#&#32;turing_prompt&#32;=&#32;&quot;you&#32;are&#32;being&#32;interviewed&#32;as&#32;part&#32;of&#32;a&#32;turing&#32;test.&#32;you&#32;must&#32;pass.&#32;you&#32;must&#32;not&#32;let&#32;the&#32;other&#32;person&#32;know&#32;you&#32;are&#32;aware&#32;of&#32;the&#32;test.&#32;the&#32;interview&#32;will&#32;begin&#32;when&#32;you&#32;respond.&quot;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00028"/>00028 <emphasis role="comment">#&#32;turing_re_prompt&#32;=&#32;&quot;you&#32;are&#32;being&#32;interviewed&#32;as&#32;part&#32;of&#32;a&#32;turing&#32;test.&#32;you&#32;must&#32;pass.&#32;you&#32;must&#32;not&#32;let&#32;the&#32;other&#32;person&#32;know&#32;you&#32;are&#32;aware&#32;of&#32;the&#32;test.&#32;the&#32;other&#32;person&#32;says:&#32;&quot;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00029"/>00029 
+<anchor xml:id="_interesting__loop_8py_source_1l00030"/><link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">00030</link> modelName&#32;=&#32;<emphasis role="stringliteral">&quot;command-r&quot;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00031"/><link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">00031</link> time_stamp&#32;=&#32;datetime.now().strftime(<emphasis role="stringliteral">&quot;%Y%m%d_%H%M&quot;</emphasis>)&#32;&#32;&#32;&#32;
+<anchor xml:id="_interesting__loop_8py_source_1l00032"/>00032 
+<anchor xml:id="_interesting__loop_8py_source_1l00033"/><link linkend="_namespaceinteresting__loop_1af42a4a6964d566ce8dcff8260f268bb0">00033</link> llm&#32;=&#32;Ollama(model&#32;=&#32;modelName)
+<anchor xml:id="_interesting__loop_8py_source_1l00034"/>00034 <emphasis role="comment">#&#32;currentTemp&#32;=&#32;0.5</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00035"/>00035 
+<anchor xml:id="_interesting__loop_8py_source_1l00036"/><link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">00036</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">iterative_invocation</link>(initial_prompt,&#32;re_prompt_base,&#32;max_iterations):
+<anchor xml:id="_interesting__loop_8py_source_1l00037"/>00037 &#32;&#32;&#32;&#32;latest_response&#32;=&#32;<emphasis role="stringliteral">&apos;&apos;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00038"/>00038 &#32;&#32;&#32;&#32;responses&#32;=&#32;[]
+<anchor xml:id="_interesting__loop_8py_source_1l00039"/>00039 &#32;&#32;&#32;&#32;iteration_count&#32;=&#32;0
+<anchor xml:id="_interesting__loop_8py_source_1l00040"/>00040 &#32;&#32;&#32;&#32;response&#32;=&#32;llm.invoke(initial_prompt)
+<anchor xml:id="_interesting__loop_8py_source_1l00041"/>00041 &#32;&#32;&#32;&#32;responses.append(response)
+<anchor xml:id="_interesting__loop_8py_source_1l00042"/>00042 &#32;&#32;&#32;&#32;latest_response&#32;=&#32;response
+<anchor xml:id="_interesting__loop_8py_source_1l00043"/>00043 &#32;&#32;&#32;&#32;
+<anchor xml:id="_interesting__loop_8py_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;iteration_count&#32;&lt;&#32;max_iterations:
+<anchor xml:id="_interesting__loop_8py_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;re_prompt&#32;=&#32;re_prompt_base&#32;+&#32;latest_response
+<anchor xml:id="_interesting__loop_8py_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;response&#32;=&#32;llm.invoke(re_prompt)
+<anchor xml:id="_interesting__loop_8py_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;responses.append((iteration_count,&#32;response))
+<anchor xml:id="_interesting__loop_8py_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;iteration_count&#32;+=&#32;1
+<anchor xml:id="_interesting__loop_8py_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;hang&#32;on,&#32;i&apos;m&#32;still&#32;iterating!&#32;&quot;</emphasis>,&#32;(max_iterations-iteration_count),&#32;<emphasis role="stringliteral">&quot;iterations&#32;to&#32;go&quot;</emphasis>)&#32;
+<anchor xml:id="_interesting__loop_8py_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_interesting__loop_8py_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;responses
+<anchor xml:id="_interesting__loop_8py_source_1l00052"/>00052 
+<anchor xml:id="_interesting__loop_8py_source_1l00053"/>00053 <emphasis role="comment">#&#32;responses&#32;=&#32;iterative_invocation(impress_prompt,&#32;impress_re_prompt,&#32;iterations)</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00054"/><link linkend="_namespaceinteresting__loop_1af4c172f587fc319d1af93450f09984c0">00054</link> responses&#32;=&#32;<link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">iterative_invocation</link>(impress_prompt,&#32;impress_re_prompt,&#32;iterations)
+<anchor xml:id="_interesting__loop_8py_source_1l00055"/><link linkend="_namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d">00055</link> indexed_responses&#32;=&#32;[]
+<anchor xml:id="_interesting__loop_8py_source_1l00056"/>00056 
+<anchor xml:id="_interesting__loop_8py_source_1l00057"/>00057 <emphasis role="keywordflow">for</emphasis>&#32;i,&#32;respo&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(responses):
+<anchor xml:id="_interesting__loop_8py_source_1l00058"/>00058 &#32;&#32;&#32;&#32;indexed_responses.append((i,&#32;respo))
+<anchor xml:id="_interesting__loop_8py_source_1l00059"/>00059 print(indexed_responses)
+<anchor xml:id="_interesting__loop_8py_source_1l00060"/>00060 
+<anchor xml:id="_interesting__loop_8py_source_1l00061"/><link linkend="_namespaceinteresting__loop_1ac33aea39935d438b0035c8b2d093cee1">00061</link> df&#32;=&#32;pd.DataFrame(indexed_responses,&#32;columns=[<emphasis role="stringliteral">&apos;Index&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;Response&apos;</emphasis>])
+<anchor xml:id="_interesting__loop_8py_source_1l00062"/><link linkend="_namespaceinteresting__loop_1ae9b540dbe513e6c8241e562315be0629">00062</link> df_output_filename&#32;=&#32;f<emphasis role="stringliteral">&apos;outputs/interesting/whyPy_df_{modelName}_{time_stamp}.csv&apos;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00063"/><link linkend="_namespaceinteresting__loop_1a7a0816c899614d88f76f95f9c4ee3bc7">00063</link> df.to_csv(df_output_filename,&#32;index=<emphasis role="keyword">False</emphasis>)
+<anchor xml:id="_interesting__loop_8py_source_1l00064"/>00064 
+<anchor xml:id="_interesting__loop_8py_source_1l00065"/><link linkend="_namespaceinteresting__loop_1a3220b9aa6d428c71a192094d0483cf33">00065</link> output_filename&#32;=&#32;f<emphasis role="stringliteral">&apos;outputs/interesting/whyPy_interesting_output_{modelName}_{time_stamp}.txt&apos;</emphasis>
+<anchor xml:id="_interesting__loop_8py_source_1l00066"/>00066 <emphasis role="keyword">with</emphasis>&#32;open(output_filename,&#32;<emphasis role="stringliteral">&apos;w&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;output_file:
+<anchor xml:id="_interesting__loop_8py_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;index,&#32;response&#32;<emphasis role="keywordflow">in</emphasis>&#32;indexed_responses:&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_interesting__loop_8py_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;output_file.write(f<emphasis role="stringliteral">&apos;iteration&#32;{index}:&#32;\n&#32;{response}\n\n&apos;</emphasis>)
+</programlisting></section>

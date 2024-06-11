@@ -1,0 +1,43 @@
+\doxysection{prou2.\+py File Reference}
+\hypertarget{prou2_8py}{}\label{prou2_8py}\index{prou2.py@{prou2.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceprou2}{prou2}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprou2_a499142bcdc2936338ee44be504ecdb0f}{prou2.\+respo}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{prou2.\+time\+\_\+stamp}} = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})
+\item 
+str \mbox{\hyperlink{namespaceprou2_a5d9503116a8df31f3452154978633cbd}{prou2.\+prompt}} = "{}which words or phrases do you most overuse?"{}
+\item 
+str \mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{prou2.\+model\+\_\+name}} = "{}llama3"{}
+\item 
+int \mbox{\hyperlink{namespaceprou2_ad6884cf6f2a0376b693e2d3ba12afa6d}{prou2.\+iterations}} = 10
+\item 
+float \mbox{\hyperlink{namespaceprou2_a8ac75f8fff231bf1b1b92d430b06fac3}{prou2.\+frequency\+\_\+penalty}} = 0.\+8,
+\item 
+float \mbox{\hyperlink{namespaceprou2_aaa4fe0882c633a16daee158677405aab}{prou2.\+presence\+\_\+penalty}} = 0.\+8,
+\item 
+\mbox{\hyperlink{namespaceprou2_a2a8a77a90d7b6cd77cc53529c1b86d29}{prou2.\+llm}} = Ollama(model = \mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}})
+\item 
+\mbox{\hyperlink{namespaceprou2_ab3f3df4827ee6ebea0d2cdc910024ef0}{prou2.\+response}}
+\item 
+list \mbox{\hyperlink{namespaceprou2_a09d8be55109d567b53869fa6e64f50dd}{prou2.\+responses}} = \mbox{[}\mbox{\hyperlink{namespaceprou2_ab3f3df4827ee6ebea0d2cdc910024ef0}{response}},\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceprou2_ac0ff9f8800d2df4012e8788619f6bfbe}{prou2.\+indexed\+\_\+responses}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceprou2_a13923c560151303fdf4dd956b7240c39}{prou2.\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceprou2_ac0ff9f8800d2df4012e8788619f6bfbe}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespaceprou2_ad7177cd6129b1e2636bdacdcc35e1b44}{prou2.\+df\+\_\+output\+\_\+filename}} = f\textquotesingle{}outputs/prou2\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}}\}\+\_\+\{\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{time\+\_\+stamp}}\}.csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespaceprou2_aa9321ce40b13d1a83b91fb75e539bf59}{prou2.\+index}}
+\item 
+str \mbox{\hyperlink{namespaceprou2_a2269b998d5e1bb16d072a9e677342b38}{prou2.\+output\+\_\+filename}} = f\textquotesingle{}outputs/prou2\+\_\+\{\mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}}\}\+\_\+\{\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{time\+\_\+stamp}}\}.txt\textquotesingle{}
+\end{DoxyCompactItemize}

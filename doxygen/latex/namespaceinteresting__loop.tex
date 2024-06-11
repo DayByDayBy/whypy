@@ -1,0 +1,174 @@
+\doxysection{interesting\+\_\+loop Namespace Reference}
+\hypertarget{namespaceinteresting__loop}{}\label{namespaceinteresting__loop}\index{interesting\_loop@{interesting\_loop}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ae4a271a56e90046770e0c2d14fd8aba5}{iterative\+\_\+invocation}} (initial\+\_\+prompt, re\+\_\+prompt\+\_\+base, max\+\_\+iterations)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a4bfc650a34d329f0b839dcd4244f0adf}{parser}} = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a4057d12e05400306064054c00182f77e}{type}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a5b601e31f1db9a59b9589593ea5f870b}{int}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_afe58b8a409c61e92721d9840ddcce47b}{nargs}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a73e90ec6d744759873051635bd939553}{default}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ab329b2a82c5998b75bd3645c594e237d}{help}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ad4fba10c4603a493fd05b4afefe55b0a}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a2bbf09e78028181042aa81b78c0991c2}{iterations}} = args.\+iterations
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_aec73eb1e759f194d8c4a71631f1c13ac}{impress\+\_\+prompt}} = "{}concisely convince me you\textquotesingle{}re intersting"{}
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_a5a2bed0aab916f8badd049435ad1fb0c}{impress\+\_\+re\+\_\+prompt}} = "{}show me you\textquotesingle{}re more interesting than this person\+: "{}
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}} = "{}command-\/r"{}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{time\+\_\+stamp}} = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_af42a4a6964d566ce8dcff8260f268bb0}{llm}} = Ollama(model = \mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}})
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_af4c172f587fc319d1af93450f09984c0}{responses}} = \mbox{\hyperlink{namespaceinteresting__loop_ae4a271a56e90046770e0c2d14fd8aba5}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespaceinteresting__loop_aec73eb1e759f194d8c4a71631f1c13ac}{impress\+\_\+prompt}}, \mbox{\hyperlink{namespaceinteresting__loop_a5a2bed0aab916f8badd049435ad1fb0c}{impress\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespaceinteresting__loop_a2bbf09e78028181042aa81b78c0991c2}{iterations}})
+\item 
+list \mbox{\hyperlink{namespaceinteresting__loop_af1de1c897e1db75910e48ba7ed3fd28d}{indexed\+\_\+responses}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ac33aea39935d438b0035c8b2d093cee1}{df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceinteresting__loop_af1de1c897e1db75910e48ba7ed3fd28d}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_ae9b540dbe513e6c8241e562315be0629}{df\+\_\+output\+\_\+filename}} = f\textquotesingle{}outputs/interesting/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{time\+\_\+stamp}}\}.csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a7a0816c899614d88f76f95f9c4ee3bc7}{index}}
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_a3220b9aa6d428c71a192094d0483cf33}{output\+\_\+filename}} = f\textquotesingle{}outputs/interesting/why\+Py\+\_\+interesting\+\_\+output\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{time\+\_\+stamp}}\}.txt\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceinteresting__loop_ae4a271a56e90046770e0c2d14fd8aba5}\index{interesting\_loop@{interesting\_loop}!iterative\_invocation@{iterative\_invocation}}
+\index{iterative\_invocation@{iterative\_invocation}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{iterative\_invocation()}{iterative\_invocation()}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_ae4a271a56e90046770e0c2d14fd8aba5} 
+interesting\+\_\+loop.\+iterative\+\_\+invocation (\begin{DoxyParamCaption}\item[{}]{initial\+\_\+prompt}{, }\item[{}]{re\+\_\+prompt\+\_\+base}{, }\item[{}]{max\+\_\+iterations}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceinteresting__loop_ad4fba10c4603a493fd05b4afefe55b0a}\index{interesting\_loop@{interesting\_loop}!args@{args}}
+\index{args@{args}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_ad4fba10c4603a493fd05b4afefe55b0a} 
+interesting\+\_\+loop.\+args = parser.\+parse\+\_\+args()}
+
+\Hypertarget{namespaceinteresting__loop_a73e90ec6d744759873051635bd939553}\index{interesting\_loop@{interesting\_loop}!default@{default}}
+\index{default@{default}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a73e90ec6d744759873051635bd939553} 
+interesting\+\_\+loop.\+default}
+
+\Hypertarget{namespaceinteresting__loop_ac33aea39935d438b0035c8b2d093cee1}\index{interesting\_loop@{interesting\_loop}!df@{df}}
+\index{df@{df}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_ac33aea39935d438b0035c8b2d093cee1} 
+interesting\+\_\+loop.\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceinteresting__loop_af1de1c897e1db75910e48ba7ed3fd28d}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})}
+
+\Hypertarget{namespaceinteresting__loop_ae9b540dbe513e6c8241e562315be0629}\index{interesting\_loop@{interesting\_loop}!df\_output\_filename@{df\_output\_filename}}
+\index{df\_output\_filename@{df\_output\_filename}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{df\_output\_filename}{df\_output\_filename}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_ae9b540dbe513e6c8241e562315be0629} 
+interesting\+\_\+loop.\+df\+\_\+output\+\_\+filename = f\textquotesingle{}outputs/interesting/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{time\+\_\+stamp}}\}.csv\textquotesingle{}}
+
+\Hypertarget{namespaceinteresting__loop_ab329b2a82c5998b75bd3645c594e237d}\index{interesting\_loop@{interesting\_loop}!help@{help}}
+\index{help@{help}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_ab329b2a82c5998b75bd3645c594e237d} 
+interesting\+\_\+loop.\+help}
+
+\Hypertarget{namespaceinteresting__loop_aec73eb1e759f194d8c4a71631f1c13ac}\index{interesting\_loop@{interesting\_loop}!impress\_prompt@{impress\_prompt}}
+\index{impress\_prompt@{impress\_prompt}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{impress\_prompt}{impress\_prompt}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_aec73eb1e759f194d8c4a71631f1c13ac} 
+str interesting\+\_\+loop.\+impress\+\_\+prompt = "{}concisely convince me you\textquotesingle{}re intersting"{}}
+
+\Hypertarget{namespaceinteresting__loop_a5a2bed0aab916f8badd049435ad1fb0c}\index{interesting\_loop@{interesting\_loop}!impress\_re\_prompt@{impress\_re\_prompt}}
+\index{impress\_re\_prompt@{impress\_re\_prompt}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{impress\_re\_prompt}{impress\_re\_prompt}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a5a2bed0aab916f8badd049435ad1fb0c} 
+str interesting\+\_\+loop.\+impress\+\_\+re\+\_\+prompt = "{}show me you\textquotesingle{}re more interesting than this person\+: "{}}
+
+\Hypertarget{namespaceinteresting__loop_a7a0816c899614d88f76f95f9c4ee3bc7}\index{interesting\_loop@{interesting\_loop}!index@{index}}
+\index{index@{index}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a7a0816c899614d88f76f95f9c4ee3bc7} 
+interesting\+\_\+loop.\+index}
+
+\Hypertarget{namespaceinteresting__loop_af1de1c897e1db75910e48ba7ed3fd28d}\index{interesting\_loop@{interesting\_loop}!indexed\_responses@{indexed\_responses}}
+\index{indexed\_responses@{indexed\_responses}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{indexed\_responses}{indexed\_responses}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_af1de1c897e1db75910e48ba7ed3fd28d} 
+list interesting\+\_\+loop.\+indexed\+\_\+responses = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespaceinteresting__loop_a5b601e31f1db9a59b9589593ea5f870b}\index{interesting\_loop@{interesting\_loop}!int@{int}}
+\index{int@{int}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{int}{int}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a5b601e31f1db9a59b9589593ea5f870b} 
+interesting\+\_\+loop.\+int}
+
+\Hypertarget{namespaceinteresting__loop_a2bbf09e78028181042aa81b78c0991c2}\index{interesting\_loop@{interesting\_loop}!iterations@{iterations}}
+\index{iterations@{iterations}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{iterations}{iterations}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a2bbf09e78028181042aa81b78c0991c2} 
+interesting\+\_\+loop.\+iterations = args.\+iterations}
+
+\Hypertarget{namespaceinteresting__loop_af42a4a6964d566ce8dcff8260f268bb0}\index{interesting\_loop@{interesting\_loop}!llm@{llm}}
+\index{llm@{llm}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{llm}{llm}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_af42a4a6964d566ce8dcff8260f268bb0} 
+interesting\+\_\+loop.\+llm = Ollama(model = \mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}})}
+
+\Hypertarget{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}\index{interesting\_loop@{interesting\_loop}!modelName@{modelName}}
+\index{modelName@{modelName}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{modelName}{modelName}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af} 
+str interesting\+\_\+loop.\+model\+Name = "{}command-\/r"{}}
+
+\Hypertarget{namespaceinteresting__loop_afe58b8a409c61e92721d9840ddcce47b}\index{interesting\_loop@{interesting\_loop}!nargs@{nargs}}
+\index{nargs@{nargs}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_afe58b8a409c61e92721d9840ddcce47b} 
+interesting\+\_\+loop.\+nargs}
+
+\Hypertarget{namespaceinteresting__loop_a3220b9aa6d428c71a192094d0483cf33}\index{interesting\_loop@{interesting\_loop}!output\_filename@{output\_filename}}
+\index{output\_filename@{output\_filename}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{output\_filename}{output\_filename}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a3220b9aa6d428c71a192094d0483cf33} 
+str interesting\+\_\+loop.\+output\+\_\+filename = f\textquotesingle{}outputs/interesting/why\+Py\+\_\+interesting\+\_\+output\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{time\+\_\+stamp}}\}.txt\textquotesingle{}}
+
+\Hypertarget{namespaceinteresting__loop_a4bfc650a34d329f0b839dcd4244f0adf}\index{interesting\_loop@{interesting\_loop}!parser@{parser}}
+\index{parser@{parser}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a4bfc650a34d329f0b839dcd4244f0adf} 
+interesting\+\_\+loop.\+parser = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})}
+
+\Hypertarget{namespaceinteresting__loop_af4c172f587fc319d1af93450f09984c0}\index{interesting\_loop@{interesting\_loop}!responses@{responses}}
+\index{responses@{responses}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{responses}{responses}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_af4c172f587fc319d1af93450f09984c0} 
+interesting\+\_\+loop.\+responses = \mbox{\hyperlink{namespaceinteresting__loop_ae4a271a56e90046770e0c2d14fd8aba5}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespaceinteresting__loop_aec73eb1e759f194d8c4a71631f1c13ac}{impress\+\_\+prompt}}, \mbox{\hyperlink{namespaceinteresting__loop_a5a2bed0aab916f8badd049435ad1fb0c}{impress\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespaceinteresting__loop_a2bbf09e78028181042aa81b78c0991c2}{iterations}})}
+
+\Hypertarget{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}\index{interesting\_loop@{interesting\_loop}!time\_stamp@{time\_stamp}}
+\index{time\_stamp@{time\_stamp}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{time\_stamp}{time\_stamp}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8} 
+interesting\+\_\+loop.\+time\+\_\+stamp = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})}
+
+\Hypertarget{namespaceinteresting__loop_a4057d12e05400306064054c00182f77e}\index{interesting\_loop@{interesting\_loop}!type@{type}}
+\index{type@{type}!interesting\_loop@{interesting\_loop}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{namespaceinteresting__loop_a4057d12e05400306064054c00182f77e} 
+interesting\+\_\+loop.\+type}
+

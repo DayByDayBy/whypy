@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceinteresting__loop" xml:lang="en-US">
+<title>interesting_loop Namespace Reference</title>
+<indexterm><primary>interesting_loop</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">iterative_invocation</link> (initial_prompt, re_prompt_base, max_iterations)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a4bfc650a34d329f0b839dcd4244f0adf">parser</link> = argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a4057d12e05400306064054c00182f77e">type</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a5b601e31f1db9a59b9589593ea5f870b">int</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1afe58b8a409c61e92721d9840ddcce47b">nargs</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a73e90ec6d744759873051635bd939553">default</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ab329b2a82c5998b75bd3645c594e237d">help</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ad4fba10c4603a493fd05b4afefe55b0a">args</link> = parser.parse_args()</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2">iterations</link> = args.iterations</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac">impress_prompt</link> = &quot;concisely convince me you&apos;re intersting&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c">impress_re_prompt</link> = &quot;show me you&apos;re more interesting than this person: &quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link> = &quot;command-r&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1af42a4a6964d566ce8dcff8260f268bb0">llm</link> = Ollama(model = <link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1af4c172f587fc319d1af93450f09984c0">responses</link> = <link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">iterative_invocation</link>(<link linkend="_namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac">impress_prompt</link>, <link linkend="_namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c">impress_re_prompt</link>, <link linkend="_namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2">iterations</link>)</para>
+</listitem>
+            <listitem><para>list <link linkend="_namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d">indexed_responses</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ac33aea39935d438b0035c8b2d093cee1">df</link> = pd.DataFrame(<link linkend="_namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1ae9b540dbe513e6c8241e562315be0629">df_output_filename</link> = f&apos;outputs/interesting/whyPy_df_{<link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>}_{<link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a7a0816c899614d88f76f95f9c4ee3bc7">index</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1a3220b9aa6d428c71a192094d0483cf33">output_filename</link> = f&apos;outputs/interesting/whyPy_interesting_output_{<link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>}_{<link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">time_stamp</link>}.txt&apos;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5"/><section>
+    <title>iterative_invocation()</title>
+<indexterm><primary>iterative_invocation</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>iterative_invocation</secondary></indexterm>
+<para><computeroutput>interesting_loop.iterative_invocation ( initial_prompt,  re_prompt_base,  max_iterations)</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00036">36</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespaceinteresting__loop_1ad4fba10c4603a493fd05b4afefe55b0a"/><section>
+    <title>args</title>
+<indexterm><primary>args</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>args</secondary></indexterm>
+<para><computeroutput>interesting_loop.args = parser.parse_args()</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00014">14</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a73e90ec6d744759873051635bd939553"/><section>
+    <title>default</title>
+<indexterm><primary>default</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>default</secondary></indexterm>
+<para><computeroutput>interesting_loop.default</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00013">13</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1ac33aea39935d438b0035c8b2d093cee1"/><section>
+    <title>df</title>
+<indexterm><primary>df</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>df</secondary></indexterm>
+<para><computeroutput>interesting_loop.df = pd.DataFrame(<link linkend="_namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00061">61</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1ae9b540dbe513e6c8241e562315be0629"/><section>
+    <title>df_output_filename</title>
+<indexterm><primary>df_output_filename</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>df_output_filename</secondary></indexterm>
+<para><computeroutput>interesting_loop.df_output_filename = f&apos;outputs/interesting/whyPy_df_{<link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>}_{<link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">time_stamp</link>}.csv&apos;</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00062">62</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1ab329b2a82c5998b75bd3645c594e237d"/><section>
+    <title>help</title>
+<indexterm><primary>help</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>help</secondary></indexterm>
+<para><computeroutput>interesting_loop.help</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00013">13</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac"/><section>
+    <title>impress_prompt</title>
+<indexterm><primary>impress_prompt</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>impress_prompt</secondary></indexterm>
+<para><computeroutput>str interesting_loop.impress_prompt = &quot;concisely convince me you&apos;re intersting&quot;</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00023">23</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c"/><section>
+    <title>impress_re_prompt</title>
+<indexterm><primary>impress_re_prompt</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>impress_re_prompt</secondary></indexterm>
+<para><computeroutput>str interesting_loop.impress_re_prompt = &quot;show me you&apos;re more interesting than this person: &quot;</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00024">24</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a7a0816c899614d88f76f95f9c4ee3bc7"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>interesting_loop.index</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00063">63</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d"/><section>
+    <title>indexed_responses</title>
+<indexterm><primary>indexed_responses</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>indexed_responses</secondary></indexterm>
+<para><computeroutput>list interesting_loop.indexed_responses = []</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00055">55</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a5b601e31f1db9a59b9589593ea5f870b"/><section>
+    <title>int</title>
+<indexterm><primary>int</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>int</secondary></indexterm>
+<para><computeroutput>interesting_loop.int</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00013">13</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2"/><section>
+    <title>iterations</title>
+<indexterm><primary>iterations</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>iterations</secondary></indexterm>
+<para><computeroutput>interesting_loop.iterations = args.iterations</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00016">16</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1af42a4a6964d566ce8dcff8260f268bb0"/><section>
+    <title>llm</title>
+<indexterm><primary>llm</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>llm</secondary></indexterm>
+<para><computeroutput>interesting_loop.llm = Ollama(model = <link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>)</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00033">33</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af"/><section>
+    <title>modelName</title>
+<indexterm><primary>modelName</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>modelName</secondary></indexterm>
+<para><computeroutput>str interesting_loop.modelName = &quot;command-r&quot;</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00030">30</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1afe58b8a409c61e92721d9840ddcce47b"/><section>
+    <title>nargs</title>
+<indexterm><primary>nargs</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>nargs</secondary></indexterm>
+<para><computeroutput>interesting_loop.nargs</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00013">13</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a3220b9aa6d428c71a192094d0483cf33"/><section>
+    <title>output_filename</title>
+<indexterm><primary>output_filename</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>output_filename</secondary></indexterm>
+<para><computeroutput>str interesting_loop.output_filename = f&apos;outputs/interesting/whyPy_interesting_output_{<link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>}_{<link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">time_stamp</link>}.txt&apos;</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00065">65</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a4bfc650a34d329f0b839dcd4244f0adf"/><section>
+    <title>parser</title>
+<indexterm><primary>parser</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>parser</secondary></indexterm>
+<para><computeroutput>interesting_loop.parser = argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00012">12</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1af4c172f587fc319d1af93450f09984c0"/><section>
+    <title>responses</title>
+<indexterm><primary>responses</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>responses</secondary></indexterm>
+<para><computeroutput>interesting_loop.responses = <link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">iterative_invocation</link>(<link linkend="_namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac">impress_prompt</link>, <link linkend="_namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c">impress_re_prompt</link>, <link linkend="_namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2">iterations</link>)</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00054">54</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8"/><section>
+    <title>time_stamp</title>
+<indexterm><primary>time_stamp</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>time_stamp</secondary></indexterm>
+<para><computeroutput>interesting_loop.time_stamp = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00031">31</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceinteresting__loop_1a4057d12e05400306064054c00182f77e"/><section>
+    <title>type</title>
+<indexterm><primary>type</primary><secondary>interesting_loop</secondary></indexterm>
+<indexterm><primary>interesting_loop</primary><secondary>type</secondary></indexterm>
+<para><computeroutput>interesting_loop.type</computeroutput></para><para>
+Definition at line <link linkend="_interesting__loop_8py_source_1l00013">13</link> of file <link linkend="_interesting__loop_8py_source">interesting_loop.py</link>.</para>
+</section>
+</section>
+</section>

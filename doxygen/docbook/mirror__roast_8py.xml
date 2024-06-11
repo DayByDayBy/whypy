@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mirror__roast_8py" xml:lang="en-US">
+<title>mirror_roast.py File Reference</title>
+<indexterm><primary>mirror_roast.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacemirror__roast">mirror_roast</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacemirror__roast_1a0dbfd15aceb85123da1f4d0df8cae37a">mirror_roast.initialize_output_files</link> (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacemirror__roast_1a05a0be3da9e2311ba92224ce194cc4ea">mirror_roast.log_response</link> (txt_fname, csv_fname, iteration, response)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacemirror__roast_1ac922af0bfbb72c5a1dabaf39650fb052">mirror_roast.response_generator</link> (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacemirror__roast_1a86707d3cb317f967c34a2cd2a7d53446">mirror_roast.main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

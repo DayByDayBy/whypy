@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceexplainyourself" kind="namespace" language="Python">
+    <compoundname>explainyourself</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceexplainyourself_1a47f230f3ff45fc3725a5fb66c3da3182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>explainyourself.initialize_output_files</definition>
+        <argsstring>(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)</argsstring>
+        <name>initialize_output_files</name>
+        <qualifiedname>explainyourself.initialize_output_files</qualifiedname>
+        <param>
+          <type>csv_fname</type>
+          <defname>csv_fname</defname>
+        </param>
+        <param>
+          <type>txt_fname</type>
+          <defname>txt_fname</defname>
+        </param>
+        <param>
+          <type>initial_prompt</type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type>temp</type>
+          <defname>temp</defname>
+        </param>
+        <param>
+          <type>frequency_penalty</type>
+          <defname>frequency_penalty</defname>
+        </param>
+        <param>
+          <type>presence_penalty</type>
+          <defname>presence_penalty</defname>
+        </param>
+        <param>
+          <type>model_name</type>
+          <defname>model_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="explainyourself.py" line="8" column="1" bodyfile="explainyourself.py" bodystart="8" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceexplainyourself_1a2454ba4a481423cf9e8ac1d5f428d0a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>explainyourself.log_response</definition>
+        <argsstring>(txt_fname, csv_fname, iteration, response)</argsstring>
+        <name>log_response</name>
+        <qualifiedname>explainyourself.log_response</qualifiedname>
+        <param>
+          <type>txt_fname</type>
+          <defname>txt_fname</defname>
+        </param>
+        <param>
+          <type>csv_fname</type>
+          <defname>csv_fname</defname>
+        </param>
+        <param>
+          <type>iteration</type>
+          <defname>iteration</defname>
+        </param>
+        <param>
+          <type>response</type>
+          <defname>response</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="explainyourself.py" line="22" column="1" bodyfile="explainyourself.py" bodystart="22" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceexplainyourself_1aa08c88059599a1c28c767e4b246f4320" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>explainyourself.response_generator</definition>
+        <argsstring>(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)</argsstring>
+        <name>response_generator</name>
+        <qualifiedname>explainyourself.response_generator</qualifiedname>
+        <param>
+          <type>initial_prompt</type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type>iterations</type>
+          <defname>iterations</defname>
+        </param>
+        <param>
+          <type>llm</type>
+          <defname>llm</defname>
+        </param>
+        <param>
+          <type>temp</type>
+          <defname>temp</defname>
+        </param>
+        <param>
+          <type>frequency_penalty</type>
+          <defname>frequency_penalty</defname>
+        </param>
+        <param>
+          <type>presence_penalty</type>
+          <defname>presence_penalty</defname>
+        </param>
+        <param>
+          <type>txt_fname</type>
+          <defname>txt_fname</defname>
+        </param>
+        <param>
+          <type>csv_fname</type>
+          <defname>csv_fname</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="explainyourself.py" line="32" column="1" bodyfile="explainyourself.py" bodystart="32" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceexplainyourself_1a8272001856f6ad0e38c90f9635ad2b0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>explainyourself.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>explainyourself.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="explainyourself.py" line="52" column="1" bodyfile="explainyourself.py" bodystart="52" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="explainyourself.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

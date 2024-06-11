@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceinteresting__loop" kind="namespace" language="Python">
+    <compoundname>interesting_loop</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a4bfc650a34d329f0b839dcd4244f0adf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <qualifiedname>interesting_loop.parser</qualifiedname>
+        <initializer>=  argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="12" column="1" bodyfile="interesting_loop.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a4057d12e05400306064054c00182f77e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>interesting_loop.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="13" column="1" bodyfile="interesting_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a5b601e31f1db9a59b9589593ea5f870b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.int</definition>
+        <argsstring></argsstring>
+        <name>int</name>
+        <qualifiedname>interesting_loop.int</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="13" column="1" bodyfile="interesting_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1afe58b8a409c61e92721d9840ddcce47b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.nargs</definition>
+        <argsstring></argsstring>
+        <name>nargs</name>
+        <qualifiedname>interesting_loop.nargs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="13" column="1" bodyfile="interesting_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a73e90ec6d744759873051635bd939553" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.default</definition>
+        <argsstring></argsstring>
+        <name>default</name>
+        <qualifiedname>interesting_loop.default</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="13" column="1" bodyfile="interesting_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1ab329b2a82c5998b75bd3645c594e237d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>interesting_loop.help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="13" column="1" bodyfile="interesting_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1ad4fba10c4603a493fd05b4afefe55b0a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <qualifiedname>interesting_loop.args</qualifiedname>
+        <initializer>=  parser.parse_args()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="14" column="1" bodyfile="interesting_loop.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.iterations</definition>
+        <argsstring></argsstring>
+        <name>iterations</name>
+        <qualifiedname>interesting_loop.iterations</qualifiedname>
+        <initializer>=  args.iterations</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="16" column="1" bodyfile="interesting_loop.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str interesting_loop.impress_prompt</definition>
+        <argsstring></argsstring>
+        <name>impress_prompt</name>
+        <qualifiedname>interesting_loop.impress_prompt</qualifiedname>
+        <initializer>=  &quot;concisely convince me you&apos;re intersting&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="23" column="1" bodyfile="interesting_loop.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str interesting_loop.impress_re_prompt</definition>
+        <argsstring></argsstring>
+        <name>impress_re_prompt</name>
+        <qualifiedname>interesting_loop.impress_re_prompt</qualifiedname>
+        <initializer>=  &quot;show me you&apos;re more interesting than this person: &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="24" column="1" bodyfile="interesting_loop.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str interesting_loop.modelName</definition>
+        <argsstring></argsstring>
+        <name>modelName</name>
+        <qualifiedname>interesting_loop.modelName</qualifiedname>
+        <initializer>=  &quot;command-r&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="30" column="1" bodyfile="interesting_loop.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.time_stamp</definition>
+        <argsstring></argsstring>
+        <name>time_stamp</name>
+        <qualifiedname>interesting_loop.time_stamp</qualifiedname>
+        <initializer>=  datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="31" column="1" bodyfile="interesting_loop.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1af42a4a6964d566ce8dcff8260f268bb0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.llm</definition>
+        <argsstring></argsstring>
+        <name>llm</name>
+        <qualifiedname>interesting_loop.llm</qualifiedname>
+        <initializer>=  Ollama(model = <ref refid="namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af" kindref="member">modelName</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="33" column="1" bodyfile="interesting_loop.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1af4c172f587fc319d1af93450f09984c0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.responses</definition>
+        <argsstring></argsstring>
+        <name>responses</name>
+        <qualifiedname>interesting_loop.responses</qualifiedname>
+        <initializer>=  <ref refid="namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5" kindref="member">iterative_invocation</ref>(<ref refid="namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac" kindref="member">impress_prompt</ref>, <ref refid="namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c" kindref="member">impress_re_prompt</ref>, <ref refid="namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2" kindref="member">iterations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="54" column="1" bodyfile="interesting_loop.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list interesting_loop.indexed_responses</definition>
+        <argsstring></argsstring>
+        <name>indexed_responses</name>
+        <qualifiedname>interesting_loop.indexed_responses</qualifiedname>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="55" column="1" bodyfile="interesting_loop.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1ac33aea39935d438b0035c8b2d093cee1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.df</definition>
+        <argsstring></argsstring>
+        <name>df</name>
+        <qualifiedname>interesting_loop.df</qualifiedname>
+        <initializer>=  pd.DataFrame(<ref refid="namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d" kindref="member">indexed_responses</ref>, columns=[&apos;Index&apos;, &apos;Response&apos;])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="61" column="1" bodyfile="interesting_loop.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1ae9b540dbe513e6c8241e562315be0629" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>interesting_loop.df_output_filename</definition>
+        <argsstring></argsstring>
+        <name>df_output_filename</name>
+        <qualifiedname>interesting_loop.df_output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/interesting/whyPy_df_{<ref refid="namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af" kindref="member">modelName</ref>}_{<ref refid="namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8" kindref="member">time_stamp</ref>}.csv&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="62" column="1" bodyfile="interesting_loop.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a7a0816c899614d88f76f95f9c4ee3bc7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>interesting_loop.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>interesting_loop.index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="63" column="1" bodyfile="interesting_loop.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceinteresting__loop_1a3220b9aa6d428c71a192094d0483cf33" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str interesting_loop.output_filename</definition>
+        <argsstring></argsstring>
+        <name>output_filename</name>
+        <qualifiedname>interesting_loop.output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/interesting/whyPy_interesting_output_{<ref refid="namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af" kindref="member">modelName</ref>}_{<ref refid="namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8" kindref="member">time_stamp</ref>}.txt&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="65" column="1" bodyfile="interesting_loop.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>interesting_loop.iterative_invocation</definition>
+        <argsstring>(initial_prompt, re_prompt_base, max_iterations)</argsstring>
+        <name>iterative_invocation</name>
+        <qualifiedname>interesting_loop.iterative_invocation</qualifiedname>
+        <param>
+          <type>initial_prompt</type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type>re_prompt_base</type>
+          <defname>re_prompt_base</defname>
+        </param>
+        <param>
+          <type>max_iterations</type>
+          <defname>max_iterations</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interesting_loop.py" line="36" column="1" bodyfile="interesting_loop.py" bodystart="36" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="interesting_loop.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

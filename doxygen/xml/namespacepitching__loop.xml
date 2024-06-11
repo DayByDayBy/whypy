@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespacepitching__loop" kind="namespace" language="Python">
+    <compoundname>pitching_loop</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacepitching__loop_1a90a0aea4f98de78c9c8893bad538c68b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <qualifiedname>pitching_loop.parser</qualifiedname>
+        <initializer>=  argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="12" column="1" bodyfile="pitching_loop.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1acd9848894558a3121ffb8304fe3ac043" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>pitching_loop.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="13" column="1" bodyfile="pitching_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1ad637c32101462130ba284b241520e2b8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.int</definition>
+        <argsstring></argsstring>
+        <name>int</name>
+        <qualifiedname>pitching_loop.int</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="13" column="1" bodyfile="pitching_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a989f63cabf71e49f3a140ec1295cc822" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.nargs</definition>
+        <argsstring></argsstring>
+        <name>nargs</name>
+        <qualifiedname>pitching_loop.nargs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="13" column="1" bodyfile="pitching_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a811b991e7a586f124d7775137fc2e14f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.default</definition>
+        <argsstring></argsstring>
+        <name>default</name>
+        <qualifiedname>pitching_loop.default</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="13" column="1" bodyfile="pitching_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1aa8bdded0b6e23a4d6ff50fa9a4d92847" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>pitching_loop.help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="13" column="1" bodyfile="pitching_loop.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1ad86819aa007ada6310c3299396b3cf93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <qualifiedname>pitching_loop.args</qualifiedname>
+        <initializer>=  parser.parse_args()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="14" column="1" bodyfile="pitching_loop.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.iterations</definition>
+        <argsstring></argsstring>
+        <name>iterations</name>
+        <qualifiedname>pitching_loop.iterations</qualifiedname>
+        <initializer>=  args.iterations</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="16" column="1" bodyfile="pitching_loop.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str pitching_loop.pitch_prompt</definition>
+        <argsstring></argsstring>
+        <name>pitch_prompt</name>
+        <qualifiedname>pitching_loop.pitch_prompt</qualifiedname>
+        <initializer>=  &quot;pitch me an original idea for a movie&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="19" column="1" bodyfile="pitching_loop.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a6354850bfe2f390a8237fca038623681" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str pitching_loop.pitch_re_prompt</definition>
+        <argsstring></argsstring>
+        <name>pitch_re_prompt</name>
+        <qualifiedname>pitching_loop.pitch_re_prompt</qualifiedname>
+        <initializer>=  &apos;pitch me a better movie than this one: &apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="20" column="1" bodyfile="pitching_loop.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str pitching_loop.model_name</definition>
+        <argsstring></argsstring>
+        <name>model_name</name>
+        <qualifiedname>pitching_loop.model_name</qualifiedname>
+        <initializer>=  &quot;mistral&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="30" column="1" bodyfile="pitching_loop.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1ab0916613600790ead026314753130e95" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.time_stamp</definition>
+        <argsstring></argsstring>
+        <name>time_stamp</name>
+        <qualifiedname>pitching_loop.time_stamp</qualifiedname>
+        <initializer>=  datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="31" column="1" bodyfile="pitching_loop.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1aae28f1802f549cc7ee4745d70c7e1710" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.llm</definition>
+        <argsstring></argsstring>
+        <name>llm</name>
+        <qualifiedname>pitching_loop.llm</qualifiedname>
+        <initializer>=  Ollama(model = <ref refid="namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d" kindref="member">model_name</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="33" column="1" bodyfile="pitching_loop.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float pitching_loop.temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <qualifiedname>pitching_loop.temp</qualifiedname>
+        <initializer>=  0.7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="34" column="1" bodyfile="pitching_loop.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a9b65cf563720359603ceb4ed90769694" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacepitching__loop_1ad637c32101462130ba284b241520e2b8" kindref="member">int</ref></type>
+        <definition>int pitching_loop.max_t</definition>
+        <argsstring></argsstring>
+        <name>max_t</name>
+        <qualifiedname>pitching_loop.max_t</qualifiedname>
+        <initializer>=  100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="35" column="1" bodyfile="pitching_loop.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a9d2b3bf94ec3ae9d460b27ca1648ee0e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float pitching_loop.freq_penalty</definition>
+        <argsstring></argsstring>
+        <name>freq_penalty</name>
+        <qualifiedname>pitching_loop.freq_penalty</qualifiedname>
+        <initializer>= 0.7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="36" column="1" bodyfile="pitching_loop.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a108554aa06aa8994e000b4e0302cac13" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float pitching_loop.pres_penalty</definition>
+        <argsstring></argsstring>
+        <name>pres_penalty</name>
+        <qualifiedname>pitching_loop.pres_penalty</qualifiedname>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="37" column="1" bodyfile="pitching_loop.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a7afd06e8970eacfa22ab9c00e4ad1824" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.responses</definition>
+        <argsstring></argsstring>
+        <name>responses</name>
+        <qualifiedname>pitching_loop.responses</qualifiedname>
+        <initializer>=  <ref refid="namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa" kindref="member">iterative_invocation</ref>(<ref refid="namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73" kindref="member">pitch_prompt</ref>, <ref refid="namespacepitching__loop_1a6354850bfe2f390a8237fca038623681" kindref="member">pitch_re_prompt</ref>, <ref refid="namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637" kindref="member">iterations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="62" column="1" bodyfile="pitching_loop.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list pitching_loop.indexed_responses</definition>
+        <argsstring></argsstring>
+        <name>indexed_responses</name>
+        <qualifiedname>pitching_loop.indexed_responses</qualifiedname>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="63" column="1" bodyfile="pitching_loop.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1aea9e967a622b96826324a437dab60119" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.df</definition>
+        <argsstring></argsstring>
+        <name>df</name>
+        <qualifiedname>pitching_loop.df</qualifiedname>
+        <initializer>=  pd.DataFrame(<ref refid="namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea" kindref="member">indexed_responses</ref>, columns=[&apos;Index&apos;, &apos;Response&apos;])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="69" column="1" bodyfile="pitching_loop.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1ade50c445407952b5943dff49402d0150" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>pitching_loop.df_output_filename</definition>
+        <argsstring></argsstring>
+        <name>df_output_filename</name>
+        <qualifiedname>pitching_loop.df_output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/pitching/whyPy_df_{<ref refid="namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d" kindref="member">model_name</ref>}_temp{<ref refid="namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704" kindref="member">temp</ref>}_{<ref refid="namespacepitching__loop_1ab0916613600790ead026314753130e95" kindref="member">time_stamp</ref>}.csv&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="70" column="1" bodyfile="pitching_loop.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a416be6b378478cec32793e6120a9d0c9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pitching_loop.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>pitching_loop.index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="71" column="1" bodyfile="pitching_loop.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacepitching__loop_1a9a6d7ec56b62fd3780dbc5fa233a5d0f" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str pitching_loop.output_filename</definition>
+        <argsstring></argsstring>
+        <name>output_filename</name>
+        <qualifiedname>pitching_loop.output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/pitching/whyPy_pitching_output_{<ref refid="namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d" kindref="member">model_name</ref>}_temp{<ref refid="namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704" kindref="member">temp</ref>}_{<ref refid="namespacepitching__loop_1ab0916613600790ead026314753130e95" kindref="member">time_stamp</ref>}.txt&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="73" column="1" bodyfile="pitching_loop.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pitching_loop.iterative_invocation</definition>
+        <argsstring>(initial_prompt, re_prompt_base, max_iterations)</argsstring>
+        <name>iterative_invocation</name>
+        <qualifiedname>pitching_loop.iterative_invocation</qualifiedname>
+        <param>
+          <type>initial_prompt</type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type>re_prompt_base</type>
+          <defname>re_prompt_base</defname>
+        </param>
+        <param>
+          <type>max_iterations</type>
+          <defname>max_iterations</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pitching_loop.py" line="39" column="1" bodyfile="pitching_loop.py" bodystart="39" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pitching_loop.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_prou2_8py" xml:lang="en-US">
+<title>prou2.py File Reference</title>
+<indexterm><primary>prou2.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceprou2">prou2</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f">prou2.respo</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">prou2.time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1a5d9503116a8df31f3452154978633cbd">prou2.prompt</link> = &quot;which words or phrases do you most overuse?&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">prou2.model_name</link> = &quot;llama3&quot;</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespaceprou2_1ad6884cf6f2a0376b693e2d3ba12afa6d">prou2.iterations</link> = 10</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespaceprou2_1a8ac75f8fff231bf1b1b92d430b06fac3">prou2.frequency_penalty</link> = 0.8,</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespaceprou2_1aaa4fe0882c633a16daee158677405aab">prou2.presence_penalty</link> = 0.8,</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1a2a8a77a90d7b6cd77cc53529c1b86d29">prou2.llm</link> = Ollama(model = <link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0">prou2.response</link></para>
+</listitem>
+            <listitem><para>list <link linkend="_namespaceprou2_1a09d8be55109d567b53869fa6e64f50dd">prou2.responses</link> = [<link linkend="_namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0">response</link>,]</para>
+</listitem>
+            <listitem><para>list <link linkend="_namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe">prou2.indexed_responses</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1a13923c560151303fdf4dd956b7240c39">prou2.df</link> = pd.DataFrame(<link linkend="_namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1ad7177cd6129b1e2636bdacdcc35e1b44">prou2.df_output_filename</link> = f&apos;outputs/prou2_df_{<link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>}_{<link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1aa9321ce40b13d1a83b91fb75e539bf59">prou2.index</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1a2269b998d5e1bb16d072a9e677342b38">prou2.output_filename</link> = f&apos;outputs/prou2_{<link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>}_{<link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">time_stamp</link>}.txt&apos;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

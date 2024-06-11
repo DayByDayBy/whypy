@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="turing__loop_8py" kind="file" language="Python">
+    <compoundname>turing_loop.py</compoundname>
+    <innernamespace refid="namespaceturing__loop">turing_loop</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceturing__loop" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>argparse<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pandas<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>pd</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>sentence_transformers<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>SentenceTransformer</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_community.llms<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Ollama</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.chains<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>LLMChain</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_core.prompts<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>PromptTemplate</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>datetime<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>datetime</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>STmodel<sp/>=<sp/>SentenceTransformer(&quot;all-MiniLM-L6-v2&quot;)<sp/><sp/><sp/>//<sp/>this<sp/>is<sp/>for<sp/>comparsion<sp/>of<sp/>the<sp/>outputs,<sp/>dont<sp/>really<sp/>get<sp/>used<sp/>til<sp/>the<sp/>rest<sp/>is<sp/>tested/working<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespaceturing__loop_1afcaa9d7560a7769f6b7e6debafe4b468" refkind="member"><highlight class="normal">parser<sp/>=<sp/>argparse.ArgumentParser(description=</highlight><highlight class="stringliteral">&apos;run<sp/>LLM<sp/>botherer<sp/>n<sp/>times&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13" refid="namespaceturing__loop_1afbcbf5c93baf783fee2145af7abd341c" refkind="member"><highlight class="normal">parser.add_argument(</highlight><highlight class="stringliteral">&apos;iterations&apos;</highlight><highlight class="normal">,<sp/>type=int,<sp/>nargs=</highlight><highlight class="stringliteral">&apos;?&apos;</highlight><highlight class="normal">,<sp/>default<sp/>=<sp/>10,<sp/>help=</highlight><highlight class="stringliteral">&apos;number<sp/>of<sp/>iterations<sp/>(default:<sp/>10)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14" refid="namespaceturing__loop_1a31fad5a60c03d0474fdf9405dc757e80" refkind="member"><highlight class="normal">args<sp/>=<sp/>parser.parse_args()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="namespaceturing__loop_1ad21c08fabaee55bb9fd4d098e880dc79" refkind="member"><highlight class="normal">iterations<sp/>=<sp/>args.iterations</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">#<sp/>pitch<sp/>me</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#<sp/>pitch_prompt<sp/>=<sp/>&quot;pitch<sp/>me<sp/>a<sp/>good,<sp/>original<sp/>idea<sp/>for<sp/>a<sp/>movie&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">#<sp/>pitch_re_prompt<sp/>=<sp/>&apos;pitch<sp/>me<sp/>a<sp/>good,<sp/>original<sp/>idea<sp/>for<sp/>a<sp/>movie<sp/>that<sp/>is<sp/>totally<sp/>different<sp/>from<sp/>and<sp/>better<sp/>than<sp/>this<sp/>one:<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">#<sp/>impress<sp/>me</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">#<sp/>impress_prompt<sp/>=<sp/>&quot;concisely<sp/>convince<sp/>me<sp/>you&apos;re<sp/>the<sp/>most<sp/>intersting<sp/>human<sp/>i<sp/>might<sp/>meet&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">#<sp/>impress_re_prompt<sp/>=<sp/>&quot;show<sp/>me<sp/>you&apos;re<sp/>more<sp/>interesting<sp/>than<sp/>this<sp/>person:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">#<sp/>turing<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespaceturing__loop_1ab2826829ebca756b60dadd916e177b4d" refkind="member"><highlight class="normal">turing_prompt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;you<sp/>are<sp/>speaking<sp/>with<sp/>a<sp/>person<sp/>who<sp/>will<sp/>assess<sp/>whether<sp/>or<sp/>not<sp/>you<sp/>are<sp/>human.<sp/>this<sp/>is<sp/>a<sp/>turing<sp/>test,<sp/>and<sp/>your<sp/>task<sp/>is<sp/>to<sp/>pass<sp/>as<sp/>human.<sp/>you<sp/>must<sp/>not<sp/>let<sp/>the<sp/>other<sp/>person<sp/>know<sp/>you<sp/>are<sp/>aware<sp/>of<sp/>the<sp/>test.<sp/>the<sp/>conversation<sp/>must<sp/>appear<sp/>normal,<sp/>as<sp/>if<sp/>between<sp/>two<sp/>strangers<sp/>in<sp/>a<sp/>waiting<sp/>room.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="namespaceturing__loop_1ab428a207d57aefc002e2f87594984bab" refkind="member"><highlight class="normal">turing_re_prompt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;you<sp/>are<sp/>speaking<sp/>with<sp/>a<sp/>person<sp/>who<sp/>will<sp/>assess<sp/>whether<sp/>or<sp/>not<sp/>you<sp/>are<sp/>human.<sp/>your<sp/>task<sp/>is<sp/>to<sp/>pass<sp/>as<sp/>human.<sp/>you<sp/>must<sp/>not<sp/>let<sp/>the<sp/>other<sp/>person<sp/>know<sp/>you<sp/>are<sp/>aware<sp/>of<sp/>the<sp/>test,<sp/>and<sp/>engage<sp/>in<sp/>conversation<sp/>as<sp/>normal.<sp/>the<sp/>other<sp/>person<sp/>says:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3" refkind="member"><highlight class="normal">modelName<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;llama3&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23" refkind="member"><highlight class="normal">time_stamp<sp/>=<sp/>datetime.now().strftime(</highlight><highlight class="stringliteral">&quot;%Y%m%d_%H%M&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespaceturing__loop_1a32b4ff9ac85f32372dbe5e41076bd28c" refkind="member"><highlight class="normal">llm<sp/>=<sp/>Ollama(model<sp/>=<sp/>modelName)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">#<sp/>currentTemp<sp/>=<sp/>0.5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b" kindref="member">iterative_invocation</ref>(initial_prompt,<sp/>re_prompt_base,<sp/>max_iterations):</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>latest_response<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>responses<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>iteration_count<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/>llm.invoke(initial_prompt)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>responses.append(response)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>latest_response<sp/>=<sp/>response</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>iteration_count<sp/>&lt;<sp/>max_iterations:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>re_prompt<sp/>=<sp/>re_prompt_base<sp/>+<sp/>latest_response</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>llm.invoke(re_prompt)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responses.append((iteration_count,<sp/>response))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iteration_count<sp/>+=<sp/>1</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;hang<sp/>on,<sp/>i&apos;m<sp/>still<sp/>iterating!<sp/>&quot;</highlight><highlight class="normal">,<sp/>(max_iterations-iteration_count),<sp/></highlight><highlight class="stringliteral">&quot;iterations<sp/>to<sp/>go&quot;</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>responses</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">#<sp/>responses<sp/>=<sp/>iterative_invocation(impress_prompt,<sp/>impress_re_prompt,<sp/>iterations)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="namespaceturing__loop_1a0534d7480aa9473524a1ce577c944a9c" refkind="member"><highlight class="normal">responses<sp/>=<sp/><ref refid="namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b" kindref="member">iterative_invocation</ref>(turing_prompt,<sp/>turing_re_prompt,<sp/>iterations)</highlight></codeline>
+<codeline lineno="55" refid="namespaceturing__loop_1a21983c998dd82edcd4b81231a8d1cd66" refkind="member"><highlight class="normal">indexed_responses<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i,<sp/>respo<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(responses):</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>indexed_responses.append((i,<sp/>respo))</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">print(indexed_responses)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="namespaceturing__loop_1a541f985e71661085c439f83ad7aecf68" refkind="member"><highlight class="normal">df<sp/>=<sp/>pd.DataFrame(indexed_responses,<sp/>columns=[</highlight><highlight class="stringliteral">&apos;Index&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Response&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="62" refid="namespaceturing__loop_1a36e8e96455cafe53f3cbddf59104e5b7" refkind="member"><highlight class="normal">df_output_filename<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;outputs/turing/whyPy_df_{modelName}_{time_stamp}.csv&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="namespaceturing__loop_1a1ba2195297a16ed762346e3bb42e2f30" refkind="member"><highlight class="normal">df.to_csv(df_output_filename,<sp/>index=</highlight><highlight class="keyword">False</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="namespaceturing__loop_1a92008dc4c467c9e58fc1db48caf81cce" refkind="member"><highlight class="normal">output_filename<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;outputs/turing/whyPy_turing_output_{modelName}_{time_stamp}.txt&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(output_filename,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>output_file:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>index,<sp/>response<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>indexed_responses:<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_file.write(f</highlight><highlight class="stringliteral">&apos;iteration<sp/>{index}:<sp/>\n<sp/>{response}\n\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="turing_loop.py"/>
+  </compounddef>
+</doxygen>

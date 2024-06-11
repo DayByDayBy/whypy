@@ -1,0 +1,51 @@
+\chapter{whypy}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{whypy@{whypy}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{an iterative LLM-\/botherer}{an iterative LLM-\/botherer}}\label{md__r_e_a_d_m_e_autotoc_md1}
+iteratively invoking Large Language Models (LLM) using Ollama via {\ttfamily langchain\+\_\+community} package\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{\texorpdfstring{Scripts}{Scripts}}\label{md__r_e_a_d_m_e_autotoc_md2}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{1. {\ttfamily \+\_\+loop.\+py}}{1. {\ttfamily \+\_\+loop.\+py}}}\label{md__r_e_a_d_m_e_autotoc_md3}
+iteratively invoke an LLM with different prompts\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{2. {\ttfamily explainyourself.\+py}}{2. {\ttfamily explainyourself.\+py}}}\label{md__r_e_a_d_m_e_autotoc_md4}
+iteratively prompts an LLM to explain itself. saves the responses in csv and txt file formats.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{Requirements}{Requirements}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Python 3.\+x
+\item Packages\+: {\ttfamily argparse}, {\ttfamily pandas}, {\ttfamily langchain\+\_\+community}, {\ttfamily langchain}, {\ttfamily langchain\+\_\+core}
+\end{DoxyItemize}
+
+install the required packages using pip\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ argparse\ pandas\ langchain\_community}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item clone the repo or copy the script to your local machine.
+\item run the script with the desired number of iterations\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ loop.py\ [iterations]}
+
+\end{DoxyCode}
+
+
+(if no iterations are given, the script defaults to 10)
+
+output files will be saved in the {\ttfamily outputs/pitching} directory with a filename format that includes the model name, temperature, and a timestamp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ explainyourself.py}
+
+\end{DoxyCode}
+
+
+output files will be saved in the {\ttfamily outputs/explain} directory with filenames that include the model name and a timestamp.
+
+\DoxyHorRuler{0}
+ 

@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceprou" kind="namespace" language="Python">
+    <compoundname>prou</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prou.time_stamp</definition>
+        <argsstring></argsstring>
+        <name>time_stamp</name>
+        <qualifiedname>prou.time_stamp</qualifiedname>
+        <initializer>=  datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="11" column="1" bodyfile="prou.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1af07321498c89e197b96d4538c3157ec6" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str prou.initial_prompt</definition>
+        <argsstring></argsstring>
+        <name>initial_prompt</name>
+        <qualifiedname>prou.initial_prompt</qualifiedname>
+        <initializer>=  &quot;what do you consider the most overrated virtue?&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="13" column="1" bodyfile="prou.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str prou.model_name</definition>
+        <argsstring></argsstring>
+        <name>model_name</name>
+        <qualifiedname>prou.model_name</qualifiedname>
+        <initializer>=  &quot;llama3&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="15" column="1" bodyfile="prou.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1ad88cb933c3f4f32d05977d3800955885" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prou.iterations</definition>
+        <argsstring></argsstring>
+        <name>iterations</name>
+        <qualifiedname>prou.iterations</qualifiedname>
+        <initializer>=  300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="16" column="1" bodyfile="prou.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1af5b5b0dd5ccbb3bcd790ed6b5bd05459" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float prou.temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <qualifiedname>prou.temp</qualifiedname>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="17" column="1" bodyfile="prou.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1ae57357985c743c74980e1a750036a120" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prou.frequency_penalty</definition>
+        <argsstring></argsstring>
+        <name>frequency_penalty</name>
+        <qualifiedname>prou.frequency_penalty</qualifiedname>
+        <initializer>=  np.float32(0.9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="18" column="1" bodyfile="prou.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1aae9369a204404515e5ed5b2320ecf09e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prou.presence_penalty</definition>
+        <argsstring></argsstring>
+        <name>presence_penalty</name>
+        <qualifiedname>prou.presence_penalty</qualifiedname>
+        <initializer>=  np.float32(0.9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="19" column="1" bodyfile="prou.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1a1112b2251f3050b294f05bb718db3bd6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prou.llm</definition>
+        <argsstring></argsstring>
+        <name>llm</name>
+        <qualifiedname>prou.llm</qualifiedname>
+        <initializer>=  Ollama(model = <ref refid="namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d" kindref="member">model_name</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="20" column="1" bodyfile="prou.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1ab4305f86758ec7814292a6c2d84f3e8f" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str prou.df_output_filename</definition>
+        <argsstring></argsstring>
+        <name>df_output_filename</name>
+        <qualifiedname>prou.df_output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/prou/prou_df_{<ref refid="namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d" kindref="member">model_name</ref>}_{<ref refid="namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae" kindref="member">time_stamp</ref>}.csv&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="21" column="1" bodyfile="prou.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1ac37908aac1b74578607fe4c8f68da057" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str prou.output_filename</definition>
+        <argsstring></argsstring>
+        <name>output_filename</name>
+        <qualifiedname>prou.output_filename</qualifiedname>
+        <initializer>=  f&apos;outputs/prou/prou_{<ref refid="namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d" kindref="member">model_name</ref>}_{<ref refid="namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae" kindref="member">time_stamp</ref>}.txt&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="22" column="1" bodyfile="prou.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1a0413ee758f9f548a4ddc5d81fecea261" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prou.returned_responses</definition>
+        <argsstring></argsstring>
+        <name>returned_responses</name>
+        <qualifiedname>prou.returned_responses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="62" column="1" bodyfile="prou.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceprou_1a3381d974a4c234dddcb38fae8e9343d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prou.indexed_responses</definition>
+        <argsstring></argsstring>
+        <name>indexed_responses</name>
+        <qualifiedname>prou.indexed_responses</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="62" column="1" bodyfile="prou.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceprou_1adad796204d78a09573d2f3faa4636e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prou.respo</definition>
+        <argsstring>(initial_prompt, iterations)</argsstring>
+        <name>respo</name>
+        <qualifiedname>prou.respo</qualifiedname>
+        <param>
+          <type><ref refid="namespaceprou_1af07321498c89e197b96d4538c3157ec6" kindref="member">initial_prompt</ref></type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceprou_1ad88cb933c3f4f32d05977d3800955885" kindref="member">iterations</ref></type>
+          <defname>iterations</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="prou.py" line="26" column="1" bodyfile="prou.py" bodystart="26" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="prou.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

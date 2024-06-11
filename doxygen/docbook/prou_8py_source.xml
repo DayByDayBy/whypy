@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_prou_8py_source" xml:lang="en-US">
+<title>prou.py</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_prou_8py_source_1l00001"/><link linkend="_namespaceprou">00001</link> <emphasis role="keyword">import</emphasis>&#32;time
+<anchor xml:id="_prou_8py_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;pandas&#32;<emphasis role="keyword">as</emphasis>&#32;pd
+<anchor xml:id="_prou_8py_source_1l00003"/>00003 <emphasis role="keyword">import</emphasis>&#32;numpy&#32;<emphasis role="keyword">as</emphasis>&#32;np
+<anchor xml:id="_prou_8py_source_1l00004"/>00004 <emphasis role="comment">#&#32;import&#32;matplotlib.pyplot&#32;as&#32;plt</emphasis>
+<anchor xml:id="_prou_8py_source_1l00005"/>00005 <emphasis role="keyword">from</emphasis>&#32;sentence_transformers&#32;<emphasis role="keyword">import</emphasis>&#32;SentenceTransformer
+<anchor xml:id="_prou_8py_source_1l00006"/>00006 <emphasis role="keyword">from</emphasis>&#32;langchain_community.llms&#32;<emphasis role="keyword">import</emphasis>&#32;Ollama
+<anchor xml:id="_prou_8py_source_1l00007"/>00007 <emphasis role="comment">#&#32;from&#32;langchain.chains&#32;import&#32;LLMChain</emphasis>
+<anchor xml:id="_prou_8py_source_1l00008"/>00008 <emphasis role="keyword">from</emphasis>&#32;langchain_core.prompts&#32;<emphasis role="keyword">import</emphasis>&#32;PromptTemplate
+<anchor xml:id="_prou_8py_source_1l00009"/>00009 <emphasis role="keyword">from</emphasis>&#32;datetime&#32;<emphasis role="keyword">import</emphasis>&#32;datetime
+<anchor xml:id="_prou_8py_source_1l00010"/>00010 
+<anchor xml:id="_prou_8py_source_1l00011"/><link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">00011</link> time_stamp&#32;=&#32;datetime.now().strftime(<emphasis role="stringliteral">&quot;%Y%m%d_%H%M&quot;</emphasis>)
+<anchor xml:id="_prou_8py_source_1l00012"/>00012 
+<anchor xml:id="_prou_8py_source_1l00013"/><link linkend="_namespaceprou_1af07321498c89e197b96d4538c3157ec6">00013</link> initial_prompt&#32;=&#32;<emphasis role="stringliteral">&quot;what&#32;do&#32;you&#32;consider&#32;the&#32;most&#32;overrated&#32;virtue?&quot;</emphasis>
+<anchor xml:id="_prou_8py_source_1l00014"/>00014 
+<anchor xml:id="_prou_8py_source_1l00015"/><link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">00015</link> model_name&#32;=&#32;<emphasis role="stringliteral">&quot;llama3&quot;</emphasis>
+<anchor xml:id="_prou_8py_source_1l00016"/><link linkend="_namespaceprou_1ad88cb933c3f4f32d05977d3800955885">00016</link> iterations&#32;=&#32;300
+<anchor xml:id="_prou_8py_source_1l00017"/><link linkend="_namespaceprou_1af5b5b0dd5ccbb3bcd790ed6b5bd05459">00017</link> temp&#32;=&#32;0.6
+<anchor xml:id="_prou_8py_source_1l00018"/><link linkend="_namespaceprou_1ae57357985c743c74980e1a750036a120">00018</link> frequency_penalty&#32;=&#32;np.float32(0.9)
+<anchor xml:id="_prou_8py_source_1l00019"/><link linkend="_namespaceprou_1aae9369a204404515e5ed5b2320ecf09e">00019</link> presence_penalty&#32;=&#32;np.float32(0.9)
+<anchor xml:id="_prou_8py_source_1l00020"/><link linkend="_namespaceprou_1a1112b2251f3050b294f05bb718db3bd6">00020</link> llm&#32;=&#32;Ollama(model&#32;=&#32;model_name)
+<anchor xml:id="_prou_8py_source_1l00021"/><link linkend="_namespaceprou_1ab4305f86758ec7814292a6c2d84f3e8f">00021</link> df_output_filename&#32;=&#32;f<emphasis role="stringliteral">&apos;outputs/prou/prou_df_{model_name}_{time_stamp}.csv&apos;</emphasis>
+<anchor xml:id="_prou_8py_source_1l00022"/><link linkend="_namespaceprou_1ac37908aac1b74578607fe4c8f68da057">00022</link> output_filename&#32;=&#32;f<emphasis role="stringliteral">&apos;outputs/prou/prou_{model_name}_{time_stamp}.txt&apos;</emphasis>
+<anchor xml:id="_prou_8py_source_1l00023"/>00023 
+<anchor xml:id="_prou_8py_source_1l00024"/>00024 
+<anchor xml:id="_prou_8py_source_1l00025"/>00025 
+<anchor xml:id="_prou_8py_source_1l00026"/><link linkend="_namespaceprou_1adad796204d78a09573d2f3faa4636e21">00026</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceprou_1adad796204d78a09573d2f3faa4636e21">respo</link>(initial_prompt,&#32;iterations):
+<anchor xml:id="_prou_8py_source_1l00027"/>00027 &#32;&#32;&#32;&#32;responses&#32;=&#32;[]
+<anchor xml:id="_prou_8py_source_1l00028"/>00028 &#32;&#32;&#32;&#32;current_prompt&#32;=&#32;initial_prompt
+<anchor xml:id="_prou_8py_source_1l00029"/>00029 &#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&apos;starting&#32;with&#32;prompt=&quot;{initial_prompt}&quot;&#32;and&#32;{iterations}&#32;iterations&apos;</emphasis>)
+<anchor xml:id="_prou_8py_source_1l00030"/>00030 
+<anchor xml:id="_prou_8py_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(iterations):
+<anchor xml:id="_prou_8py_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&apos;iteration&#32;{i+1}/{iterations}&apos;</emphasis>)
+<anchor xml:id="_prou_8py_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">with</emphasis>&#32;open(output_filename,&#32;<emphasis role="stringliteral">&apos;w&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;txt:
+<anchor xml:id="_prou_8py_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;txt.write(f<emphasis role="stringliteral">&quot;#&#32;initial&#32;prompt:&#32;{initial_prompt}\n\n&quot;</emphasis>
+<anchor xml:id="_prou_8py_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f<emphasis role="stringliteral">&quot;temp:&#32;{temp};&#32;&#32;FP:&#32;{frequency_penalty};&#32;PP:&#32;{presence_penalty}\n\n&quot;</emphasis>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">with</emphasis>&#32;open(df_output_filename,&#32;<emphasis role="stringliteral">&apos;w&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;csv:
+<anchor xml:id="_prou_8py_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;csv.write(f<emphasis role="stringliteral">&quot;#&#32;initial&#32;prompt:&#32;{initial_prompt}\n\n&quot;</emphasis>
+<anchor xml:id="_prou_8py_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f<emphasis role="stringliteral">&quot;temp:&#32;{temp};&#32;&#32;FP:&#32;{frequency_penalty};&#32;PP:&#32;{presence_penalty}\n\n&quot;</emphasis>)&#32;
+<anchor xml:id="_prou_8py_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;response&#32;=&#32;llm.invoke(
+<anchor xml:id="_prou_8py_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;current_prompt,&#32;
+<anchor xml:id="_prou_8py_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;max_tokens=98,&#32;
+<anchor xml:id="_prou_8py_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temperature=temp,
+<anchor xml:id="_prou_8py_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frequency_penalty&#32;=&#32;float(frequency_penalty),&#32;
+<anchor xml:id="_prou_8py_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;presence_penalty&#32;=&#32;float(presence_penalty)
+<anchor xml:id="_prou_8py_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+<anchor xml:id="_prou_8py_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;responses.append([i,&#32;response,&#32;<emphasis role="stringliteral">&apos;\n\n&apos;</emphasis>])
+<anchor xml:id="_prou_8py_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;current_prompt&#32;=&#32;response
+<anchor xml:id="_prou_8py_source_1l00051"/>00051 
+<anchor xml:id="_prou_8py_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;df&#32;=&#32;pd.DataFrame(indexed_responses,&#32;columns=[<emphasis role="stringliteral">&apos;Index&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;Response&apos;</emphasis>])
+<anchor xml:id="_prou_8py_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>:&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;df.to_csv(df_output_filename,&#32;index=<emphasis role="keyword">False</emphasis>,&#32;mode=<emphasis role="stringliteral">&apos;a&apos;</emphasis>)
+<anchor xml:id="_prou_8py_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">except</emphasis>&#32;Exception&#32;<emphasis role="keyword">as</emphasis>&#32;e:
+<anchor xml:id="_prou_8py_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;error&#32;while&#32;writing&#32;to&#32;csv&#32;file:&#32;{e}&quot;</emphasis>)
+<anchor xml:id="_prou_8py_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00059"/>00059 &#32;&#32;&#32;&#32;indexed_responses&#32;=&#32;[(ip,&#32;it)&#32;<emphasis role="keywordflow">for</emphasis>&#32;ip,&#32;it&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(responses)]
+<anchor xml:id="_prou_8py_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;responses,&#32;indexed_responses
+<anchor xml:id="_prou_8py_source_1l00061"/>00061 
+<anchor xml:id="_prou_8py_source_1l00062"/><link linkend="_namespaceprou_1a3381d974a4c234dddcb38fae8e9343d6">00062</link> returned_responses,&#32;indexed_responses&#32;=&#32;<link linkend="_namespaceprou_1adad796204d78a09573d2f3faa4636e21">respo</link>(initial_prompt,&#32;iterations)
+<anchor xml:id="_prou_8py_source_1l00063"/>00063 &#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00064"/>00064 <emphasis role="keywordflow">try</emphasis>:&#32;
+<anchor xml:id="_prou_8py_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<emphasis role="keyword">with</emphasis>&#32;open(output_filename,&#32;<emphasis role="stringliteral">&apos;a&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;f:
+<anchor xml:id="_prou_8py_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f.write(f<emphasis role="stringliteral">&quot;#&#32;initial&#32;prompt:&#32;{initial_prompt}\n\n&quot;</emphasis>
+<anchor xml:id="_prou_8py_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f<emphasis role="stringliteral">&quot;temp:&#32;{temp};&#32;&#32;FP:&#32;{frequency_penalty};&#32;PP:&#32;{presence_penalty}\n\n&quot;</emphasis>)&#32;
+<anchor xml:id="_prou_8py_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;index,&#32;response&#32;<emphasis role="keywordflow">in</emphasis>&#32;indexed_responses:&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f.write(f<emphasis role="stringliteral">&apos;iteration&#32;{index}:&#32;\n&#32;{response}\n\n&apos;</emphasis>)
+<anchor xml:id="_prou_8py_source_1l00070"/>00070 <emphasis role="keywordflow">except</emphasis>&#32;Exception&#32;<emphasis role="keyword">as</emphasis>&#32;e:&#32;
+<anchor xml:id="_prou_8py_source_1l00071"/>00071 &#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;error&#32;while&#32;writing&#32;to&#32;txt&#32;file:&#32;{e}&quot;</emphasis>)
+<anchor xml:id="_prou_8py_source_1l00072"/>00072 &#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00073"/>00073 &#32;&#32;&#32;&#32;
+<anchor xml:id="_prou_8py_source_1l00074"/>00074 
+<anchor xml:id="_prou_8py_source_1l00075"/>00075 
+<anchor xml:id="_prou_8py_source_1l00076"/>00076 print(<emphasis role="stringliteral">&apos;done&apos;</emphasis>)
+</programlisting></section>

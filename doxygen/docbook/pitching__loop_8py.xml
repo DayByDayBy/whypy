@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_pitching__loop_8py" xml:lang="en-US">
+<title>pitching_loop.py File Reference</title>
+<indexterm><primary>pitching_loop.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacepitching__loop">pitching_loop</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa">pitching_loop.iterative_invocation</link> (initial_prompt, re_prompt_base, max_iterations)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacepitching__loop_1a90a0aea4f98de78c9c8893bad538c68b">pitching_loop.parser</link> = argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1acd9848894558a3121ffb8304fe3ac043">pitching_loop.type</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad637c32101462130ba284b241520e2b8">pitching_loop.int</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a989f63cabf71e49f3a140ec1295cc822">pitching_loop.nargs</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a811b991e7a586f124d7775137fc2e14f">pitching_loop.default</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1aa8bdded0b6e23a4d6ff50fa9a4d92847">pitching_loop.help</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad86819aa007ada6310c3299396b3cf93">pitching_loop.args</link> = parser.parse_args()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637">pitching_loop.iterations</link> = args.iterations</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73">pitching_loop.pitch_prompt</link> = &quot;pitch me an original idea for a movie&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1a6354850bfe2f390a8237fca038623681">pitching_loop.pitch_re_prompt</link> = &apos;pitch me a better movie than this one: &apos;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">pitching_loop.model_name</link> = &quot;mistral&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">pitching_loop.time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1aae28f1802f549cc7ee4745d70c7e1710">pitching_loop.llm</link> = Ollama(model = <link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>)</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">pitching_loop.temp</link> = 0.7</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1ad637c32101462130ba284b241520e2b8">int</link> <link linkend="_namespacepitching__loop_1a9b65cf563720359603ceb4ed90769694">pitching_loop.max_t</link> = 100</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespacepitching__loop_1a9d2b3bf94ec3ae9d460b27ca1648ee0e">pitching_loop.freq_penalty</link> = 0.7</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespacepitching__loop_1a108554aa06aa8994e000b4e0302cac13">pitching_loop.pres_penalty</link> = 0.5</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a7afd06e8970eacfa22ab9c00e4ad1824">pitching_loop.responses</link> = <link linkend="_namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa">iterative_invocation</link>(<link linkend="_namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73">pitch_prompt</link>, <link linkend="_namespacepitching__loop_1a6354850bfe2f390a8237fca038623681">pitch_re_prompt</link>, <link linkend="_namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637">iterations</link>)</para>
+</listitem>
+            <listitem><para>list <link linkend="_namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea">pitching_loop.indexed_responses</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1aea9e967a622b96826324a437dab60119">pitching_loop.df</link> = pd.DataFrame(<link linkend="_namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1ade50c445407952b5943dff49402d0150">pitching_loop.df_output_filename</link> = f&apos;outputs/pitching/whyPy_df_{<link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>}_temp{<link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">temp</link>}_{<link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespacepitching__loop_1a416be6b378478cec32793e6120a9d0c9">pitching_loop.index</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespacepitching__loop_1a9a6d7ec56b62fd3780dbc5fa233a5d0f">pitching_loop.output_filename</link> = f&apos;outputs/pitching/whyPy_pitching_output_{<link linkend="_namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d">model_name</link>}_temp{<link linkend="_namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704">temp</link>}_{<link linkend="_namespacepitching__loop_1ab0916613600790ead026314753130e95">time_stamp</link>}.txt&apos;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

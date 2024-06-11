@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="prou_8py" kind="file" language="Python">
+    <compoundname>prou.py</compoundname>
+    <innernamespace refid="namespaceprou">prou</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceprou" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>time</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pandas<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>pd</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#<sp/>import<sp/>matplotlib.pyplot<sp/>as<sp/>plt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>sentence_transformers<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>SentenceTransformer</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_community.llms<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Ollama</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">#<sp/>from<sp/>langchain.chains<sp/>import<sp/>LLMChain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_core.prompts<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>PromptTemplate</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>datetime<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>datetime</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae" refkind="member"><highlight class="normal">time_stamp<sp/>=<sp/>datetime.now().strftime(</highlight><highlight class="stringliteral">&quot;%Y%m%d_%H%M&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespaceprou_1af07321498c89e197b96d4538c3157ec6" refkind="member"><highlight class="normal">initial_prompt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;what<sp/>do<sp/>you<sp/>consider<sp/>the<sp/>most<sp/>overrated<sp/>virtue?&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d" refkind="member"><highlight class="normal">model_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;llama3&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="namespaceprou_1ad88cb933c3f4f32d05977d3800955885" refkind="member"><highlight class="normal">iterations<sp/>=<sp/>300</highlight></codeline>
+<codeline lineno="17" refid="namespaceprou_1af5b5b0dd5ccbb3bcd790ed6b5bd05459" refkind="member"><highlight class="normal">temp<sp/>=<sp/>0.6</highlight></codeline>
+<codeline lineno="18" refid="namespaceprou_1ae57357985c743c74980e1a750036a120" refkind="member"><highlight class="normal">frequency_penalty<sp/>=<sp/>np.float32(0.9)</highlight></codeline>
+<codeline lineno="19" refid="namespaceprou_1aae9369a204404515e5ed5b2320ecf09e" refkind="member"><highlight class="normal">presence_penalty<sp/>=<sp/>np.float32(0.9)</highlight></codeline>
+<codeline lineno="20" refid="namespaceprou_1a1112b2251f3050b294f05bb718db3bd6" refkind="member"><highlight class="normal">llm<sp/>=<sp/>Ollama(model<sp/>=<sp/>model_name)</highlight></codeline>
+<codeline lineno="21" refid="namespaceprou_1ab4305f86758ec7814292a6c2d84f3e8f" refkind="member"><highlight class="normal">df_output_filename<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;outputs/prou/prou_df_{model_name}_{time_stamp}.csv&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespaceprou_1ac37908aac1b74578607fe4c8f68da057" refkind="member"><highlight class="normal">output_filename<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;outputs/prou/prou_{model_name}_{time_stamp}.txt&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="namespaceprou_1adad796204d78a09573d2f3faa4636e21" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceprou_1adad796204d78a09573d2f3faa4636e21" kindref="member">respo</ref>(initial_prompt,<sp/>iterations):</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>responses<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>current_prompt<sp/>=<sp/>initial_prompt</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&apos;starting<sp/>with<sp/>prompt=&quot;{initial_prompt}&quot;<sp/>and<sp/>{iterations}<sp/>iterations&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(iterations):</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&apos;iteration<sp/>{i+1}/{iterations}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(output_filename,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>txt:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>txt.write(f</highlight><highlight class="stringliteral">&quot;#<sp/>initial<sp/>prompt:<sp/>{initial_prompt}\n\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f</highlight><highlight class="stringliteral">&quot;temp:<sp/>{temp};<sp/><sp/>FP:<sp/>{frequency_penalty};<sp/>PP:<sp/>{presence_penalty}\n\n&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(df_output_filename,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>csv:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>csv.write(f</highlight><highlight class="stringliteral">&quot;#<sp/>initial<sp/>prompt:<sp/>{initial_prompt}\n\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f</highlight><highlight class="stringliteral">&quot;temp:<sp/>{temp};<sp/><sp/>FP:<sp/>{frequency_penalty};<sp/>PP:<sp/>{presence_penalty}\n\n&quot;</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response<sp/>=<sp/>llm.invoke(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_prompt,<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_tokens=98,<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature=temp,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frequency_penalty<sp/>=<sp/>float(frequency_penalty),<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>presence_penalty<sp/>=<sp/>float(presence_penalty)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responses.append([i,<sp/>response,<sp/></highlight><highlight class="stringliteral">&apos;\n\n&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_prompt<sp/>=<sp/>response</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>df<sp/>=<sp/>pd.DataFrame(indexed_responses,<sp/>columns=[</highlight><highlight class="stringliteral">&apos;Index&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Response&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:<sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>df.to_csv(df_output_filename,<sp/>index=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,<sp/>mode=</highlight><highlight class="stringliteral">&apos;a&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>Exception<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;error<sp/>while<sp/>writing<sp/>to<sp/>csv<sp/>file:<sp/>{e}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>indexed_responses<sp/>=<sp/>[(ip,<sp/>it)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>ip,<sp/>it<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(responses)]</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>responses,<sp/>indexed_responses</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="namespaceprou_1a3381d974a4c234dddcb38fae8e9343d6" refkind="member"><highlight class="normal">returned_responses,<sp/>indexed_responses<sp/>=<sp/><ref refid="namespaceprou_1adad796204d78a09573d2f3faa4636e21" kindref="member">respo</ref>(initial_prompt,<sp/>iterations)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(output_filename,<sp/></highlight><highlight class="stringliteral">&apos;a&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>f:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f.write(f</highlight><highlight class="stringliteral">&quot;#<sp/>initial<sp/>prompt:<sp/>{initial_prompt}\n\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f</highlight><highlight class="stringliteral">&quot;temp:<sp/>{temp};<sp/><sp/>FP:<sp/>{frequency_penalty};<sp/>PP:<sp/>{presence_penalty}\n\n&quot;</highlight><highlight class="normal">)<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>index,<sp/>response<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>indexed_responses:<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f.write(f</highlight><highlight class="stringliteral">&apos;iteration<sp/>{index}:<sp/>\n<sp/>{response}\n\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>Exception<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>e:<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;error<sp/>while<sp/>writing<sp/>to<sp/>txt<sp/>file:<sp/>{e}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">print(</highlight><highlight class="stringliteral">&apos;done&apos;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="prou.py"/>
+  </compounddef>
+</doxygen>

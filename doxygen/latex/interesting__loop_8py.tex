@@ -1,0 +1,53 @@
+\doxysection{interesting\+\_\+loop.\+py File Reference}
+\hypertarget{interesting__loop_8py}{}\label{interesting__loop_8py}\index{interesting\_loop.py@{interesting\_loop.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceinteresting__loop}{interesting\+\_\+loop}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ae4a271a56e90046770e0c2d14fd8aba5}{interesting\+\_\+loop.\+iterative\+\_\+invocation}} (initial\+\_\+prompt, re\+\_\+prompt\+\_\+base, max\+\_\+iterations)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a4bfc650a34d329f0b839dcd4244f0adf}{interesting\+\_\+loop.\+parser}} = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a4057d12e05400306064054c00182f77e}{interesting\+\_\+loop.\+type}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a5b601e31f1db9a59b9589593ea5f870b}{interesting\+\_\+loop.\+int}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_afe58b8a409c61e92721d9840ddcce47b}{interesting\+\_\+loop.\+nargs}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a73e90ec6d744759873051635bd939553}{interesting\+\_\+loop.\+default}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ab329b2a82c5998b75bd3645c594e237d}{interesting\+\_\+loop.\+help}}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ad4fba10c4603a493fd05b4afefe55b0a}{interesting\+\_\+loop.\+args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a2bbf09e78028181042aa81b78c0991c2}{interesting\+\_\+loop.\+iterations}} = args.\+iterations
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_aec73eb1e759f194d8c4a71631f1c13ac}{interesting\+\_\+loop.\+impress\+\_\+prompt}} = "{}concisely convince me you\textquotesingle{}re intersting"{}
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_a5a2bed0aab916f8badd049435ad1fb0c}{interesting\+\_\+loop.\+impress\+\_\+re\+\_\+prompt}} = "{}show me you\textquotesingle{}re more interesting than this person\+: "{}
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{interesting\+\_\+loop.\+model\+Name}} = "{}command-\/r"{}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{interesting\+\_\+loop.\+time\+\_\+stamp}} = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_af42a4a6964d566ce8dcff8260f268bb0}{interesting\+\_\+loop.\+llm}} = Ollama(model = \mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}})
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_af4c172f587fc319d1af93450f09984c0}{interesting\+\_\+loop.\+responses}} = \mbox{\hyperlink{namespaceinteresting__loop_ae4a271a56e90046770e0c2d14fd8aba5}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespaceinteresting__loop_aec73eb1e759f194d8c4a71631f1c13ac}{impress\+\_\+prompt}}, \mbox{\hyperlink{namespaceinteresting__loop_a5a2bed0aab916f8badd049435ad1fb0c}{impress\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespaceinteresting__loop_a2bbf09e78028181042aa81b78c0991c2}{iterations}})
+\item 
+list \mbox{\hyperlink{namespaceinteresting__loop_af1de1c897e1db75910e48ba7ed3fd28d}{interesting\+\_\+loop.\+indexed\+\_\+responses}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_ac33aea39935d438b0035c8b2d093cee1}{interesting\+\_\+loop.\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceinteresting__loop_af1de1c897e1db75910e48ba7ed3fd28d}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_ae9b540dbe513e6c8241e562315be0629}{interesting\+\_\+loop.\+df\+\_\+output\+\_\+filename}} = f\textquotesingle{}outputs/interesting/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{time\+\_\+stamp}}\}.csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespaceinteresting__loop_a7a0816c899614d88f76f95f9c4ee3bc7}{interesting\+\_\+loop.\+index}}
+\item 
+str \mbox{\hyperlink{namespaceinteresting__loop_a3220b9aa6d428c71a192094d0483cf33}{interesting\+\_\+loop.\+output\+\_\+filename}} = f\textquotesingle{}outputs/interesting/why\+Py\+\_\+interesting\+\_\+output\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_a7661c6026932305a1e6b740a765e33af}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceinteresting__loop_aa3eaca9d077208058d0a0ea5623c6ca8}{time\+\_\+stamp}}\}.txt\textquotesingle{}
+\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.11.0" xml:lang="en-US">
+  <compound refid="namespaceexplainyourself" kind="namespace"><name>explainyourself</name>
+    <member refid="namespaceexplainyourself_1a47f230f3ff45fc3725a5fb66c3da3182" kind="function"><name>initialize_output_files</name></member>
+    <member refid="namespaceexplainyourself_1a2454ba4a481423cf9e8ac1d5f428d0a6" kind="function"><name>log_response</name></member>
+    <member refid="namespaceexplainyourself_1aa08c88059599a1c28c767e4b246f4320" kind="function"><name>response_generator</name></member>
+    <member refid="namespaceexplainyourself_1a8272001856f6ad0e38c90f9635ad2b0c" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespaceinteresting__loop" kind="namespace"><name>interesting_loop</name>
+    <member refid="namespaceinteresting__loop_1a4bfc650a34d329f0b839dcd4244f0adf" kind="variable"><name>parser</name></member>
+    <member refid="namespaceinteresting__loop_1a4057d12e05400306064054c00182f77e" kind="variable"><name>type</name></member>
+    <member refid="namespaceinteresting__loop_1a5b601e31f1db9a59b9589593ea5f870b" kind="variable"><name>int</name></member>
+    <member refid="namespaceinteresting__loop_1afe58b8a409c61e92721d9840ddcce47b" kind="variable"><name>nargs</name></member>
+    <member refid="namespaceinteresting__loop_1a73e90ec6d744759873051635bd939553" kind="variable"><name>default</name></member>
+    <member refid="namespaceinteresting__loop_1ab329b2a82c5998b75bd3645c594e237d" kind="variable"><name>help</name></member>
+    <member refid="namespaceinteresting__loop_1ad4fba10c4603a493fd05b4afefe55b0a" kind="variable"><name>args</name></member>
+    <member refid="namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2" kind="variable"><name>iterations</name></member>
+    <member refid="namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac" kind="variable"><name>impress_prompt</name></member>
+    <member refid="namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c" kind="variable"><name>impress_re_prompt</name></member>
+    <member refid="namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af" kind="variable"><name>modelName</name></member>
+    <member refid="namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8" kind="variable"><name>time_stamp</name></member>
+    <member refid="namespaceinteresting__loop_1af42a4a6964d566ce8dcff8260f268bb0" kind="variable"><name>llm</name></member>
+    <member refid="namespaceinteresting__loop_1af4c172f587fc319d1af93450f09984c0" kind="variable"><name>responses</name></member>
+    <member refid="namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d" kind="variable"><name>indexed_responses</name></member>
+    <member refid="namespaceinteresting__loop_1ac33aea39935d438b0035c8b2d093cee1" kind="variable"><name>df</name></member>
+    <member refid="namespaceinteresting__loop_1ae9b540dbe513e6c8241e562315be0629" kind="variable"><name>df_output_filename</name></member>
+    <member refid="namespaceinteresting__loop_1a7a0816c899614d88f76f95f9c4ee3bc7" kind="variable"><name>index</name></member>
+    <member refid="namespaceinteresting__loop_1a3220b9aa6d428c71a192094d0483cf33" kind="variable"><name>output_filename</name></member>
+    <member refid="namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5" kind="function"><name>iterative_invocation</name></member>
+  </compound>
+  <compound refid="namespacemirror__roast" kind="namespace"><name>mirror_roast</name>
+    <member refid="namespacemirror__roast_1a0dbfd15aceb85123da1f4d0df8cae37a" kind="function"><name>initialize_output_files</name></member>
+    <member refid="namespacemirror__roast_1a05a0be3da9e2311ba92224ce194cc4ea" kind="function"><name>log_response</name></member>
+    <member refid="namespacemirror__roast_1ac922af0bfbb72c5a1dabaf39650fb052" kind="function"><name>response_generator</name></member>
+    <member refid="namespacemirror__roast_1a86707d3cb317f967c34a2cd2a7d53446" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespacepitching__loop" kind="namespace"><name>pitching_loop</name>
+    <member refid="namespacepitching__loop_1a90a0aea4f98de78c9c8893bad538c68b" kind="variable"><name>parser</name></member>
+    <member refid="namespacepitching__loop_1acd9848894558a3121ffb8304fe3ac043" kind="variable"><name>type</name></member>
+    <member refid="namespacepitching__loop_1ad637c32101462130ba284b241520e2b8" kind="variable"><name>int</name></member>
+    <member refid="namespacepitching__loop_1a989f63cabf71e49f3a140ec1295cc822" kind="variable"><name>nargs</name></member>
+    <member refid="namespacepitching__loop_1a811b991e7a586f124d7775137fc2e14f" kind="variable"><name>default</name></member>
+    <member refid="namespacepitching__loop_1aa8bdded0b6e23a4d6ff50fa9a4d92847" kind="variable"><name>help</name></member>
+    <member refid="namespacepitching__loop_1ad86819aa007ada6310c3299396b3cf93" kind="variable"><name>args</name></member>
+    <member refid="namespacepitching__loop_1ad12bdeade9426a544b19c053ecd97637" kind="variable"><name>iterations</name></member>
+    <member refid="namespacepitching__loop_1a300a8658c74dd2b56d20040ca96e6c73" kind="variable"><name>pitch_prompt</name></member>
+    <member refid="namespacepitching__loop_1a6354850bfe2f390a8237fca038623681" kind="variable"><name>pitch_re_prompt</name></member>
+    <member refid="namespacepitching__loop_1aa23df51a43d772fb39bc7066b0dfc66d" kind="variable"><name>model_name</name></member>
+    <member refid="namespacepitching__loop_1ab0916613600790ead026314753130e95" kind="variable"><name>time_stamp</name></member>
+    <member refid="namespacepitching__loop_1aae28f1802f549cc7ee4745d70c7e1710" kind="variable"><name>llm</name></member>
+    <member refid="namespacepitching__loop_1a1fdf09996abc0f9e5890a1f88718f704" kind="variable"><name>temp</name></member>
+    <member refid="namespacepitching__loop_1a9b65cf563720359603ceb4ed90769694" kind="variable"><name>max_t</name></member>
+    <member refid="namespacepitching__loop_1a9d2b3bf94ec3ae9d460b27ca1648ee0e" kind="variable"><name>freq_penalty</name></member>
+    <member refid="namespacepitching__loop_1a108554aa06aa8994e000b4e0302cac13" kind="variable"><name>pres_penalty</name></member>
+    <member refid="namespacepitching__loop_1a7afd06e8970eacfa22ab9c00e4ad1824" kind="variable"><name>responses</name></member>
+    <member refid="namespacepitching__loop_1a8e62973dba4044c809f453ca6b93ffea" kind="variable"><name>indexed_responses</name></member>
+    <member refid="namespacepitching__loop_1aea9e967a622b96826324a437dab60119" kind="variable"><name>df</name></member>
+    <member refid="namespacepitching__loop_1ade50c445407952b5943dff49402d0150" kind="variable"><name>df_output_filename</name></member>
+    <member refid="namespacepitching__loop_1a416be6b378478cec32793e6120a9d0c9" kind="variable"><name>index</name></member>
+    <member refid="namespacepitching__loop_1a9a6d7ec56b62fd3780dbc5fa233a5d0f" kind="variable"><name>output_filename</name></member>
+    <member refid="namespacepitching__loop_1a9049849ecb7958fe925a5a2e05f684aa" kind="function"><name>iterative_invocation</name></member>
+  </compound>
+  <compound refid="namespaceprou" kind="namespace"><name>prou</name>
+    <member refid="namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae" kind="variable"><name>time_stamp</name></member>
+    <member refid="namespaceprou_1af07321498c89e197b96d4538c3157ec6" kind="variable"><name>initial_prompt</name></member>
+    <member refid="namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d" kind="variable"><name>model_name</name></member>
+    <member refid="namespaceprou_1ad88cb933c3f4f32d05977d3800955885" kind="variable"><name>iterations</name></member>
+    <member refid="namespaceprou_1af5b5b0dd5ccbb3bcd790ed6b5bd05459" kind="variable"><name>temp</name></member>
+    <member refid="namespaceprou_1ae57357985c743c74980e1a750036a120" kind="variable"><name>frequency_penalty</name></member>
+    <member refid="namespaceprou_1aae9369a204404515e5ed5b2320ecf09e" kind="variable"><name>presence_penalty</name></member>
+    <member refid="namespaceprou_1a1112b2251f3050b294f05bb718db3bd6" kind="variable"><name>llm</name></member>
+    <member refid="namespaceprou_1ab4305f86758ec7814292a6c2d84f3e8f" kind="variable"><name>df_output_filename</name></member>
+    <member refid="namespaceprou_1ac37908aac1b74578607fe4c8f68da057" kind="variable"><name>output_filename</name></member>
+    <member refid="namespaceprou_1a0413ee758f9f548a4ddc5d81fecea261" kind="variable"><name>returned_responses</name></member>
+    <member refid="namespaceprou_1a3381d974a4c234dddcb38fae8e9343d6" kind="variable"><name>indexed_responses</name></member>
+    <member refid="namespaceprou_1adad796204d78a09573d2f3faa4636e21" kind="function"><name>respo</name></member>
+  </compound>
+  <compound refid="namespaceprou2" kind="namespace"><name>prou2</name>
+    <member refid="namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952" kind="variable"><name>time_stamp</name></member>
+    <member refid="namespaceprou2_1a5d9503116a8df31f3452154978633cbd" kind="variable"><name>prompt</name></member>
+    <member refid="namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f" kind="variable"><name>model_name</name></member>
+    <member refid="namespaceprou2_1ad6884cf6f2a0376b693e2d3ba12afa6d" kind="variable"><name>iterations</name></member>
+    <member refid="namespaceprou2_1a8ac75f8fff231bf1b1b92d430b06fac3" kind="variable"><name>frequency_penalty</name></member>
+    <member refid="namespaceprou2_1aaa4fe0882c633a16daee158677405aab" kind="variable"><name>presence_penalty</name></member>
+    <member refid="namespaceprou2_1a2a8a77a90d7b6cd77cc53529c1b86d29" kind="variable"><name>llm</name></member>
+    <member refid="namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0" kind="variable"><name>response</name></member>
+    <member refid="namespaceprou2_1a09d8be55109d567b53869fa6e64f50dd" kind="variable"><name>responses</name></member>
+    <member refid="namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe" kind="variable"><name>indexed_responses</name></member>
+    <member refid="namespaceprou2_1a13923c560151303fdf4dd956b7240c39" kind="variable"><name>df</name></member>
+    <member refid="namespaceprou2_1ad7177cd6129b1e2636bdacdcc35e1b44" kind="variable"><name>df_output_filename</name></member>
+    <member refid="namespaceprou2_1aa9321ce40b13d1a83b91fb75e539bf59" kind="variable"><name>index</name></member>
+    <member refid="namespaceprou2_1a2269b998d5e1bb16d072a9e677342b38" kind="variable"><name>output_filename</name></member>
+    <member refid="namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f" kind="function"><name>respo</name></member>
+  </compound>
+  <compound refid="namespaceshocker" kind="namespace"><name>shocker</name>
+    <member refid="namespaceshocker_1af8a3252ec0b152a957973df6b69ce5da" kind="function"><name>initialize_output_files</name></member>
+    <member refid="namespaceshocker_1abca42a204cc99ed758f162c3fe75b3e3" kind="function"><name>log_response</name></member>
+    <member refid="namespaceshocker_1a99efa9d677270bbcd966238b70eeb190" kind="function"><name>response_generator</name></member>
+    <member refid="namespaceshocker_1a3f41c96a1a5d8185d002a5aaeb25e5a6" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespaceturing__loop" kind="namespace"><name>turing_loop</name>
+    <member refid="namespaceturing__loop_1afcaa9d7560a7769f6b7e6debafe4b468" kind="variable"><name>parser</name></member>
+    <member refid="namespaceturing__loop_1a42bb5cea3cf46948e6120b52bb545b30" kind="variable"><name>type</name></member>
+    <member refid="namespaceturing__loop_1a0b01a373a8ee5d2515f32b3fb09f001e" kind="variable"><name>int</name></member>
+    <member refid="namespaceturing__loop_1ada475f7a6ae29999801446f790a6220e" kind="variable"><name>nargs</name></member>
+    <member refid="namespaceturing__loop_1afbcbf5c93baf783fee2145af7abd341c" kind="variable"><name>default</name></member>
+    <member refid="namespaceturing__loop_1a104b6817ae34462e04c3ee93ce65bc45" kind="variable"><name>help</name></member>
+    <member refid="namespaceturing__loop_1a31fad5a60c03d0474fdf9405dc757e80" kind="variable"><name>args</name></member>
+    <member refid="namespaceturing__loop_1ad21c08fabaee55bb9fd4d098e880dc79" kind="variable"><name>iterations</name></member>
+    <member refid="namespaceturing__loop_1ab2826829ebca756b60dadd916e177b4d" kind="variable"><name>turing_prompt</name></member>
+    <member refid="namespaceturing__loop_1ab428a207d57aefc002e2f87594984bab" kind="variable"><name>turing_re_prompt</name></member>
+    <member refid="namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3" kind="variable"><name>modelName</name></member>
+    <member refid="namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23" kind="variable"><name>time_stamp</name></member>
+    <member refid="namespaceturing__loop_1a32b4ff9ac85f32372dbe5e41076bd28c" kind="variable"><name>llm</name></member>
+    <member refid="namespaceturing__loop_1a0534d7480aa9473524a1ce577c944a9c" kind="variable"><name>responses</name></member>
+    <member refid="namespaceturing__loop_1a21983c998dd82edcd4b81231a8d1cd66" kind="variable"><name>indexed_responses</name></member>
+    <member refid="namespaceturing__loop_1a541f985e71661085c439f83ad7aecf68" kind="variable"><name>df</name></member>
+    <member refid="namespaceturing__loop_1a36e8e96455cafe53f3cbddf59104e5b7" kind="variable"><name>df_output_filename</name></member>
+    <member refid="namespaceturing__loop_1a1ba2195297a16ed762346e3bb42e2f30" kind="variable"><name>index</name></member>
+    <member refid="namespaceturing__loop_1a92008dc4c467c9e58fc1db48caf81cce" kind="variable"><name>output_filename</name></member>
+    <member refid="namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b" kind="function"><name>iterative_invocation</name></member>
+  </compound>
+  <compound refid="explainyourself_8py" kind="file"><name>explainyourself.py</name>
+  </compound>
+  <compound refid="interesting__loop_8py" kind="file"><name>interesting_loop.py</name>
+  </compound>
+  <compound refid="mirror__roast_8py" kind="file"><name>mirror_roast.py</name>
+  </compound>
+  <compound refid="pitching__loop_8py" kind="file"><name>pitching_loop.py</name>
+  </compound>
+  <compound refid="prou_8py" kind="file"><name>prou.py</name>
+  </compound>
+  <compound refid="prou2_8py" kind="file"><name>prou2.py</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="shocker_8py" kind="file"><name>shocker.py</name>
+  </compound>
+  <compound refid="turing__loop_8py" kind="file"><name>turing_loop.py</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="prou2_8py" kind="file" language="Python">
+    <compoundname>prou2.py</compoundname>
+    <innernamespace refid="namespaceprou2">prou2</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceprou2" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>argparse<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pandas<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>pd</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>sentence_transformers<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>SentenceTransformer</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_community.llms<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Ollama</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>from<sp/>langchain.chains<sp/>import<sp/>LLMChain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_core.prompts<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>PromptTemplate</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>datetime<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>datetime</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952" refkind="member"><highlight class="normal">time_stamp<sp/>=<sp/>datetime.now().strftime(</highlight><highlight class="stringliteral">&quot;%Y%m%d_%H%M&quot;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10" refid="namespaceprou2_1a5d9503116a8df31f3452154978633cbd" refkind="member"><highlight class="normal">prompt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;which<sp/>words<sp/>or<sp/>phrases<sp/>do<sp/>you<sp/>most<sp/>overuse?&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f" refkind="member"><highlight class="normal">model_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;llama3&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespaceprou2_1ad6884cf6f2a0376b693e2d3ba12afa6d" refkind="member"><highlight class="normal">iterations<sp/>=<sp/>10</highlight></codeline>
+<codeline lineno="13" refid="namespaceprou2_1a8ac75f8fff231bf1b1b92d430b06fac3" refkind="member"><highlight class="normal">frequency_penalty<sp/>=<sp/>0.8,</highlight></codeline>
+<codeline lineno="14" refid="namespaceprou2_1aaa4fe0882c633a16daee158677405aab" refkind="member"><highlight class="normal">presence_penalty<sp/>=<sp/>0.8,</highlight></codeline>
+<codeline lineno="15" refid="namespaceprou2_1a2a8a77a90d7b6cd77cc53529c1b86d29" refkind="member"><highlight class="normal">llm<sp/>=<sp/>Ollama(model<sp/>=<sp/>model_name)</highlight></codeline>
+<codeline lineno="16" refid="namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0" refkind="member"><highlight class="normal">response<sp/>=<sp/>llm.invoke(</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>prompt,<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>max_tokens=100,<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature=0.9,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>frequency_penalty<sp/>=<sp/>0.8,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>presence_penalty<sp/>=<sp/>0.9)</highlight></codeline>
+<codeline lineno="22" refid="namespaceprou2_1a09d8be55109d567b53869fa6e64f50dd" refkind="member"><highlight class="normal">responses<sp/>=<sp/>[response,]</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f" kindref="member">respo</ref>():</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>i<sp/>&lt;<sp/>iterations:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responsed<sp/>=<sp/>llm.invoke(</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>response,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_tokens=100,<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frequency_penalty=<sp/>0.9,<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>presence_penalty=<sp/>0.9)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>responses.append([i,<sp/>responsed,<sp/></highlight><highlight class="stringliteral">&apos;\n\n&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>+=<sp/>1</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>responses<sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f" kindref="member">respo</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">print(responses)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">#<sp/>print<sp/>to<sp/>file:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe" refkind="member"><highlight class="normal">indexed_responses<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i,<sp/>r<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(responses):</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>indexed_responses.append((i,<sp/>r))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="namespaceprou2_1a13923c560151303fdf4dd956b7240c39" refkind="member"><highlight class="normal">df<sp/>=<sp/>pd.DataFrame(indexed_responses,<sp/>columns=[</highlight><highlight class="stringliteral">&apos;Index&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Response&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="50" refid="namespaceprou2_1ad7177cd6129b1e2636bdacdcc35e1b44" refkind="member"><highlight class="normal">df_output_filename<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;outputs/prou2_df_{model_name}_{time_stamp}.csv&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="namespaceprou2_1aa9321ce40b13d1a83b91fb75e539bf59" refkind="member"><highlight class="normal">df.to_csv(df_output_filename,<sp/>index=</highlight><highlight class="keyword">False</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespaceprou2_1a2269b998d5e1bb16d072a9e677342b38" refkind="member"><highlight class="normal">output_filename<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;outputs/prou2_{model_name}_{time_stamp}.txt&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(output_filename,<sp/></highlight><highlight class="stringliteral">&apos;w&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>output_file:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>index,<sp/>response<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>indexed_responses:<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_file.write(f</highlight><highlight class="stringliteral">&apos;iteration<sp/>{index}:<sp/>\n<sp/>{response}\n\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="prou2.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>whypy<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>an<sp/>iterative<sp/>LLM-botherer</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">iteratively<sp/>invoking<sp/>Large<sp/>Language<sp/>Models<sp/>(LLM)<sp/>using<sp/>Ollama<sp/>via<sp/>`langchain_community`<sp/>package</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Scripts</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>1.<sp/>`_loop.py`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">iteratively<sp/>invoke<sp/>an<sp/>LLM<sp/>with<sp/>different<sp/>prompts</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>2.<sp/>`explainyourself.py`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">iteratively<sp/>prompts<sp/>an<sp/>LLM<sp/>to<sp/>explain<sp/>itself.<sp/>saves<sp/>the<sp/>responses<sp/>in<sp/>csv<sp/>and<sp/>txt<sp/>file<sp/>formats.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Python<sp/>3.x</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Packages:<sp/>`argparse`,<sp/>`pandas`,<sp/>`langchain_community`,<sp/>`langchain`,<sp/>`langchain_core`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">install<sp/>the<sp/>required<sp/>packages<sp/>using<sp/>pip:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>argparse<sp/>pandas<sp/>langchain_community</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>clone<sp/>the<sp/>repo<sp/>or<sp/>copy<sp/>the<sp/>script<sp/>to<sp/>your<sp/>local<sp/>machine.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>run<sp/>the<sp/>script<sp/>with<sp/>the<sp/>desired<sp/>number<sp/>of<sp/>iterations:</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">python<sp/>loop.py<sp/>[iterations]</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">(if<sp/>no<sp/>iterations<sp/>are<sp/>given,<sp/>the<sp/>script<sp/>defaults<sp/>to<sp/>10)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">output<sp/>files<sp/>will<sp/>be<sp/>saved<sp/>in<sp/>the<sp/>`outputs/pitching`<sp/>directory<sp/>with<sp/>a<sp/>filename<sp/>format<sp/>that<sp/>includes<sp/>the<sp/>model<sp/>name,<sp/>temperature,<sp/>and<sp/>a<sp/>timestamp.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">python<sp/>explainyourself.py</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">output<sp/>files<sp/>will<sp/>be<sp/>saved<sp/>in<sp/>the<sp/>`outputs/explain`<sp/>directory<sp/>with<sp/>filenames<sp/>that<sp/>include<sp/>the<sp/>model<sp/>name<sp/>and<sp/>a<sp/>timestamp.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

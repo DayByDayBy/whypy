@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interesting__loop_8py" xml:lang="en-US">
+<title>interesting_loop.py File Reference</title>
+<indexterm><primary>interesting_loop.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceinteresting__loop">interesting_loop</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">interesting_loop.iterative_invocation</link> (initial_prompt, re_prompt_base, max_iterations)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a4bfc650a34d329f0b839dcd4244f0adf">interesting_loop.parser</link> = argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a4057d12e05400306064054c00182f77e">interesting_loop.type</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a5b601e31f1db9a59b9589593ea5f870b">interesting_loop.int</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1afe58b8a409c61e92721d9840ddcce47b">interesting_loop.nargs</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a73e90ec6d744759873051635bd939553">interesting_loop.default</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ab329b2a82c5998b75bd3645c594e237d">interesting_loop.help</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ad4fba10c4603a493fd05b4afefe55b0a">interesting_loop.args</link> = parser.parse_args()</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2">interesting_loop.iterations</link> = args.iterations</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac">interesting_loop.impress_prompt</link> = &quot;concisely convince me you&apos;re intersting&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c">interesting_loop.impress_re_prompt</link> = &quot;show me you&apos;re more interesting than this person: &quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">interesting_loop.modelName</link> = &quot;command-r&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">interesting_loop.time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1af42a4a6964d566ce8dcff8260f268bb0">interesting_loop.llm</link> = Ollama(model = <link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1af4c172f587fc319d1af93450f09984c0">interesting_loop.responses</link> = <link linkend="_namespaceinteresting__loop_1ae4a271a56e90046770e0c2d14fd8aba5">iterative_invocation</link>(<link linkend="_namespaceinteresting__loop_1aec73eb1e759f194d8c4a71631f1c13ac">impress_prompt</link>, <link linkend="_namespaceinteresting__loop_1a5a2bed0aab916f8badd049435ad1fb0c">impress_re_prompt</link>, <link linkend="_namespaceinteresting__loop_1a2bbf09e78028181042aa81b78c0991c2">iterations</link>)</para>
+</listitem>
+            <listitem><para>list <link linkend="_namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d">interesting_loop.indexed_responses</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1ac33aea39935d438b0035c8b2d093cee1">interesting_loop.df</link> = pd.DataFrame(<link linkend="_namespaceinteresting__loop_1af1de1c897e1db75910e48ba7ed3fd28d">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1ae9b540dbe513e6c8241e562315be0629">interesting_loop.df_output_filename</link> = f&apos;outputs/interesting/whyPy_df_{<link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>}_{<link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceinteresting__loop_1a7a0816c899614d88f76f95f9c4ee3bc7">interesting_loop.index</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceinteresting__loop_1a3220b9aa6d428c71a192094d0483cf33">interesting_loop.output_filename</link> = f&apos;outputs/interesting/whyPy_interesting_output_{<link linkend="_namespaceinteresting__loop_1a7661c6026932305a1e6b740a765e33af">modelName</link>}_{<link linkend="_namespaceinteresting__loop_1aa3eaca9d077208058d0a0ea5623c6ca8">time_stamp</link>}.txt&apos;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

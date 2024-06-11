@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceprou2" xml:lang="en-US">
+<title>prou2 Namespace Reference</title>
+<indexterm><primary>prou2</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f">respo</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1a5d9503116a8df31f3452154978633cbd">prompt</link> = &quot;which words or phrases do you most overuse?&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link> = &quot;llama3&quot;</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespaceprou2_1ad6884cf6f2a0376b693e2d3ba12afa6d">iterations</link> = 10</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespaceprou2_1a8ac75f8fff231bf1b1b92d430b06fac3">frequency_penalty</link> = 0.8,</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespaceprou2_1aaa4fe0882c633a16daee158677405aab">presence_penalty</link> = 0.8,</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1a2a8a77a90d7b6cd77cc53529c1b86d29">llm</link> = Ollama(model = <link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0">response</link></para>
+</listitem>
+            <listitem><para>list <link linkend="_namespaceprou2_1a09d8be55109d567b53869fa6e64f50dd">responses</link> = [<link linkend="_namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0">response</link>,]</para>
+</listitem>
+            <listitem><para>list <link linkend="_namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe">indexed_responses</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1a13923c560151303fdf4dd956b7240c39">df</link> = pd.DataFrame(<link linkend="_namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1ad7177cd6129b1e2636bdacdcc35e1b44">df_output_filename</link> = f&apos;outputs/prou2_df_{<link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>}_{<link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou2_1aa9321ce40b13d1a83b91fb75e539bf59">index</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou2_1a2269b998d5e1bb16d072a9e677342b38">output_filename</link> = f&apos;outputs/prou2_{<link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>}_{<link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">time_stamp</link>}.txt&apos;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f"/><section>
+    <title>respo()</title>
+<indexterm><primary>respo</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>respo</secondary></indexterm>
+<para><computeroutput>prou2.respo ( )</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00025">25</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespaceprou2_1a13923c560151303fdf4dd956b7240c39"/><section>
+    <title>df</title>
+<indexterm><primary>df</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>df</secondary></indexterm>
+<para><computeroutput>prou2.df = pd.DataFrame(<link linkend="_namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00049">49</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1ad7177cd6129b1e2636bdacdcc35e1b44"/><section>
+    <title>df_output_filename</title>
+<indexterm><primary>df_output_filename</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>df_output_filename</secondary></indexterm>
+<para><computeroutput>prou2.df_output_filename = f&apos;outputs/prou2_df_{<link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>}_{<link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">time_stamp</link>}.csv&apos;</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00050">50</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1a8ac75f8fff231bf1b1b92d430b06fac3"/><section>
+    <title>frequency_penalty</title>
+<indexterm><primary>frequency_penalty</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>frequency_penalty</secondary></indexterm>
+<para><computeroutput>float prou2.frequency_penalty = 0.8,</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00013">13</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1aa9321ce40b13d1a83b91fb75e539bf59"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>prou2.index</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00051">51</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe"/><section>
+    <title>indexed_responses</title>
+<indexterm><primary>indexed_responses</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>indexed_responses</secondary></indexterm>
+<para><computeroutput>list prou2.indexed_responses = []</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00045">45</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1ad6884cf6f2a0376b693e2d3ba12afa6d"/><section>
+    <title>iterations</title>
+<indexterm><primary>iterations</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>iterations</secondary></indexterm>
+<para><computeroutput>int prou2.iterations = 10</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00012">12</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1a2a8a77a90d7b6cd77cc53529c1b86d29"/><section>
+    <title>llm</title>
+<indexterm><primary>llm</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>llm</secondary></indexterm>
+<para><computeroutput>prou2.llm = Ollama(model = <link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>)</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00015">15</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f"/><section>
+    <title>model_name</title>
+<indexterm><primary>model_name</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>model_name</secondary></indexterm>
+<para><computeroutput>str prou2.model_name = &quot;llama3&quot;</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00011">11</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1a2269b998d5e1bb16d072a9e677342b38"/><section>
+    <title>output_filename</title>
+<indexterm><primary>output_filename</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>output_filename</secondary></indexterm>
+<para><computeroutput>str prou2.output_filename = f&apos;outputs/prou2_{<link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">model_name</link>}_{<link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">time_stamp</link>}.txt&apos;</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00053">53</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1aaa4fe0882c633a16daee158677405aab"/><section>
+    <title>presence_penalty</title>
+<indexterm><primary>presence_penalty</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>presence_penalty</secondary></indexterm>
+<para><computeroutput>float prou2.presence_penalty = 0.8,</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00014">14</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1a5d9503116a8df31f3452154978633cbd"/><section>
+    <title>prompt</title>
+<indexterm><primary>prompt</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>prompt</secondary></indexterm>
+<para><computeroutput>str prou2.prompt = &quot;which words or phrases do you most overuse?&quot;</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00010">10</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0"/><section>
+    <title>response</title>
+<indexterm><primary>response</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>response</secondary></indexterm>
+<para><computeroutput>prou2.response</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">00001 =&#32;&#32;llm.invoke(
+00002 &#32;&#32;&#32;&#32;prompt,&#32;
+00003 &#32;&#32;&#32;&#32;max_tokens=100,&#32;
+00004 &#32;&#32;&#32;&#32;temperature=0.9,
+00005 &#32;&#32;&#32;&#32;frequency_penalty&#32;=&#32;0.8,
+00006 &#32;&#32;&#32;&#32;presence_penalty&#32;=&#32;0.9)
+</programlisting><para>
+Definition at line <link linkend="_prou2_8py_source_1l00016">16</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1a09d8be55109d567b53869fa6e64f50dd"/><section>
+    <title>responses</title>
+<indexterm><primary>responses</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>responses</secondary></indexterm>
+<para><computeroutput>list prou2.responses = [<link linkend="_namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0">response</link>,]</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00022">22</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952"/><section>
+    <title>time_stamp</title>
+<indexterm><primary>time_stamp</primary><secondary>prou2</secondary></indexterm>
+<indexterm><primary>prou2</primary><secondary>time_stamp</secondary></indexterm>
+<para><computeroutput>prou2.time_stamp = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_prou2_8py_source_1l00009">9</link> of file <link linkend="_prou2_8py_source">prou2.py</link>.</para>
+</section>
+</section>
+</section>

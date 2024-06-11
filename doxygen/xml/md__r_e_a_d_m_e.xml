@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md__r_e_a_d_m_e</compoundname>
+    <title>whypy</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__r_e_a_d_m_e_1autotoc_md0"/> </para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md1">
+<title>an iterative LLM-botherer</title><para>iteratively invoking Large Language Models (LLM) using Ollama via <computeroutput>langchain_community</computeroutput> package</para>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md2">
+<title>Scripts</title><sect3 id="md__r_e_a_d_m_e_1autotoc_md3">
+<title>1. <computeroutput>_loop.py</computeroutput></title><para>iteratively invoke an LLM with different prompts</para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md4">
+<title>2. <computeroutput>explainyourself.py</computeroutput></title><para>iteratively prompts an LLM to explain itself. saves the responses in csv and txt file formats.</para>
+</sect3>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md5">
+<title>Requirements</title><para><itemizedlist>
+<listitem><para>Python 3.x</para>
+</listitem><listitem><para>Packages: <computeroutput>argparse</computeroutput>, <computeroutput>pandas</computeroutput>, <computeroutput>langchain_community</computeroutput>, <computeroutput>langchain</computeroutput>, <computeroutput>langchain_core</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para>install the required packages using pip:</para>
+<para><programlisting><codeline><highlight class="normal">pip<sp/>install<sp/>argparse<sp/>pandas<sp/>langchain_community</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md6">
+<title>Usage</title><para><orderedlist>
+<listitem><para>clone the repo or copy the script to your local machine.</para>
+</listitem><listitem><para>run the script with the desired number of iterations:</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">python<sp/>loop.py<sp/>[iterations]</highlight></codeline>
+</programlisting></para>
+<para>(if no iterations are given, the script defaults to 10)</para>
+<para>output files will be saved in the <computeroutput>outputs/pitching</computeroutput> directory with a filename format that includes the model name, temperature, and a timestamp.</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">python<sp/>explainyourself.py</highlight></codeline>
+</programlisting></para>
+<para>output files will be saved in the <computeroutput>outputs/explain</computeroutput> directory with filenames that include the model name and a timestamp.</para>
+<para><hruler/>
+ </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

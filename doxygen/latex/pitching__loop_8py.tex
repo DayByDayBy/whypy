@@ -1,0 +1,61 @@
+\doxysection{pitching\+\_\+loop.\+py File Reference}
+\hypertarget{pitching__loop_8py}{}\label{pitching__loop_8py}\index{pitching\_loop.py@{pitching\_loop.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacepitching__loop}{pitching\+\_\+loop}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a9049849ecb7958fe925a5a2e05f684aa}{pitching\+\_\+loop.\+iterative\+\_\+invocation}} (initial\+\_\+prompt, re\+\_\+prompt\+\_\+base, max\+\_\+iterations)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a90a0aea4f98de78c9c8893bad538c68b}{pitching\+\_\+loop.\+parser}} = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepitching__loop_acd9848894558a3121ffb8304fe3ac043}{pitching\+\_\+loop.\+type}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad637c32101462130ba284b241520e2b8}{pitching\+\_\+loop.\+int}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a989f63cabf71e49f3a140ec1295cc822}{pitching\+\_\+loop.\+nargs}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a811b991e7a586f124d7775137fc2e14f}{pitching\+\_\+loop.\+default}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_aa8bdded0b6e23a4d6ff50fa9a4d92847}{pitching\+\_\+loop.\+help}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad86819aa007ada6310c3299396b3cf93}{pitching\+\_\+loop.\+args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad12bdeade9426a544b19c053ecd97637}{pitching\+\_\+loop.\+iterations}} = args.\+iterations
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_a300a8658c74dd2b56d20040ca96e6c73}{pitching\+\_\+loop.\+pitch\+\_\+prompt}} = "{}pitch me an original idea for a movie"{}
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_a6354850bfe2f390a8237fca038623681}{pitching\+\_\+loop.\+pitch\+\_\+re\+\_\+prompt}} = \textquotesingle{}pitch me a better movie than this one\+: \textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{pitching\+\_\+loop.\+model\+\_\+name}} = "{}mistral"{}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{pitching\+\_\+loop.\+time\+\_\+stamp}} = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})
+\item 
+\mbox{\hyperlink{namespacepitching__loop_aae28f1802f549cc7ee4745d70c7e1710}{pitching\+\_\+loop.\+llm}} = Ollama(model = \mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}})
+\item 
+float \mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{pitching\+\_\+loop.\+temp}} = 0.\+7
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad637c32101462130ba284b241520e2b8}{int}} \mbox{\hyperlink{namespacepitching__loop_a9b65cf563720359603ceb4ed90769694}{pitching\+\_\+loop.\+max\+\_\+t}} = 100
+\item 
+float \mbox{\hyperlink{namespacepitching__loop_a9d2b3bf94ec3ae9d460b27ca1648ee0e}{pitching\+\_\+loop.\+freq\+\_\+penalty}} = 0.\+7
+\item 
+float \mbox{\hyperlink{namespacepitching__loop_a108554aa06aa8994e000b4e0302cac13}{pitching\+\_\+loop.\+pres\+\_\+penalty}} = 0.\+5
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a7afd06e8970eacfa22ab9c00e4ad1824}{pitching\+\_\+loop.\+responses}} = \mbox{\hyperlink{namespacepitching__loop_a9049849ecb7958fe925a5a2e05f684aa}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespacepitching__loop_a300a8658c74dd2b56d20040ca96e6c73}{pitch\+\_\+prompt}}, \mbox{\hyperlink{namespacepitching__loop_a6354850bfe2f390a8237fca038623681}{pitch\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespacepitching__loop_ad12bdeade9426a544b19c053ecd97637}{iterations}})
+\item 
+list \mbox{\hyperlink{namespacepitching__loop_a8e62973dba4044c809f453ca6b93ffea}{pitching\+\_\+loop.\+indexed\+\_\+responses}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_aea9e967a622b96826324a437dab60119}{pitching\+\_\+loop.\+df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespacepitching__loop_a8e62973dba4044c809f453ca6b93ffea}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_ade50c445407952b5943dff49402d0150}{pitching\+\_\+loop.\+df\+\_\+output\+\_\+filename}} = f\textquotesingle{}outputs/pitching/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}}\}\+\_\+temp\{\mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{temp}}\}\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{time\+\_\+stamp}}\}.csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a416be6b378478cec32793e6120a9d0c9}{pitching\+\_\+loop.\+index}}
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_a9a6d7ec56b62fd3780dbc5fa233a5d0f}{pitching\+\_\+loop.\+output\+\_\+filename}} = f\textquotesingle{}outputs/pitching/why\+Py\+\_\+pitching\+\_\+output\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}}\}\+\_\+temp\{\mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{temp}}\}\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{time\+\_\+stamp}}\}.txt\textquotesingle{}
+\end{DoxyCompactItemize}

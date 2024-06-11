@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>why-py-scan-dox</title>
+    </info>
+    <xi:include href="md__r_e_a_d_m_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespaceexplainyourself.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespaceinteresting__loop.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacemirror__roast.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacepitching__loop.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespaceprou.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespaceprou2.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespaceshocker.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespaceturing__loop.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="explainyourself_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="explainyourself_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interesting__loop_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interesting__loop_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="mirror__roast_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="mirror__roast_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="pitching__loop_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="pitching__loop_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="prou_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="prou_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="prou2_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="prou2_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="shocker_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="shocker_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="turing__loop_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="turing__loop_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

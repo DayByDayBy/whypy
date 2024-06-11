@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceprou" xml:lang="en-US">
+<title>prou Namespace Reference</title>
+<indexterm><primary>prou</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou_1adad796204d78a09573d2f3faa4636e21">respo</link> (<link linkend="_namespaceprou_1af07321498c89e197b96d4538c3157ec6">initial_prompt</link>, <link linkend="_namespaceprou_1ad88cb933c3f4f32d05977d3800955885">iterations</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1af07321498c89e197b96d4538c3157ec6">initial_prompt</link> = &quot;what do you consider the most overrated virtue?&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link> = &quot;llama3&quot;</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespaceprou_1ad88cb933c3f4f32d05977d3800955885">iterations</link> = 300</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespaceprou_1af5b5b0dd5ccbb3bcd790ed6b5bd05459">temp</link> = 0.6</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1ae57357985c743c74980e1a750036a120">frequency_penalty</link> = np.float32(0.9)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1aae9369a204404515e5ed5b2320ecf09e">presence_penalty</link> = np.float32(0.9)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1a1112b2251f3050b294f05bb718db3bd6">llm</link> = Ollama(model = <link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>)</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1ab4305f86758ec7814292a6c2d84f3e8f">df_output_filename</link> = f&apos;outputs/prou/prou_df_{<link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>}_{<link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1ac37908aac1b74578607fe4c8f68da057">output_filename</link> = f&apos;outputs/prou/prou_{<link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>}_{<link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">time_stamp</link>}.txt&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1a0413ee758f9f548a4ddc5d81fecea261">returned_responses</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1a3381d974a4c234dddcb38fae8e9343d6">indexed_responses</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceprou_1adad796204d78a09573d2f3faa4636e21"/><section>
+    <title>respo()</title>
+<indexterm><primary>respo</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>respo</secondary></indexterm>
+<para><computeroutput>prou.respo ( initial_prompt,  iterations)</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00026">26</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespaceprou_1ab4305f86758ec7814292a6c2d84f3e8f"/><section>
+    <title>df_output_filename</title>
+<indexterm><primary>df_output_filename</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>df_output_filename</secondary></indexterm>
+<para><computeroutput>str prou.df_output_filename = f&apos;outputs/prou/prou_df_{<link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>}_{<link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">time_stamp</link>}.csv&apos;</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00021">21</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1ae57357985c743c74980e1a750036a120"/><section>
+    <title>frequency_penalty</title>
+<indexterm><primary>frequency_penalty</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>frequency_penalty</secondary></indexterm>
+<para><computeroutput>prou.frequency_penalty = np.float32(0.9)</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00018">18</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1a3381d974a4c234dddcb38fae8e9343d6"/><section>
+    <title>indexed_responses</title>
+<indexterm><primary>indexed_responses</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>indexed_responses</secondary></indexterm>
+<para><computeroutput>prou.indexed_responses</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00062">62</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1af07321498c89e197b96d4538c3157ec6"/><section>
+    <title>initial_prompt</title>
+<indexterm><primary>initial_prompt</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>initial_prompt</secondary></indexterm>
+<para><computeroutput>str prou.initial_prompt = &quot;what do you consider the most overrated virtue?&quot;</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00013">13</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1ad88cb933c3f4f32d05977d3800955885"/><section>
+    <title>iterations</title>
+<indexterm><primary>iterations</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>iterations</secondary></indexterm>
+<para><computeroutput>int prou.iterations = 300</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00016">16</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1a1112b2251f3050b294f05bb718db3bd6"/><section>
+    <title>llm</title>
+<indexterm><primary>llm</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>llm</secondary></indexterm>
+<para><computeroutput>prou.llm = Ollama(model = <link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>)</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00020">20</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d"/><section>
+    <title>model_name</title>
+<indexterm><primary>model_name</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>model_name</secondary></indexterm>
+<para><computeroutput>str prou.model_name = &quot;llama3&quot;</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00015">15</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1ac37908aac1b74578607fe4c8f68da057"/><section>
+    <title>output_filename</title>
+<indexterm><primary>output_filename</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>output_filename</secondary></indexterm>
+<para><computeroutput>str prou.output_filename = f&apos;outputs/prou/prou_{<link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>}_{<link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">time_stamp</link>}.txt&apos;</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00022">22</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1aae9369a204404515e5ed5b2320ecf09e"/><section>
+    <title>presence_penalty</title>
+<indexterm><primary>presence_penalty</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>presence_penalty</secondary></indexterm>
+<para><computeroutput>prou.presence_penalty = np.float32(0.9)</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00019">19</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1a0413ee758f9f548a4ddc5d81fecea261"/><section>
+    <title>returned_responses</title>
+<indexterm><primary>returned_responses</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>returned_responses</secondary></indexterm>
+<para><computeroutput>prou.returned_responses</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00062">62</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1af5b5b0dd5ccbb3bcd790ed6b5bd05459"/><section>
+    <title>temp</title>
+<indexterm><primary>temp</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>temp</secondary></indexterm>
+<para><computeroutput>float prou.temp = 0.6</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00017">17</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae"/><section>
+    <title>time_stamp</title>
+<indexterm><primary>time_stamp</primary><secondary>prou</secondary></indexterm>
+<indexterm><primary>prou</primary><secondary>time_stamp</secondary></indexterm>
+<para><computeroutput>prou.time_stamp = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_prou_8py_source_1l00011">11</link> of file <link linkend="_prou_8py_source">prou.py</link>.</para>
+</section>
+</section>
+</section>

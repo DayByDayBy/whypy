@@ -1,0 +1,174 @@
+\doxysection{turing\+\_\+loop Namespace Reference}
+\hypertarget{namespaceturing__loop}{}\label{namespaceturing__loop}\index{turing\_loop@{turing\_loop}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a15157e7293135e7ab2af28d4c1118d1b}{iterative\+\_\+invocation}} (initial\+\_\+prompt, re\+\_\+prompt\+\_\+base, max\+\_\+iterations)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_afcaa9d7560a7769f6b7e6debafe4b468}{parser}} = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a42bb5cea3cf46948e6120b52bb545b30}{type}}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a0b01a373a8ee5d2515f32b3fb09f001e}{int}}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_ada475f7a6ae29999801446f790a6220e}{nargs}}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_afbcbf5c93baf783fee2145af7abd341c}{default}}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a104b6817ae34462e04c3ee93ce65bc45}{help}}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a31fad5a60c03d0474fdf9405dc757e80}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespaceturing__loop_ad21c08fabaee55bb9fd4d098e880dc79}{iterations}} = args.\+iterations
+\item 
+str \mbox{\hyperlink{namespaceturing__loop_ab2826829ebca756b60dadd916e177b4d}{turing\+\_\+prompt}} = "{}you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room."{}
+\item 
+str \mbox{\hyperlink{namespaceturing__loop_ab428a207d57aefc002e2f87594984bab}{turing\+\_\+re\+\_\+prompt}} = "{}you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says\+: "{}
+\item 
+str \mbox{\hyperlink{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}{model\+Name}} = "{}llama3"{}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a9a6c9eb88da0cad2bac436771bc18a23}{time\+\_\+stamp}} = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a32b4ff9ac85f32372dbe5e41076bd28c}{llm}} = Ollama(model = \mbox{\hyperlink{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}{model\+Name}})
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a0534d7480aa9473524a1ce577c944a9c}{responses}} = \mbox{\hyperlink{namespaceturing__loop_a15157e7293135e7ab2af28d4c1118d1b}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespaceturing__loop_ab2826829ebca756b60dadd916e177b4d}{turing\+\_\+prompt}}, \mbox{\hyperlink{namespaceturing__loop_ab428a207d57aefc002e2f87594984bab}{turing\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespaceturing__loop_ad21c08fabaee55bb9fd4d098e880dc79}{iterations}})
+\item 
+list \mbox{\hyperlink{namespaceturing__loop_a21983c998dd82edcd4b81231a8d1cd66}{indexed\+\_\+responses}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a541f985e71661085c439f83ad7aecf68}{df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceturing__loop_a21983c998dd82edcd4b81231a8d1cd66}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespaceturing__loop_a36e8e96455cafe53f3cbddf59104e5b7}{df\+\_\+output\+\_\+filename}} = f\textquotesingle{}outputs/turing/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_a9a6c9eb88da0cad2bac436771bc18a23}{time\+\_\+stamp}}\}.csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespaceturing__loop_a1ba2195297a16ed762346e3bb42e2f30}{index}}
+\item 
+str \mbox{\hyperlink{namespaceturing__loop_a92008dc4c467c9e58fc1db48caf81cce}{output\+\_\+filename}} = f\textquotesingle{}outputs/turing/why\+Py\+\_\+turing\+\_\+output\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_a9a6c9eb88da0cad2bac436771bc18a23}{time\+\_\+stamp}}\}.txt\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceturing__loop_a15157e7293135e7ab2af28d4c1118d1b}\index{turing\_loop@{turing\_loop}!iterative\_invocation@{iterative\_invocation}}
+\index{iterative\_invocation@{iterative\_invocation}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{iterative\_invocation()}{iterative\_invocation()}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a15157e7293135e7ab2af28d4c1118d1b} 
+turing\+\_\+loop.\+iterative\+\_\+invocation (\begin{DoxyParamCaption}\item[{}]{initial\+\_\+prompt}{, }\item[{}]{re\+\_\+prompt\+\_\+base}{, }\item[{}]{max\+\_\+iterations}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceturing__loop_a31fad5a60c03d0474fdf9405dc757e80}\index{turing\_loop@{turing\_loop}!args@{args}}
+\index{args@{args}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a31fad5a60c03d0474fdf9405dc757e80} 
+turing\+\_\+loop.\+args = parser.\+parse\+\_\+args()}
+
+\Hypertarget{namespaceturing__loop_afbcbf5c93baf783fee2145af7abd341c}\index{turing\_loop@{turing\_loop}!default@{default}}
+\index{default@{default}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_afbcbf5c93baf783fee2145af7abd341c} 
+turing\+\_\+loop.\+default}
+
+\Hypertarget{namespaceturing__loop_a541f985e71661085c439f83ad7aecf68}\index{turing\_loop@{turing\_loop}!df@{df}}
+\index{df@{df}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a541f985e71661085c439f83ad7aecf68} 
+turing\+\_\+loop.\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceturing__loop_a21983c998dd82edcd4b81231a8d1cd66}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})}
+
+\Hypertarget{namespaceturing__loop_a36e8e96455cafe53f3cbddf59104e5b7}\index{turing\_loop@{turing\_loop}!df\_output\_filename@{df\_output\_filename}}
+\index{df\_output\_filename@{df\_output\_filename}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{df\_output\_filename}{df\_output\_filename}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a36e8e96455cafe53f3cbddf59104e5b7} 
+turing\+\_\+loop.\+df\+\_\+output\+\_\+filename = f\textquotesingle{}outputs/turing/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_a9a6c9eb88da0cad2bac436771bc18a23}{time\+\_\+stamp}}\}.csv\textquotesingle{}}
+
+\Hypertarget{namespaceturing__loop_a104b6817ae34462e04c3ee93ce65bc45}\index{turing\_loop@{turing\_loop}!help@{help}}
+\index{help@{help}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a104b6817ae34462e04c3ee93ce65bc45} 
+turing\+\_\+loop.\+help}
+
+\Hypertarget{namespaceturing__loop_a1ba2195297a16ed762346e3bb42e2f30}\index{turing\_loop@{turing\_loop}!index@{index}}
+\index{index@{index}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a1ba2195297a16ed762346e3bb42e2f30} 
+turing\+\_\+loop.\+index}
+
+\Hypertarget{namespaceturing__loop_a21983c998dd82edcd4b81231a8d1cd66}\index{turing\_loop@{turing\_loop}!indexed\_responses@{indexed\_responses}}
+\index{indexed\_responses@{indexed\_responses}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{indexed\_responses}{indexed\_responses}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a21983c998dd82edcd4b81231a8d1cd66} 
+list turing\+\_\+loop.\+indexed\+\_\+responses = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespaceturing__loop_a0b01a373a8ee5d2515f32b3fb09f001e}\index{turing\_loop@{turing\_loop}!int@{int}}
+\index{int@{int}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{int}{int}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a0b01a373a8ee5d2515f32b3fb09f001e} 
+turing\+\_\+loop.\+int}
+
+\Hypertarget{namespaceturing__loop_ad21c08fabaee55bb9fd4d098e880dc79}\index{turing\_loop@{turing\_loop}!iterations@{iterations}}
+\index{iterations@{iterations}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{iterations}{iterations}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_ad21c08fabaee55bb9fd4d098e880dc79} 
+turing\+\_\+loop.\+iterations = args.\+iterations}
+
+\Hypertarget{namespaceturing__loop_a32b4ff9ac85f32372dbe5e41076bd28c}\index{turing\_loop@{turing\_loop}!llm@{llm}}
+\index{llm@{llm}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{llm}{llm}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a32b4ff9ac85f32372dbe5e41076bd28c} 
+turing\+\_\+loop.\+llm = Ollama(model = \mbox{\hyperlink{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}{model\+Name}})}
+
+\Hypertarget{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}\index{turing\_loop@{turing\_loop}!modelName@{modelName}}
+\index{modelName@{modelName}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{modelName}{modelName}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3} 
+str turing\+\_\+loop.\+model\+Name = "{}llama3"{}}
+
+\Hypertarget{namespaceturing__loop_ada475f7a6ae29999801446f790a6220e}\index{turing\_loop@{turing\_loop}!nargs@{nargs}}
+\index{nargs@{nargs}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_ada475f7a6ae29999801446f790a6220e} 
+turing\+\_\+loop.\+nargs}
+
+\Hypertarget{namespaceturing__loop_a92008dc4c467c9e58fc1db48caf81cce}\index{turing\_loop@{turing\_loop}!output\_filename@{output\_filename}}
+\index{output\_filename@{output\_filename}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{output\_filename}{output\_filename}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a92008dc4c467c9e58fc1db48caf81cce} 
+str turing\+\_\+loop.\+output\+\_\+filename = f\textquotesingle{}outputs/turing/why\+Py\+\_\+turing\+\_\+output\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_acea1d03a15c4acf786fcbcb1781bf2c3}{model\+Name}}\}\+\_\+\{\mbox{\hyperlink{namespaceturing__loop_a9a6c9eb88da0cad2bac436771bc18a23}{time\+\_\+stamp}}\}.txt\textquotesingle{}}
+
+\Hypertarget{namespaceturing__loop_afcaa9d7560a7769f6b7e6debafe4b468}\index{turing\_loop@{turing\_loop}!parser@{parser}}
+\index{parser@{parser}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_afcaa9d7560a7769f6b7e6debafe4b468} 
+turing\+\_\+loop.\+parser = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})}
+
+\Hypertarget{namespaceturing__loop_a0534d7480aa9473524a1ce577c944a9c}\index{turing\_loop@{turing\_loop}!responses@{responses}}
+\index{responses@{responses}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{responses}{responses}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a0534d7480aa9473524a1ce577c944a9c} 
+turing\+\_\+loop.\+responses = \mbox{\hyperlink{namespaceturing__loop_a15157e7293135e7ab2af28d4c1118d1b}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespaceturing__loop_ab2826829ebca756b60dadd916e177b4d}{turing\+\_\+prompt}}, \mbox{\hyperlink{namespaceturing__loop_ab428a207d57aefc002e2f87594984bab}{turing\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespaceturing__loop_ad21c08fabaee55bb9fd4d098e880dc79}{iterations}})}
+
+\Hypertarget{namespaceturing__loop_a9a6c9eb88da0cad2bac436771bc18a23}\index{turing\_loop@{turing\_loop}!time\_stamp@{time\_stamp}}
+\index{time\_stamp@{time\_stamp}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{time\_stamp}{time\_stamp}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a9a6c9eb88da0cad2bac436771bc18a23} 
+turing\+\_\+loop.\+time\+\_\+stamp = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})}
+
+\Hypertarget{namespaceturing__loop_ab2826829ebca756b60dadd916e177b4d}\index{turing\_loop@{turing\_loop}!turing\_prompt@{turing\_prompt}}
+\index{turing\_prompt@{turing\_prompt}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{turing\_prompt}{turing\_prompt}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_ab2826829ebca756b60dadd916e177b4d} 
+str turing\+\_\+loop.\+turing\+\_\+prompt = "{}you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room."{}}
+
+\Hypertarget{namespaceturing__loop_ab428a207d57aefc002e2f87594984bab}\index{turing\_loop@{turing\_loop}!turing\_re\_prompt@{turing\_re\_prompt}}
+\index{turing\_re\_prompt@{turing\_re\_prompt}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{turing\_re\_prompt}{turing\_re\_prompt}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_ab428a207d57aefc002e2f87594984bab} 
+str turing\+\_\+loop.\+turing\+\_\+re\+\_\+prompt = "{}you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says\+: "{}}
+
+\Hypertarget{namespaceturing__loop_a42bb5cea3cf46948e6120b52bb545b30}\index{turing\_loop@{turing\_loop}!type@{type}}
+\index{type@{type}!turing\_loop@{turing\_loop}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{namespaceturing__loop_a42bb5cea3cf46948e6120b52bb545b30} 
+turing\+\_\+loop.\+type}
+

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespacemirror__roast" kind="namespace" language="Python">
+    <compoundname>mirror_roast</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemirror__roast_1a0dbfd15aceb85123da1f4d0df8cae37a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mirror_roast.initialize_output_files</definition>
+        <argsstring>(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)</argsstring>
+        <name>initialize_output_files</name>
+        <qualifiedname>mirror_roast.initialize_output_files</qualifiedname>
+        <param>
+          <type>csv_fname</type>
+          <defname>csv_fname</defname>
+        </param>
+        <param>
+          <type>txt_fname</type>
+          <defname>txt_fname</defname>
+        </param>
+        <param>
+          <type>initial_prompt</type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type>temp</type>
+          <defname>temp</defname>
+        </param>
+        <param>
+          <type>frequency_penalty</type>
+          <defname>frequency_penalty</defname>
+        </param>
+        <param>
+          <type>presence_penalty</type>
+          <defname>presence_penalty</defname>
+        </param>
+        <param>
+          <type>model_name</type>
+          <defname>model_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mirror_roast.py" line="6" column="1" bodyfile="mirror_roast.py" bodystart="6" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemirror__roast_1a05a0be3da9e2311ba92224ce194cc4ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mirror_roast.log_response</definition>
+        <argsstring>(txt_fname, csv_fname, iteration, response)</argsstring>
+        <name>log_response</name>
+        <qualifiedname>mirror_roast.log_response</qualifiedname>
+        <param>
+          <type>txt_fname</type>
+          <defname>txt_fname</defname>
+        </param>
+        <param>
+          <type>csv_fname</type>
+          <defname>csv_fname</defname>
+        </param>
+        <param>
+          <type>iteration</type>
+          <defname>iteration</defname>
+        </param>
+        <param>
+          <type>response</type>
+          <defname>response</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mirror_roast.py" line="20" column="1" bodyfile="mirror_roast.py" bodystart="20" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemirror__roast_1ac922af0bfbb72c5a1dabaf39650fb052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mirror_roast.response_generator</definition>
+        <argsstring>(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)</argsstring>
+        <name>response_generator</name>
+        <qualifiedname>mirror_roast.response_generator</qualifiedname>
+        <param>
+          <type>initial_prompt</type>
+          <defname>initial_prompt</defname>
+        </param>
+        <param>
+          <type>iterations</type>
+          <defname>iterations</defname>
+        </param>
+        <param>
+          <type>llm</type>
+          <defname>llm</defname>
+        </param>
+        <param>
+          <type>temp</type>
+          <defname>temp</defname>
+        </param>
+        <param>
+          <type>frequency_penalty</type>
+          <defname>frequency_penalty</defname>
+        </param>
+        <param>
+          <type>presence_penalty</type>
+          <defname>presence_penalty</defname>
+        </param>
+        <param>
+          <type>txt_fname</type>
+          <defname>txt_fname</defname>
+        </param>
+        <param>
+          <type>csv_fname</type>
+          <defname>csv_fname</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mirror_roast.py" line="30" column="1" bodyfile="mirror_roast.py" bodystart="30" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemirror__roast_1a86707d3cb317f967c34a2cd2a7d53446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mirror_roast.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>mirror_roast.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mirror_roast.py" line="51" column="1" bodyfile="mirror_roast.py" bodystart="51" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="mirror_roast.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

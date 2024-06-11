@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_prou2_8py_source" xml:lang="en-US">
+<title>prou2.py</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_prou2_8py_source_1l00001"/><link linkend="_namespaceprou2">00001</link> <emphasis role="keyword">import</emphasis>&#32;argparse&#32;
+<anchor xml:id="_prou2_8py_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;pandas&#32;<emphasis role="keyword">as</emphasis>&#32;pd
+<anchor xml:id="_prou2_8py_source_1l00003"/>00003 <emphasis role="keyword">from</emphasis>&#32;sentence_transformers&#32;<emphasis role="keyword">import</emphasis>&#32;SentenceTransformer
+<anchor xml:id="_prou2_8py_source_1l00004"/>00004 <emphasis role="keyword">from</emphasis>&#32;langchain_community.llms&#32;<emphasis role="keyword">import</emphasis>&#32;Ollama
+<anchor xml:id="_prou2_8py_source_1l00005"/>00005 <emphasis role="comment">#&#32;from&#32;langchain.chains&#32;import&#32;LLMChain</emphasis>
+<anchor xml:id="_prou2_8py_source_1l00006"/>00006 <emphasis role="keyword">from</emphasis>&#32;langchain_core.prompts&#32;<emphasis role="keyword">import</emphasis>&#32;PromptTemplate
+<anchor xml:id="_prou2_8py_source_1l00007"/>00007 <emphasis role="keyword">from</emphasis>&#32;datetime&#32;<emphasis role="keyword">import</emphasis>&#32;datetime
+<anchor xml:id="_prou2_8py_source_1l00008"/>00008 
+<anchor xml:id="_prou2_8py_source_1l00009"/><link linkend="_namespaceprou2_1ae0e8cca7aa8e43bdcab09c0716a3e952">00009</link> time_stamp&#32;=&#32;datetime.now().strftime(<emphasis role="stringliteral">&quot;%Y%m%d_%H%M&quot;</emphasis>)&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou2_8py_source_1l00010"/><link linkend="_namespaceprou2_1a5d9503116a8df31f3452154978633cbd">00010</link> prompt&#32;=&#32;<emphasis role="stringliteral">&quot;which&#32;words&#32;or&#32;phrases&#32;do&#32;you&#32;most&#32;overuse?&quot;</emphasis>
+<anchor xml:id="_prou2_8py_source_1l00011"/><link linkend="_namespaceprou2_1ace75fca72821add9f8de85c1bcc6440f">00011</link> model_name&#32;=&#32;<emphasis role="stringliteral">&quot;llama3&quot;</emphasis>
+<anchor xml:id="_prou2_8py_source_1l00012"/><link linkend="_namespaceprou2_1ad6884cf6f2a0376b693e2d3ba12afa6d">00012</link> iterations&#32;=&#32;10
+<anchor xml:id="_prou2_8py_source_1l00013"/><link linkend="_namespaceprou2_1a8ac75f8fff231bf1b1b92d430b06fac3">00013</link> frequency_penalty&#32;=&#32;0.8,
+<anchor xml:id="_prou2_8py_source_1l00014"/><link linkend="_namespaceprou2_1aaa4fe0882c633a16daee158677405aab">00014</link> presence_penalty&#32;=&#32;0.8,
+<anchor xml:id="_prou2_8py_source_1l00015"/><link linkend="_namespaceprou2_1a2a8a77a90d7b6cd77cc53529c1b86d29">00015</link> llm&#32;=&#32;Ollama(model&#32;=&#32;model_name)
+<anchor xml:id="_prou2_8py_source_1l00016"/><link linkend="_namespaceprou2_1ab3f3df4827ee6ebea0d2cdc910024ef0">00016</link> response&#32;=&#32;llm.invoke(
+<anchor xml:id="_prou2_8py_source_1l00017"/>00017 &#32;&#32;&#32;&#32;prompt,&#32;
+<anchor xml:id="_prou2_8py_source_1l00018"/>00018 &#32;&#32;&#32;&#32;max_tokens=100,&#32;
+<anchor xml:id="_prou2_8py_source_1l00019"/>00019 &#32;&#32;&#32;&#32;temperature=0.9,
+<anchor xml:id="_prou2_8py_source_1l00020"/>00020 &#32;&#32;&#32;&#32;frequency_penalty&#32;=&#32;0.8,
+<anchor xml:id="_prou2_8py_source_1l00021"/>00021 &#32;&#32;&#32;&#32;presence_penalty&#32;=&#32;0.9)
+<anchor xml:id="_prou2_8py_source_1l00022"/><link linkend="_namespaceprou2_1a09d8be55109d567b53869fa6e64f50dd">00022</link> responses&#32;=&#32;[response,]
+<anchor xml:id="_prou2_8py_source_1l00023"/>00023 
+<anchor xml:id="_prou2_8py_source_1l00024"/>00024 
+<anchor xml:id="_prou2_8py_source_1l00025"/><link linkend="_namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f">00025</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f">respo</link>():
+<anchor xml:id="_prou2_8py_source_1l00026"/>00026 &#32;&#32;&#32;&#32;i&#32;=&#32;0
+<anchor xml:id="_prou2_8py_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;i&#32;&lt;&#32;iterations:
+<anchor xml:id="_prou2_8py_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;responsed&#32;=&#32;llm.invoke(
+<anchor xml:id="_prou2_8py_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;response,&#32;
+<anchor xml:id="_prou2_8py_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;max_tokens=100,&#32;
+<anchor xml:id="_prou2_8py_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frequency_penalty=&#32;0.9,&#32;
+<anchor xml:id="_prou2_8py_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;presence_penalty=&#32;0.9)
+<anchor xml:id="_prou2_8py_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;responses.append([i,&#32;responsed,&#32;<emphasis role="stringliteral">&apos;\n\n&apos;</emphasis>])
+<anchor xml:id="_prou2_8py_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;+=&#32;1
+<anchor xml:id="_prou2_8py_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;responses&#32;&#32;
+<anchor xml:id="_prou2_8py_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou2_8py_source_1l00037"/>00037 <link linkend="_namespaceprou2_1a499142bcdc2936338ee44be504ecdb0f">respo</link>()
+<anchor xml:id="_prou2_8py_source_1l00038"/>00038 print(responses)
+<anchor xml:id="_prou2_8py_source_1l00039"/>00039 
+<anchor xml:id="_prou2_8py_source_1l00040"/>00040 
+<anchor xml:id="_prou2_8py_source_1l00041"/>00041 
+<anchor xml:id="_prou2_8py_source_1l00042"/>00042 
+<anchor xml:id="_prou2_8py_source_1l00043"/>00043 <emphasis role="comment">#&#32;print&#32;to&#32;file:</emphasis>
+<anchor xml:id="_prou2_8py_source_1l00044"/>00044 
+<anchor xml:id="_prou2_8py_source_1l00045"/><link linkend="_namespaceprou2_1ac0ff9f8800d2df4012e8788619f6bfbe">00045</link> indexed_responses&#32;=&#32;[]
+<anchor xml:id="_prou2_8py_source_1l00046"/>00046 <emphasis role="keywordflow">for</emphasis>&#32;i,&#32;r&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(responses):
+<anchor xml:id="_prou2_8py_source_1l00047"/>00047 &#32;&#32;&#32;&#32;indexed_responses.append((i,&#32;r))
+<anchor xml:id="_prou2_8py_source_1l00048"/>00048 
+<anchor xml:id="_prou2_8py_source_1l00049"/><link linkend="_namespaceprou2_1a13923c560151303fdf4dd956b7240c39">00049</link> df&#32;=&#32;pd.DataFrame(indexed_responses,&#32;columns=[<emphasis role="stringliteral">&apos;Index&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;Response&apos;</emphasis>])
+<anchor xml:id="_prou2_8py_source_1l00050"/><link linkend="_namespaceprou2_1ad7177cd6129b1e2636bdacdcc35e1b44">00050</link> df_output_filename&#32;=&#32;f<emphasis role="stringliteral">&apos;outputs/prou2_df_{model_name}_{time_stamp}.csv&apos;</emphasis>
+<anchor xml:id="_prou2_8py_source_1l00051"/><link linkend="_namespaceprou2_1aa9321ce40b13d1a83b91fb75e539bf59">00051</link> df.to_csv(df_output_filename,&#32;index=<emphasis role="keyword">False</emphasis>)
+<anchor xml:id="_prou2_8py_source_1l00052"/>00052 
+<anchor xml:id="_prou2_8py_source_1l00053"/><link linkend="_namespaceprou2_1a2269b998d5e1bb16d072a9e677342b38">00053</link> output_filename&#32;=&#32;f<emphasis role="stringliteral">&apos;outputs/prou2_{model_name}_{time_stamp}.txt&apos;</emphasis>
+<anchor xml:id="_prou2_8py_source_1l00054"/>00054 <emphasis role="keyword">with</emphasis>&#32;open(output_filename,&#32;<emphasis role="stringliteral">&apos;w&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;output_file:
+<anchor xml:id="_prou2_8py_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;index,&#32;response&#32;<emphasis role="keywordflow">in</emphasis>&#32;indexed_responses:&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_prou2_8py_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;output_file.write(f<emphasis role="stringliteral">&apos;iteration&#32;{index}:&#32;\n&#32;{response}\n\n&apos;</emphasis>)
+</programlisting></section>

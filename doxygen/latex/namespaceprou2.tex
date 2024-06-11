@@ -1,0 +1,144 @@
+\doxysection{prou2 Namespace Reference}
+\hypertarget{namespaceprou2}{}\label{namespaceprou2}\index{prou2@{prou2}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprou2_a499142bcdc2936338ee44be504ecdb0f}{respo}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{time\+\_\+stamp}} = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})
+\item 
+str \mbox{\hyperlink{namespaceprou2_a5d9503116a8df31f3452154978633cbd}{prompt}} = "{}which words or phrases do you most overuse?"{}
+\item 
+str \mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}} = "{}llama3"{}
+\item 
+int \mbox{\hyperlink{namespaceprou2_ad6884cf6f2a0376b693e2d3ba12afa6d}{iterations}} = 10
+\item 
+float \mbox{\hyperlink{namespaceprou2_a8ac75f8fff231bf1b1b92d430b06fac3}{frequency\+\_\+penalty}} = 0.\+8,
+\item 
+float \mbox{\hyperlink{namespaceprou2_aaa4fe0882c633a16daee158677405aab}{presence\+\_\+penalty}} = 0.\+8,
+\item 
+\mbox{\hyperlink{namespaceprou2_a2a8a77a90d7b6cd77cc53529c1b86d29}{llm}} = Ollama(model = \mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}})
+\item 
+\mbox{\hyperlink{namespaceprou2_ab3f3df4827ee6ebea0d2cdc910024ef0}{response}}
+\item 
+list \mbox{\hyperlink{namespaceprou2_a09d8be55109d567b53869fa6e64f50dd}{responses}} = \mbox{[}\mbox{\hyperlink{namespaceprou2_ab3f3df4827ee6ebea0d2cdc910024ef0}{response}},\mbox{]}
+\item 
+list \mbox{\hyperlink{namespaceprou2_ac0ff9f8800d2df4012e8788619f6bfbe}{indexed\+\_\+responses}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceprou2_a13923c560151303fdf4dd956b7240c39}{df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceprou2_ac0ff9f8800d2df4012e8788619f6bfbe}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespaceprou2_ad7177cd6129b1e2636bdacdcc35e1b44}{df\+\_\+output\+\_\+filename}} = f\textquotesingle{}outputs/prou2\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}}\}\+\_\+\{\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{time\+\_\+stamp}}\}.csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespaceprou2_aa9321ce40b13d1a83b91fb75e539bf59}{index}}
+\item 
+str \mbox{\hyperlink{namespaceprou2_a2269b998d5e1bb16d072a9e677342b38}{output\+\_\+filename}} = f\textquotesingle{}outputs/prou2\+\_\+\{\mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}}\}\+\_\+\{\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{time\+\_\+stamp}}\}.txt\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceprou2_a499142bcdc2936338ee44be504ecdb0f}\index{prou2@{prou2}!respo@{respo}}
+\index{respo@{respo}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{respo()}{respo()}}
+{\footnotesize\ttfamily \label{namespaceprou2_a499142bcdc2936338ee44be504ecdb0f} 
+prou2.\+respo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceprou2_a13923c560151303fdf4dd956b7240c39}\index{prou2@{prou2}!df@{df}}
+\index{df@{df}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespaceprou2_a13923c560151303fdf4dd956b7240c39} 
+prou2.\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespaceprou2_ac0ff9f8800d2df4012e8788619f6bfbe}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})}
+
+\Hypertarget{namespaceprou2_ad7177cd6129b1e2636bdacdcc35e1b44}\index{prou2@{prou2}!df\_output\_filename@{df\_output\_filename}}
+\index{df\_output\_filename@{df\_output\_filename}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{df\_output\_filename}{df\_output\_filename}}
+{\footnotesize\ttfamily \label{namespaceprou2_ad7177cd6129b1e2636bdacdcc35e1b44} 
+prou2.\+df\+\_\+output\+\_\+filename = f\textquotesingle{}outputs/prou2\+\_\+df\+\_\+\{\mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}}\}\+\_\+\{\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{time\+\_\+stamp}}\}.csv\textquotesingle{}}
+
+\Hypertarget{namespaceprou2_a8ac75f8fff231bf1b1b92d430b06fac3}\index{prou2@{prou2}!frequency\_penalty@{frequency\_penalty}}
+\index{frequency\_penalty@{frequency\_penalty}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{frequency\_penalty}{frequency\_penalty}}
+{\footnotesize\ttfamily \label{namespaceprou2_a8ac75f8fff231bf1b1b92d430b06fac3} 
+float prou2.\+frequency\+\_\+penalty = 0.\+8,}
+
+\Hypertarget{namespaceprou2_aa9321ce40b13d1a83b91fb75e539bf59}\index{prou2@{prou2}!index@{index}}
+\index{index@{index}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespaceprou2_aa9321ce40b13d1a83b91fb75e539bf59} 
+prou2.\+index}
+
+\Hypertarget{namespaceprou2_ac0ff9f8800d2df4012e8788619f6bfbe}\index{prou2@{prou2}!indexed\_responses@{indexed\_responses}}
+\index{indexed\_responses@{indexed\_responses}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{indexed\_responses}{indexed\_responses}}
+{\footnotesize\ttfamily \label{namespaceprou2_ac0ff9f8800d2df4012e8788619f6bfbe} 
+list prou2.\+indexed\+\_\+responses = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespaceprou2_ad6884cf6f2a0376b693e2d3ba12afa6d}\index{prou2@{prou2}!iterations@{iterations}}
+\index{iterations@{iterations}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{iterations}{iterations}}
+{\footnotesize\ttfamily \label{namespaceprou2_ad6884cf6f2a0376b693e2d3ba12afa6d} 
+int prou2.\+iterations = 10}
+
+\Hypertarget{namespaceprou2_a2a8a77a90d7b6cd77cc53529c1b86d29}\index{prou2@{prou2}!llm@{llm}}
+\index{llm@{llm}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{llm}{llm}}
+{\footnotesize\ttfamily \label{namespaceprou2_a2a8a77a90d7b6cd77cc53529c1b86d29} 
+prou2.\+llm = Ollama(model = \mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}})}
+
+\Hypertarget{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}\index{prou2@{prou2}!model\_name@{model\_name}}
+\index{model\_name@{model\_name}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{model\_name}{model\_name}}
+{\footnotesize\ttfamily \label{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f} 
+str prou2.\+model\+\_\+name = "{}llama3"{}}
+
+\Hypertarget{namespaceprou2_a2269b998d5e1bb16d072a9e677342b38}\index{prou2@{prou2}!output\_filename@{output\_filename}}
+\index{output\_filename@{output\_filename}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{output\_filename}{output\_filename}}
+{\footnotesize\ttfamily \label{namespaceprou2_a2269b998d5e1bb16d072a9e677342b38} 
+str prou2.\+output\+\_\+filename = f\textquotesingle{}outputs/prou2\+\_\+\{\mbox{\hyperlink{namespaceprou2_ace75fca72821add9f8de85c1bcc6440f}{model\+\_\+name}}\}\+\_\+\{\mbox{\hyperlink{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}{time\+\_\+stamp}}\}.txt\textquotesingle{}}
+
+\Hypertarget{namespaceprou2_aaa4fe0882c633a16daee158677405aab}\index{prou2@{prou2}!presence\_penalty@{presence\_penalty}}
+\index{presence\_penalty@{presence\_penalty}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{presence\_penalty}{presence\_penalty}}
+{\footnotesize\ttfamily \label{namespaceprou2_aaa4fe0882c633a16daee158677405aab} 
+float prou2.\+presence\+\_\+penalty = 0.\+8,}
+
+\Hypertarget{namespaceprou2_a5d9503116a8df31f3452154978633cbd}\index{prou2@{prou2}!prompt@{prompt}}
+\index{prompt@{prompt}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily \label{namespaceprou2_a5d9503116a8df31f3452154978633cbd} 
+str prou2.\+prompt = "{}which words or phrases do you most overuse?"{}}
+
+\Hypertarget{namespaceprou2_ab3f3df4827ee6ebea0d2cdc910024ef0}\index{prou2@{prou2}!response@{response}}
+\index{response@{response}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{response}{response}}
+{\footnotesize\ttfamily \label{namespaceprou2_ab3f3df4827ee6ebea0d2cdc910024ef0} 
+prou2.\+response}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ llm.invoke(}
+\DoxyCodeLine{00002\ \ \ \ \ prompt,\ }
+\DoxyCodeLine{00003\ \ \ \ \ max\_tokens=100,\ }
+\DoxyCodeLine{00004\ \ \ \ \ temperature=0.9,}
+\DoxyCodeLine{00005\ \ \ \ \ frequency\_penalty\ =\ 0.8,}
+\DoxyCodeLine{00006\ \ \ \ \ presence\_penalty\ =\ 0.9)}
+
+\end{DoxyCode}
+\Hypertarget{namespaceprou2_a09d8be55109d567b53869fa6e64f50dd}\index{prou2@{prou2}!responses@{responses}}
+\index{responses@{responses}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{responses}{responses}}
+{\footnotesize\ttfamily \label{namespaceprou2_a09d8be55109d567b53869fa6e64f50dd} 
+list prou2.\+responses = \mbox{[}\mbox{\hyperlink{namespaceprou2_ab3f3df4827ee6ebea0d2cdc910024ef0}{response}},\mbox{]}}
+
+\Hypertarget{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952}\index{prou2@{prou2}!time\_stamp@{time\_stamp}}
+\index{time\_stamp@{time\_stamp}!prou2@{prou2}}
+\doxysubsubsection{\texorpdfstring{time\_stamp}{time\_stamp}}
+{\footnotesize\ttfamily \label{namespaceprou2_ae0e8cca7aa8e43bdcab09c0716a3e952} 
+prou2.\+time\+\_\+stamp = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})}
+

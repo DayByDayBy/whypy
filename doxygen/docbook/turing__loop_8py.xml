@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_turing__loop_8py" xml:lang="en-US">
+<title>turing_loop.py File Reference</title>
+<indexterm><primary>turing_loop.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceturing__loop">turing_loop</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b">turing_loop.iterative_invocation</link> (initial_prompt, re_prompt_base, max_iterations)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceturing__loop_1afcaa9d7560a7769f6b7e6debafe4b468">turing_loop.parser</link> = argparse.ArgumentParser(description=&apos;run LLM botherer n times&apos;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a42bb5cea3cf46948e6120b52bb545b30">turing_loop.type</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a0b01a373a8ee5d2515f32b3fb09f001e">turing_loop.int</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1ada475f7a6ae29999801446f790a6220e">turing_loop.nargs</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1afbcbf5c93baf783fee2145af7abd341c">turing_loop.default</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a104b6817ae34462e04c3ee93ce65bc45">turing_loop.help</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a31fad5a60c03d0474fdf9405dc757e80">turing_loop.args</link> = parser.parse_args()</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1ad21c08fabaee55bb9fd4d098e880dc79">turing_loop.iterations</link> = args.iterations</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceturing__loop_1ab2826829ebca756b60dadd916e177b4d">turing_loop.turing_prompt</link> = &quot;you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room.&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceturing__loop_1ab428a207d57aefc002e2f87594984bab">turing_loop.turing_re_prompt</link> = &quot;you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says: &quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3">turing_loop.modelName</link> = &quot;llama3&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23">turing_loop.time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a32b4ff9ac85f32372dbe5e41076bd28c">turing_loop.llm</link> = Ollama(model = <link linkend="_namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3">modelName</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a0534d7480aa9473524a1ce577c944a9c">turing_loop.responses</link> = <link linkend="_namespaceturing__loop_1a15157e7293135e7ab2af28d4c1118d1b">iterative_invocation</link>(<link linkend="_namespaceturing__loop_1ab2826829ebca756b60dadd916e177b4d">turing_prompt</link>, <link linkend="_namespaceturing__loop_1ab428a207d57aefc002e2f87594984bab">turing_re_prompt</link>, <link linkend="_namespaceturing__loop_1ad21c08fabaee55bb9fd4d098e880dc79">iterations</link>)</para>
+</listitem>
+            <listitem><para>list <link linkend="_namespaceturing__loop_1a21983c998dd82edcd4b81231a8d1cd66">turing_loop.indexed_responses</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a541f985e71661085c439f83ad7aecf68">turing_loop.df</link> = pd.DataFrame(<link linkend="_namespaceturing__loop_1a21983c998dd82edcd4b81231a8d1cd66">indexed_responses</link>, columns=[&apos;Index&apos;, &apos;Response&apos;])</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceturing__loop_1a36e8e96455cafe53f3cbddf59104e5b7">turing_loop.df_output_filename</link> = f&apos;outputs/turing/whyPy_df_{<link linkend="_namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3">modelName</link>}_{<link linkend="_namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceturing__loop_1a1ba2195297a16ed762346e3bb42e2f30">turing_loop.index</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceturing__loop_1a92008dc4c467c9e58fc1db48caf81cce">turing_loop.output_filename</link> = f&apos;outputs/turing/whyPy_turing_output_{<link linkend="_namespaceturing__loop_1acea1d03a15c4acf786fcbcb1781bf2c3">modelName</link>}_{<link linkend="_namespaceturing__loop_1a9a6c9eb88da0cad2bac436771bc18a23">time_stamp</link>}.txt&apos;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

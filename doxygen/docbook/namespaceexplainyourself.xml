@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceexplainyourself" xml:lang="en-US">
+<title>explainyourself Namespace Reference</title>
+<indexterm><primary>explainyourself</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceexplainyourself_1a47f230f3ff45fc3725a5fb66c3da3182">initialize_output_files</link> (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceexplainyourself_1a2454ba4a481423cf9e8ac1d5f428d0a6">log_response</link> (txt_fname, csv_fname, iteration, response)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceexplainyourself_1aa08c88059599a1c28c767e4b246f4320">response_generator</link> (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceexplainyourself_1a8272001856f6ad0e38c90f9635ad2b0c">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceexplainyourself_1a47f230f3ff45fc3725a5fb66c3da3182"/><section>
+    <title>initialize_output_files()</title>
+<indexterm><primary>initialize_output_files</primary><secondary>explainyourself</secondary></indexterm>
+<indexterm><primary>explainyourself</primary><secondary>initialize_output_files</secondary></indexterm>
+<para><computeroutput>explainyourself.initialize_output_files ( csv_fname,  txt_fname,  initial_prompt,  temp,  frequency_penalty,  presence_penalty,  model_name)</computeroutput></para><para>
+Definition at line <link linkend="_explainyourself_8py_source_1l00008">8</link> of file <link linkend="_explainyourself_8py_source">explainyourself.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceexplainyourself_1a2454ba4a481423cf9e8ac1d5f428d0a6"/><section>
+    <title>log_response()</title>
+<indexterm><primary>log_response</primary><secondary>explainyourself</secondary></indexterm>
+<indexterm><primary>explainyourself</primary><secondary>log_response</secondary></indexterm>
+<para><computeroutput>explainyourself.log_response ( txt_fname,  csv_fname,  iteration,  response)</computeroutput></para><para>
+Definition at line <link linkend="_explainyourself_8py_source_1l00022">22</link> of file <link linkend="_explainyourself_8py_source">explainyourself.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceexplainyourself_1a8272001856f6ad0e38c90f9635ad2b0c"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>explainyourself</secondary></indexterm>
+<indexterm><primary>explainyourself</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>explainyourself.main ( )</computeroutput></para><para>
+Definition at line <link linkend="_explainyourself_8py_source_1l00052">52</link> of file <link linkend="_explainyourself_8py_source">explainyourself.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceexplainyourself_1aa08c88059599a1c28c767e4b246f4320"/><section>
+    <title>response_generator()</title>
+<indexterm><primary>response_generator</primary><secondary>explainyourself</secondary></indexterm>
+<indexterm><primary>explainyourself</primary><secondary>response_generator</secondary></indexterm>
+<para><computeroutput>explainyourself.response_generator ( initial_prompt,  iterations,  llm,  temp,  frequency_penalty,  presence_penalty,  txt_fname,  csv_fname)</computeroutput></para><para>
+Definition at line <link linkend="_explainyourself_8py_source_1l00032">32</link> of file <link linkend="_explainyourself_8py_source">explainyourself.py</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,206 @@
+\doxysection{pitching\+\_\+loop Namespace Reference}
+\hypertarget{namespacepitching__loop}{}\label{namespacepitching__loop}\index{pitching\_loop@{pitching\_loop}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a9049849ecb7958fe925a5a2e05f684aa}{iterative\+\_\+invocation}} (initial\+\_\+prompt, re\+\_\+prompt\+\_\+base, max\+\_\+iterations)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a90a0aea4f98de78c9c8893bad538c68b}{parser}} = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespacepitching__loop_acd9848894558a3121ffb8304fe3ac043}{type}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad637c32101462130ba284b241520e2b8}{int}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a989f63cabf71e49f3a140ec1295cc822}{nargs}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a811b991e7a586f124d7775137fc2e14f}{default}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_aa8bdded0b6e23a4d6ff50fa9a4d92847}{help}}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad86819aa007ada6310c3299396b3cf93}{args}} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad12bdeade9426a544b19c053ecd97637}{iterations}} = args.\+iterations
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_a300a8658c74dd2b56d20040ca96e6c73}{pitch\+\_\+prompt}} = "{}pitch me an original idea for a movie"{}
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_a6354850bfe2f390a8237fca038623681}{pitch\+\_\+re\+\_\+prompt}} = \textquotesingle{}pitch me a better movie than this one\+: \textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}} = "{}mistral"{}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{time\+\_\+stamp}} = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})
+\item 
+\mbox{\hyperlink{namespacepitching__loop_aae28f1802f549cc7ee4745d70c7e1710}{llm}} = Ollama(model = \mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}})
+\item 
+float \mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{temp}} = 0.\+7
+\item 
+\mbox{\hyperlink{namespacepitching__loop_ad637c32101462130ba284b241520e2b8}{int}} \mbox{\hyperlink{namespacepitching__loop_a9b65cf563720359603ceb4ed90769694}{max\+\_\+t}} = 100
+\item 
+float \mbox{\hyperlink{namespacepitching__loop_a9d2b3bf94ec3ae9d460b27ca1648ee0e}{freq\+\_\+penalty}} = 0.\+7
+\item 
+float \mbox{\hyperlink{namespacepitching__loop_a108554aa06aa8994e000b4e0302cac13}{pres\+\_\+penalty}} = 0.\+5
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a7afd06e8970eacfa22ab9c00e4ad1824}{responses}} = \mbox{\hyperlink{namespacepitching__loop_a9049849ecb7958fe925a5a2e05f684aa}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespacepitching__loop_a300a8658c74dd2b56d20040ca96e6c73}{pitch\+\_\+prompt}}, \mbox{\hyperlink{namespacepitching__loop_a6354850bfe2f390a8237fca038623681}{pitch\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespacepitching__loop_ad12bdeade9426a544b19c053ecd97637}{iterations}})
+\item 
+list \mbox{\hyperlink{namespacepitching__loop_a8e62973dba4044c809f453ca6b93ffea}{indexed\+\_\+responses}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_aea9e967a622b96826324a437dab60119}{df}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespacepitching__loop_a8e62973dba4044c809f453ca6b93ffea}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_ade50c445407952b5943dff49402d0150}{df\+\_\+output\+\_\+filename}} = f\textquotesingle{}outputs/pitching/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}}\}\+\_\+temp\{\mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{temp}}\}\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{time\+\_\+stamp}}\}.csv\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacepitching__loop_a416be6b378478cec32793e6120a9d0c9}{index}}
+\item 
+str \mbox{\hyperlink{namespacepitching__loop_a9a6d7ec56b62fd3780dbc5fa233a5d0f}{output\+\_\+filename}} = f\textquotesingle{}outputs/pitching/why\+Py\+\_\+pitching\+\_\+output\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}}\}\+\_\+temp\{\mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{temp}}\}\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{time\+\_\+stamp}}\}.txt\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacepitching__loop_a9049849ecb7958fe925a5a2e05f684aa}\index{pitching\_loop@{pitching\_loop}!iterative\_invocation@{iterative\_invocation}}
+\index{iterative\_invocation@{iterative\_invocation}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{iterative\_invocation()}{iterative\_invocation()}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a9049849ecb7958fe925a5a2e05f684aa} 
+pitching\+\_\+loop.\+iterative\+\_\+invocation (\begin{DoxyParamCaption}\item[{}]{initial\+\_\+prompt}{, }\item[{}]{re\+\_\+prompt\+\_\+base}{, }\item[{}]{max\+\_\+iterations}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacepitching__loop_ad86819aa007ada6310c3299396b3cf93}\index{pitching\_loop@{pitching\_loop}!args@{args}}
+\index{args@{args}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_ad86819aa007ada6310c3299396b3cf93} 
+pitching\+\_\+loop.\+args = parser.\+parse\+\_\+args()}
+
+\Hypertarget{namespacepitching__loop_a811b991e7a586f124d7775137fc2e14f}\index{pitching\_loop@{pitching\_loop}!default@{default}}
+\index{default@{default}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a811b991e7a586f124d7775137fc2e14f} 
+pitching\+\_\+loop.\+default}
+
+\Hypertarget{namespacepitching__loop_aea9e967a622b96826324a437dab60119}\index{pitching\_loop@{pitching\_loop}!df@{df}}
+\index{df@{df}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_aea9e967a622b96826324a437dab60119} 
+pitching\+\_\+loop.\+df = pd.\+Data\+Frame(\mbox{\hyperlink{namespacepitching__loop_a8e62973dba4044c809f453ca6b93ffea}{indexed\+\_\+responses}}, columns=\mbox{[}\textquotesingle{}Index\textquotesingle{}, \textquotesingle{}Response\textquotesingle{}\mbox{]})}
+
+\Hypertarget{namespacepitching__loop_ade50c445407952b5943dff49402d0150}\index{pitching\_loop@{pitching\_loop}!df\_output\_filename@{df\_output\_filename}}
+\index{df\_output\_filename@{df\_output\_filename}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{df\_output\_filename}{df\_output\_filename}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_ade50c445407952b5943dff49402d0150} 
+pitching\+\_\+loop.\+df\+\_\+output\+\_\+filename = f\textquotesingle{}outputs/pitching/why\+Py\+\_\+df\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}}\}\+\_\+temp\{\mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{temp}}\}\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{time\+\_\+stamp}}\}.csv\textquotesingle{}}
+
+\Hypertarget{namespacepitching__loop_a9d2b3bf94ec3ae9d460b27ca1648ee0e}\index{pitching\_loop@{pitching\_loop}!freq\_penalty@{freq\_penalty}}
+\index{freq\_penalty@{freq\_penalty}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{freq\_penalty}{freq\_penalty}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a9d2b3bf94ec3ae9d460b27ca1648ee0e} 
+float pitching\+\_\+loop.\+freq\+\_\+penalty = 0.\+7}
+
+\Hypertarget{namespacepitching__loop_aa8bdded0b6e23a4d6ff50fa9a4d92847}\index{pitching\_loop@{pitching\_loop}!help@{help}}
+\index{help@{help}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_aa8bdded0b6e23a4d6ff50fa9a4d92847} 
+pitching\+\_\+loop.\+help}
+
+\Hypertarget{namespacepitching__loop_a416be6b378478cec32793e6120a9d0c9}\index{pitching\_loop@{pitching\_loop}!index@{index}}
+\index{index@{index}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a416be6b378478cec32793e6120a9d0c9} 
+pitching\+\_\+loop.\+index}
+
+\Hypertarget{namespacepitching__loop_a8e62973dba4044c809f453ca6b93ffea}\index{pitching\_loop@{pitching\_loop}!indexed\_responses@{indexed\_responses}}
+\index{indexed\_responses@{indexed\_responses}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{indexed\_responses}{indexed\_responses}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a8e62973dba4044c809f453ca6b93ffea} 
+list pitching\+\_\+loop.\+indexed\+\_\+responses = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{namespacepitching__loop_ad637c32101462130ba284b241520e2b8}\index{pitching\_loop@{pitching\_loop}!int@{int}}
+\index{int@{int}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{int}{int}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_ad637c32101462130ba284b241520e2b8} 
+pitching\+\_\+loop.\+int}
+
+\Hypertarget{namespacepitching__loop_ad12bdeade9426a544b19c053ecd97637}\index{pitching\_loop@{pitching\_loop}!iterations@{iterations}}
+\index{iterations@{iterations}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{iterations}{iterations}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_ad12bdeade9426a544b19c053ecd97637} 
+pitching\+\_\+loop.\+iterations = args.\+iterations}
+
+\Hypertarget{namespacepitching__loop_aae28f1802f549cc7ee4745d70c7e1710}\index{pitching\_loop@{pitching\_loop}!llm@{llm}}
+\index{llm@{llm}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{llm}{llm}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_aae28f1802f549cc7ee4745d70c7e1710} 
+pitching\+\_\+loop.\+llm = Ollama(model = \mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}})}
+
+\Hypertarget{namespacepitching__loop_a9b65cf563720359603ceb4ed90769694}\index{pitching\_loop@{pitching\_loop}!max\_t@{max\_t}}
+\index{max\_t@{max\_t}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{max\_t}{max\_t}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a9b65cf563720359603ceb4ed90769694} 
+\mbox{\hyperlink{namespacepitching__loop_ad637c32101462130ba284b241520e2b8}{int}} pitching\+\_\+loop.\+max\+\_\+t = 100}
+
+\Hypertarget{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}\index{pitching\_loop@{pitching\_loop}!model\_name@{model\_name}}
+\index{model\_name@{model\_name}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{model\_name}{model\_name}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d} 
+str pitching\+\_\+loop.\+model\+\_\+name = "{}mistral"{}}
+
+\Hypertarget{namespacepitching__loop_a989f63cabf71e49f3a140ec1295cc822}\index{pitching\_loop@{pitching\_loop}!nargs@{nargs}}
+\index{nargs@{nargs}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{nargs}{nargs}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a989f63cabf71e49f3a140ec1295cc822} 
+pitching\+\_\+loop.\+nargs}
+
+\Hypertarget{namespacepitching__loop_a9a6d7ec56b62fd3780dbc5fa233a5d0f}\index{pitching\_loop@{pitching\_loop}!output\_filename@{output\_filename}}
+\index{output\_filename@{output\_filename}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{output\_filename}{output\_filename}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a9a6d7ec56b62fd3780dbc5fa233a5d0f} 
+str pitching\+\_\+loop.\+output\+\_\+filename = f\textquotesingle{}outputs/pitching/why\+Py\+\_\+pitching\+\_\+output\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_aa23df51a43d772fb39bc7066b0dfc66d}{model\+\_\+name}}\}\+\_\+temp\{\mbox{\hyperlink{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}{temp}}\}\+\_\+\{\mbox{\hyperlink{namespacepitching__loop_ab0916613600790ead026314753130e95}{time\+\_\+stamp}}\}.txt\textquotesingle{}}
+
+\Hypertarget{namespacepitching__loop_a90a0aea4f98de78c9c8893bad538c68b}\index{pitching\_loop@{pitching\_loop}!parser@{parser}}
+\index{parser@{parser}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a90a0aea4f98de78c9c8893bad538c68b} 
+pitching\+\_\+loop.\+parser = argparse.\+Argument\+Parser(description=\textquotesingle{}run LLM botherer n times\textquotesingle{})}
+
+\Hypertarget{namespacepitching__loop_a300a8658c74dd2b56d20040ca96e6c73}\index{pitching\_loop@{pitching\_loop}!pitch\_prompt@{pitch\_prompt}}
+\index{pitch\_prompt@{pitch\_prompt}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{pitch\_prompt}{pitch\_prompt}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a300a8658c74dd2b56d20040ca96e6c73} 
+str pitching\+\_\+loop.\+pitch\+\_\+prompt = "{}pitch me an original idea for a movie"{}}
+
+\Hypertarget{namespacepitching__loop_a6354850bfe2f390a8237fca038623681}\index{pitching\_loop@{pitching\_loop}!pitch\_re\_prompt@{pitch\_re\_prompt}}
+\index{pitch\_re\_prompt@{pitch\_re\_prompt}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{pitch\_re\_prompt}{pitch\_re\_prompt}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a6354850bfe2f390a8237fca038623681} 
+str pitching\+\_\+loop.\+pitch\+\_\+re\+\_\+prompt = \textquotesingle{}pitch me a better movie than this one\+: \textquotesingle{}}
+
+\Hypertarget{namespacepitching__loop_a108554aa06aa8994e000b4e0302cac13}\index{pitching\_loop@{pitching\_loop}!pres\_penalty@{pres\_penalty}}
+\index{pres\_penalty@{pres\_penalty}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{pres\_penalty}{pres\_penalty}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a108554aa06aa8994e000b4e0302cac13} 
+float pitching\+\_\+loop.\+pres\+\_\+penalty = 0.\+5}
+
+\Hypertarget{namespacepitching__loop_a7afd06e8970eacfa22ab9c00e4ad1824}\index{pitching\_loop@{pitching\_loop}!responses@{responses}}
+\index{responses@{responses}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{responses}{responses}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a7afd06e8970eacfa22ab9c00e4ad1824} 
+pitching\+\_\+loop.\+responses = \mbox{\hyperlink{namespacepitching__loop_a9049849ecb7958fe925a5a2e05f684aa}{iterative\+\_\+invocation}}(\mbox{\hyperlink{namespacepitching__loop_a300a8658c74dd2b56d20040ca96e6c73}{pitch\+\_\+prompt}}, \mbox{\hyperlink{namespacepitching__loop_a6354850bfe2f390a8237fca038623681}{pitch\+\_\+re\+\_\+prompt}}, \mbox{\hyperlink{namespacepitching__loop_ad12bdeade9426a544b19c053ecd97637}{iterations}})}
+
+\Hypertarget{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704}\index{pitching\_loop@{pitching\_loop}!temp@{temp}}
+\index{temp@{temp}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_a1fdf09996abc0f9e5890a1f88718f704} 
+float pitching\+\_\+loop.\+temp = 0.\+7}
+
+\Hypertarget{namespacepitching__loop_ab0916613600790ead026314753130e95}\index{pitching\_loop@{pitching\_loop}!time\_stamp@{time\_stamp}}
+\index{time\_stamp@{time\_stamp}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{time\_stamp}{time\_stamp}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_ab0916613600790ead026314753130e95} 
+pitching\+\_\+loop.\+time\+\_\+stamp = datetime.\+now().strftime("{}\%Y\%m\%d\+\_\+\%H\%M"{})}
+
+\Hypertarget{namespacepitching__loop_acd9848894558a3121ffb8304fe3ac043}\index{pitching\_loop@{pitching\_loop}!type@{type}}
+\index{type@{type}!pitching\_loop@{pitching\_loop}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{namespacepitching__loop_acd9848894558a3121ffb8304fe3ac043} 
+pitching\+\_\+loop.\+type}
+

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceshocker" xml:lang="en-US">
+<title>shocker Namespace Reference</title>
+<indexterm><primary>shocker</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceshocker_1af8a3252ec0b152a957973df6b69ce5da">initialize_output_files</link> (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceshocker_1abca42a204cc99ed758f162c3fe75b3e3">log_response</link> (txt_fname, csv_fname, iteration, response)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceshocker_1a99efa9d677270bbcd966238b70eeb190">response_generator</link> (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceshocker_1a3f41c96a1a5d8185d002a5aaeb25e5a6">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceshocker_1af8a3252ec0b152a957973df6b69ce5da"/><section>
+    <title>initialize_output_files()</title>
+<indexterm><primary>initialize_output_files</primary><secondary>shocker</secondary></indexterm>
+<indexterm><primary>shocker</primary><secondary>initialize_output_files</secondary></indexterm>
+<para><computeroutput>shocker.initialize_output_files ( csv_fname,  txt_fname,  initial_prompt,  temp,  frequency_penalty,  presence_penalty,  model_name)</computeroutput></para><para>
+Definition at line <link linkend="_shocker_8py_source_1l00006">6</link> of file <link linkend="_shocker_8py_source">shocker.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceshocker_1abca42a204cc99ed758f162c3fe75b3e3"/><section>
+    <title>log_response()</title>
+<indexterm><primary>log_response</primary><secondary>shocker</secondary></indexterm>
+<indexterm><primary>shocker</primary><secondary>log_response</secondary></indexterm>
+<para><computeroutput>shocker.log_response ( txt_fname,  csv_fname,  iteration,  response)</computeroutput></para><para>
+Definition at line <link linkend="_shocker_8py_source_1l00020">20</link> of file <link linkend="_shocker_8py_source">shocker.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceshocker_1a3f41c96a1a5d8185d002a5aaeb25e5a6"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>shocker</secondary></indexterm>
+<indexterm><primary>shocker</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>shocker.main ( )</computeroutput></para><para>
+Definition at line <link linkend="_shocker_8py_source_1l00051">51</link> of file <link linkend="_shocker_8py_source">shocker.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceshocker_1a99efa9d677270bbcd966238b70eeb190"/><section>
+    <title>response_generator()</title>
+<indexterm><primary>response_generator</primary><secondary>shocker</secondary></indexterm>
+<indexterm><primary>shocker</primary><secondary>response_generator</secondary></indexterm>
+<para><computeroutput>shocker.response_generator ( initial_prompt,  iterations,  llm,  temp,  frequency_penalty,  presence_penalty,  txt_fname,  csv_fname)</computeroutput></para><para>
+Definition at line <link linkend="_shocker_8py_source_1l00030">30</link> of file <link linkend="_shocker_8py_source">shocker.py</link>.</para>
+</section>
+</section>
+</section>

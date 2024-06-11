@@ -1,0 +1,3306 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs12\cgrid \sbasedon0 \snext0 heading 6;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\*\listtable
+{\list\listtemplateid1
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8226 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u8662 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9702 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9642 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid1}
+{\list\listtemplateid2
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9744 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid2}
+{\list\listtemplateid3
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li360 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li720 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1080 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1440 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li1800 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2160 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2520 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li2880 }
+{ \listlevel\levelnfc23\leveljc0\levelstartat1\levelfollow0{\leveltext \'01\u9746 ?;}{\levelnumbers;}\f8\dbch\af3\fi-360\li3600 }
+\listid3}
+}
+{\listoverridetable
+{\listoverride\listid1\listoverridecount0\ls1}
+{\listoverride\listid2\listoverridecount0\ls2}
+{\listoverride\listid3\listoverridecount0\ls3}
+}
+{\info 
+{\title {\comment why-py-scan-dox }why-py-scan-dox}
+{\comment Generated by doxygen 1.11.0.}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt why-py-scan-dox}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version \par\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\par \pard\plain 
+\par \pard\plain 
+\pard\plain \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+whypy\par \pard\plain 
+{\tc\tcl1 \v whypy}
+{\xe \v whypy}
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+ \par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+an iterative LLM-botherer
+\par}
+{\tc\tcl2 \v an iterative LLM-botherer}
+iteratively invoking Large Language Models (LLM) using Ollama via {\f2 langchain_community}  package\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Scripts
+\par}
+{\tc\tcl3 \v Scripts}
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{{\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+1. {\f2 _loop.py} 
+\par}
+{\tc\tcl4 \v 1. {\f2 _loop.py} }
+iteratively invoke an LLM with different prompts\par}
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{{\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+2. {\f2 explainyourself.py} 
+\par}
+{\tc\tcl4 \v 2. {\f2 explainyourself.py} }
+iteratively prompts an LLM to explain itself. saves the responses in csv and txt file formats.\par}
+\par}
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Requirements
+\par}
+{\tc\tcl3 \v Requirements}
+{
+\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Python 3.x\par
+\pard\plain {\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\nowidctlpar\cf0\hich\af0\langfe2052\dbch\af0\afs24\lang1081\loch\f0\fs24\lang1033{\listtext\pard\plain \hich\af3\dbch\af3\loch\f8 \'01\u8226\tab}\ilvl0\ls1 \li0\ri0\lin0\rin0\fi-360\tx360\li360\ri0\lin360\rin0\fi-360\kerning1\hich\af4\dbch\af5\rtlch \ltrch\loch\fs20
+Packages: {\f2 argparse} , {\f2 pandas} , {\f2 langchain_community} , {\f2 langchain} , {\f2 langchain_core} \par}
+\par
+install the required packages using pip:\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid pip install argparse pandas langchain_community\par
+}
+\par}
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Usage
+\par}
+{\tc\tcl3 \v Usage}
+{
+\par
+\pard\plain \s140\fi-360\li360\widctlpar\fs20\cgrid 
+1.\tab clone the repo or copy the script to your local machine.\par
+\pard\plain \s140\fi-360\li360\widctlpar\fs20\cgrid 
+2.\tab run the script with the desired number of iterations:\par}
+\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid python loop.py [iterations]\par
+}
+\par
+(if no iterations are given, the script defaults to 10)\par
+output files will be saved in the {\f2 outputs/pitching}  directory with a filename format that includes the model name, temperature, and a timestamp.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid python explainyourself.py\par
+}
+\par
+output files will be saved in the {\f2 outputs/explain}  directory with filenames that include the model name and a timestamp.\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+ \par}
+\par}
+}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Namespace Index\par \pard\plain 
+{\tc \v Namespace Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Package List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the packages with brief descriptions (if available):}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b explainyourself} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAZ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b interesting_loop} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b mirror_roast} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABZ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b pitching_loop} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b prou} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b prou2} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADR \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b shocker} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b turing_loop} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b explainyourself.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b interesting_loop.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b mirror_roast.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b pitching_loop.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b prou.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b prou2.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b shocker.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b turing_loop.py} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Namespace Documentation\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+explainyourself Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v explainyourself}
+{\xe \v explainyourself}
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b initialize_output_files} (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b log_response} (txt_fname, csv_fname, iteration, response)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b response_generator} (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v initialize_output_files\:explainyourself}
+{\xe \v explainyourself\:initialize_output_files}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+explainyourself.initialize_output_files ( csv_fname,  txt_fname,  initial_prompt,  temp,  frequency_penalty,  presence_penalty,  model_name)}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 8} of file {\b explainyourself.py}.}\par
+}
+{\xe \v log_response\:explainyourself}
+{\xe \v explainyourself\:log_response}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+explainyourself.log_response ( txt_fname,  csv_fname,  iteration,  response)}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 22} of file {\b explainyourself.py}.}\par
+}
+{\xe \v main\:explainyourself}
+{\xe \v explainyourself\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+explainyourself.main ()}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 52} of file {\b explainyourself.py}.}\par
+}
+{\xe \v response_generator\:explainyourself}
+{\xe \v explainyourself\:response_generator}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+explainyourself.response_generator ( initial_prompt,  iterations,  llm,  temp,  frequency_penalty,  presence_penalty,  txt_fname,  csv_fname)}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 32} of file {\b explainyourself.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+interesting_loop Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v interesting_loop}
+{\xe \v interesting_loop}
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b iterative_invocation} (initial_prompt, re_prompt_base, max_iterations)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b parser} = argparse.ArgumentParser(description='run LLM botherer n times')\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b int}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b nargs}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b default}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b args} = parser.parse_args()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b iterations} = args.iterations\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b impress_prompt} = "concisely convince me you're intersting"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b impress_re_prompt} = "show me you're more interesting than this person: "\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b modelName} = "command-r"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b llm} = Ollama(model = {\b modelName})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b responses} = {\b iterative_invocation}({\b impress_prompt}, {\b impress_re_prompt}, {\b iterations})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b df_output_filename} = f'outputs/interesting/whyPy_df_\{{\b modelName}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b output_filename} = f'outputs/interesting/whyPy_interesting_output_\{{\b modelName}\}_\{{\b time_stamp}\}.txt'\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v iterative_invocation\:interesting_loop}
+{\xe \v interesting_loop\:iterative_invocation}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.iterative_invocation ( initial_prompt,  re_prompt_base,  max_iterations)}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 36} of file {\b interesting_loop.py}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v args\:interesting_loop}
+{\xe \v interesting_loop\:args}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.args = parser.parse_args()}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 14} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v default\:interesting_loop}
+{\xe \v interesting_loop\:default}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.default}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v df\:interesting_loop}
+{\xe \v interesting_loop\:df}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.df = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 61} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v df_output_filename\:interesting_loop}
+{\xe \v interesting_loop\:df_output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.df_output_filename = f'outputs/interesting/whyPy_df_\{{\b modelName}\}_\{{\b time_stamp}\}.csv'}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 62} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v help\:interesting_loop}
+{\xe \v interesting_loop\:help}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.help}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v impress_prompt\:interesting_loop}
+{\xe \v interesting_loop\:impress_prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str interesting_loop.impress_prompt = "concisely convince me you're intersting"}}
+\par
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 23} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v impress_re_prompt\:interesting_loop}
+{\xe \v interesting_loop\:impress_re_prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str interesting_loop.impress_re_prompt = "show me you're more interesting than this person: "}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 24} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v index\:interesting_loop}
+{\xe \v interesting_loop\:index}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.index}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 63} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v indexed_responses\:interesting_loop}
+{\xe \v interesting_loop\:indexed_responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+list interesting_loop.indexed_responses = []}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 55} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v int\:interesting_loop}
+{\xe \v interesting_loop\:int}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.int}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v iterations\:interesting_loop}
+{\xe \v interesting_loop\:iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.iterations = args.iterations}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 16} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v llm\:interesting_loop}
+{\xe \v interesting_loop\:llm}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.llm = Ollama(model = {\b modelName})}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 33} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v modelName\:interesting_loop}
+{\xe \v interesting_loop\:modelName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str interesting_loop.modelName = "command-r"}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v nargs\:interesting_loop}
+{\xe \v interesting_loop\:nargs}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.nargs}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v output_filename\:interesting_loop}
+{\xe \v interesting_loop\:output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str interesting_loop.output_filename = f'outputs/interesting/whyPy_interesting_output_\{{\b modelName}\}_\{{\b time_stamp}\}.txt'}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 65} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v parser\:interesting_loop}
+{\xe \v interesting_loop\:parser}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.parser = argparse.ArgumentParser(description='run LLM botherer n times')}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 12} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v responses\:interesting_loop}
+{\xe \v interesting_loop\:responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.responses = {\b iterative_invocation}({\b impress_prompt}, {\b impress_re_prompt}, {\b iterations})}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 54} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v time_stamp\:interesting_loop}
+{\xe \v interesting_loop\:time_stamp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.time_stamp = datetime.now().strftime("%Y%m%d_%H%M")}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 31} of file {\b interesting_loop.py}.}\par
+}
+{\xe \v type\:interesting_loop}
+{\xe \v interesting_loop\:type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+interesting_loop.type}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b interesting_loop.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+mirror_roast Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v mirror_roast}
+{\xe \v mirror_roast}
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b initialize_output_files} (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b log_response} (txt_fname, csv_fname, iteration, response)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b response_generator} (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v initialize_output_files\:mirror_roast}
+{\xe \v mirror_roast\:initialize_output_files}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+mirror_roast.initialize_output_files ( csv_fname,  txt_fname,  initial_prompt,  temp,  frequency_penalty,  presence_penalty,  model_name)}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b mirror_roast.py}.}\par
+}
+{\xe \v log_response\:mirror_roast}
+{\xe \v mirror_roast\:log_response}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+mirror_roast.log_response ( txt_fname,  csv_fname,  iteration,  response)}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 20} of file {\b mirror_roast.py}.}\par
+}
+{\xe \v main\:mirror_roast}
+{\xe \v mirror_roast\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+mirror_roast.main ()}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 51} of file {\b mirror_roast.py}.}\par
+}
+{\xe \v response_generator\:mirror_roast}
+{\xe \v mirror_roast\:response_generator}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+mirror_roast.response_generator ( initial_prompt,  iterations,  llm,  temp,  frequency_penalty,  presence_penalty,  txt_fname,  csv_fname)}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b mirror_roast.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+pitching_loop Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v pitching_loop}
+{\xe \v pitching_loop}
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b iterative_invocation} (initial_prompt, re_prompt_base, max_iterations)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b parser} = argparse.ArgumentParser(description='run LLM botherer n times')\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b int}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b nargs}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b default}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b args} = parser.parse_args()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b iterations} = args.iterations\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b pitch_prompt} = "pitch me an original idea for a movie"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b pitch_re_prompt} = 'pitch me a better movie than this one: '\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b model_name} = "mistral"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b llm} = Ollama(model = {\b model_name})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b temp} = 0.7\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b int} {\b max_t} = 100\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b freq_penalty} = 0.7\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b pres_penalty} = 0.5\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b responses} = {\b iterative_invocation}({\b pitch_prompt}, {\b pitch_re_prompt}, {\b iterations})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b df_output_filename} = f'outputs/pitching/whyPy_df_\{{\b model_name}\}_temp\{{\b temp}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b output_filename} = f'outputs/pitching/whyPy_pitching_output_\{{\b model_name}\}_temp\{{\b temp}\}_\{{\b time_stamp}\}.txt'\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v iterative_invocation\:pitching_loop}
+{\xe \v pitching_loop\:iterative_invocation}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.iterative_invocation ( initial_prompt,  re_prompt_base,  max_iterations)}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 39} of file {\b pitching_loop.py}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v args\:pitching_loop}
+{\xe \v pitching_loop\:args}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.args = parser.parse_args()}}
+\par
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 14} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v default\:pitching_loop}
+{\xe \v pitching_loop\:default}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.default}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v df\:pitching_loop}
+{\xe \v pitching_loop\:df}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.df = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 69} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v df_output_filename\:pitching_loop}
+{\xe \v pitching_loop\:df_output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.df_output_filename = f'outputs/pitching/whyPy_df_\{{\b model_name}\}_temp\{{\b temp}\}_\{{\b time_stamp}\}.csv'}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 70} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v freq_penalty\:pitching_loop}
+{\xe \v pitching_loop\:freq_penalty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float pitching_loop.freq_penalty = 0.7}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 36} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v help\:pitching_loop}
+{\xe \v pitching_loop\:help}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.help}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v index\:pitching_loop}
+{\xe \v pitching_loop\:index}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.index}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 71} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v indexed_responses\:pitching_loop}
+{\xe \v pitching_loop\:indexed_responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+list pitching_loop.indexed_responses = []}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 63} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v int\:pitching_loop}
+{\xe \v pitching_loop\:int}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.int}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v iterations\:pitching_loop}
+{\xe \v pitching_loop\:iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.iterations = args.iterations}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 16} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v llm\:pitching_loop}
+{\xe \v pitching_loop\:llm}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.llm = Ollama(model = {\b model_name})}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 33} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v max_t\:pitching_loop}
+{\xe \v pitching_loop\:max_t}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b int} pitching_loop.max_t = 100}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 35} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v model_name\:pitching_loop}
+{\xe \v pitching_loop\:model_name}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str pitching_loop.model_name = "mistral"}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v nargs\:pitching_loop}
+{\xe \v pitching_loop\:nargs}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.nargs}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v output_filename\:pitching_loop}
+{\xe \v pitching_loop\:output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str pitching_loop.output_filename = f'outputs/pitching/whyPy_pitching_output_\{{\b model_name}\}_temp\{{\b temp}\}_\{{\b time_stamp}\}.txt'}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 73} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v parser\:pitching_loop}
+{\xe \v pitching_loop\:parser}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.parser = argparse.ArgumentParser(description='run LLM botherer n times')}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 12} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v pitch_prompt\:pitching_loop}
+{\xe \v pitching_loop\:pitch_prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str pitching_loop.pitch_prompt = "pitch me an original idea for a movie"}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 19} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v pitch_re_prompt\:pitching_loop}
+{\xe \v pitching_loop\:pitch_re_prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str pitching_loop.pitch_re_prompt = 'pitch me a better movie than this one: '}}
+\par
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 20} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v pres_penalty\:pitching_loop}
+{\xe \v pitching_loop\:pres_penalty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float pitching_loop.pres_penalty = 0.5}}
+\par
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 37} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v responses\:pitching_loop}
+{\xe \v pitching_loop\:responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.responses = {\b iterative_invocation}({\b pitch_prompt}, {\b pitch_re_prompt}, {\b iterations})}}
+\par
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 62} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v temp\:pitching_loop}
+{\xe \v pitching_loop\:temp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float pitching_loop.temp = 0.7}}
+\par
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 34} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v time_stamp\:pitching_loop}
+{\xe \v pitching_loop\:time_stamp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.time_stamp = datetime.now().strftime("%Y%m%d_%H%M")}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 31} of file {\b pitching_loop.py}.}\par
+}
+{\xe \v type\:pitching_loop}
+{\xe \v pitching_loop\:type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+pitching_loop.type}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b pitching_loop.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+prou Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v prou}
+{\xe \v prou}
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b respo} ({\b initial_prompt}, {\b iterations})\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b initial_prompt} = "what do you consider the most overrated virtue?"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b model_name} = "llama3"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b iterations} = 300\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b temp} = 0.6\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b frequency_penalty} = np.float32(0.9)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b presence_penalty} = np.float32(0.9)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b llm} = Ollama(model = {\b model_name})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b df_output_filename} = f'outputs/prou/prou_df_\{{\b model_name}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b output_filename} = f'outputs/prou/prou_\{{\b model_name}\}_\{{\b time_stamp}\}.txt'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b returned_responses}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b indexed_responses}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v respo\:prou}
+{\xe \v prou\:respo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou.respo ( initial_prompt,  iterations)}}
+\par
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 26} of file {\b prou.py}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v df_output_filename\:prou}
+{\xe \v prou\:df_output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str prou.df_output_filename = f'outputs/prou/prou_df_\{{\b model_name}\}_\{{\b time_stamp}\}.csv'}}
+\par
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 21} of file {\b prou.py}.}\par
+}
+{\xe \v frequency_penalty\:prou}
+{\xe \v prou\:frequency_penalty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou.frequency_penalty = np.float32(0.9)}}
+\par
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 18} of file {\b prou.py}.}\par
+}
+{\xe \v indexed_responses\:prou}
+{\xe \v prou\:indexed_responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou.indexed_responses}}
+\par
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 62} of file {\b prou.py}.}\par
+}
+{\xe \v initial_prompt\:prou}
+{\xe \v prou\:initial_prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str prou.initial_prompt = "what do you consider the most overrated virtue?"}}
+\par
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b prou.py}.}\par
+}
+{\xe \v iterations\:prou}
+{\xe \v prou\:iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int prou.iterations = 300}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 16} of file {\b prou.py}.}\par
+}
+{\xe \v llm\:prou}
+{\xe \v prou\:llm}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou.llm = Ollama(model = {\b model_name})}}
+\par
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 20} of file {\b prou.py}.}\par
+}
+{\xe \v model_name\:prou}
+{\xe \v prou\:model_name}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str prou.model_name = "llama3"}}
+\par
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 15} of file {\b prou.py}.}\par
+}
+{\xe \v output_filename\:prou}
+{\xe \v prou\:output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str prou.output_filename = f'outputs/prou/prou_\{{\b model_name}\}_\{{\b time_stamp}\}.txt'}}
+\par
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 22} of file {\b prou.py}.}\par
+}
+{\xe \v presence_penalty\:prou}
+{\xe \v prou\:presence_penalty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou.presence_penalty = np.float32(0.9)}}
+\par
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 19} of file {\b prou.py}.}\par
+}
+{\xe \v returned_responses\:prou}
+{\xe \v prou\:returned_responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou.returned_responses}}
+\par
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 62} of file {\b prou.py}.}\par
+}
+{\xe \v temp\:prou}
+{\xe \v prou\:temp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float prou.temp = 0.6}}
+\par
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 17} of file {\b prou.py}.}\par
+}
+{\xe \v time_stamp\:prou}
+{\xe \v prou\:time_stamp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou.time_stamp = datetime.now().strftime("%Y%m%d_%H%M")}}
+\par
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 11} of file {\b prou.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+prou2 Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v prou2}
+{\xe \v prou2}
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b respo} ()\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prompt} = "which words or phrases do you most overuse?"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b model_name} = "llama3"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b iterations} = 10\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b frequency_penalty} = 0.8,\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b presence_penalty} = 0.8,\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b llm} = Ollama(model = {\b model_name})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b response}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b responses} = [{\b response},]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b df_output_filename} = f'outputs/prou2_df_\{{\b model_name}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b output_filename} = f'outputs/prou2_\{{\b model_name}\}_\{{\b time_stamp}\}.txt'\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v respo\:prou2}
+{\xe \v prou2\:respo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou2.respo ()}}
+\par
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 25} of file {\b prou2.py}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v df\:prou2}
+{\xe \v prou2\:df}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou2.df = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])}}
+\par
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 49} of file {\b prou2.py}.}\par
+}
+{\xe \v df_output_filename\:prou2}
+{\xe \v prou2\:df_output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou2.df_output_filename = f'outputs/prou2_df_\{{\b model_name}\}_\{{\b time_stamp}\}.csv'}}
+\par
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 50} of file {\b prou2.py}.}\par
+}
+{\xe \v frequency_penalty\:prou2}
+{\xe \v prou2\:frequency_penalty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float prou2.frequency_penalty = 0.8,}}
+\par
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b prou2.py}.}\par
+}
+{\xe \v index\:prou2}
+{\xe \v prou2\:index}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou2.index}}
+\par
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 51} of file {\b prou2.py}.}\par
+}
+{\xe \v indexed_responses\:prou2}
+{\xe \v prou2\:indexed_responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+list prou2.indexed_responses = []}}
+\par
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 45} of file {\b prou2.py}.}\par
+}
+{\xe \v iterations\:prou2}
+{\xe \v prou2\:iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int prou2.iterations = 10}}
+\par
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 12} of file {\b prou2.py}.}\par
+}
+{\xe \v llm\:prou2}
+{\xe \v prou2\:llm}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou2.llm = Ollama(model = {\b model_name})}}
+\par
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 15} of file {\b prou2.py}.}\par
+}
+{\xe \v model_name\:prou2}
+{\xe \v prou2\:model_name}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str prou2.model_name = "llama3"}}
+\par
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 11} of file {\b prou2.py}.}\par
+}
+{\xe \v output_filename\:prou2}
+{\xe \v prou2\:output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str prou2.output_filename = f'outputs/prou2_\{{\b model_name}\}_\{{\b time_stamp}\}.txt'}}
+\par
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 53} of file {\b prou2.py}.}\par
+}
+{\xe \v presence_penalty\:prou2}
+{\xe \v prou2\:presence_penalty}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float prou2.presence_penalty = 0.8,}}
+\par
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 14} of file {\b prou2.py}.}\par
+}
+{\xe \v prompt\:prou2}
+{\xe \v prou2\:prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str prou2.prompt = "which words or phrases do you most overuse?"}}
+\par
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 10} of file {\b prou2.py}.}\par
+}
+{\xe \v response\:prou2}
+{\xe \v prou2\:response}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou2.response}}
+\par
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Initial value:}{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 =  llm.invoke(\par
+00002     prompt, \par
+00003     max_tokens=100, \par
+00004     temperature=0.9,\par
+00005     frequency_penalty = 0.8,\par
+00006     presence_penalty = 0.9)\par
+}
+{
+Definition at line {\b 16} of file {\b prou2.py}.}\par
+}
+{\xe \v responses\:prou2}
+{\xe \v prou2\:responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+list prou2.responses = [{\b response},]}}
+\par
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 22} of file {\b prou2.py}.}\par
+}
+{\xe \v time_stamp\:prou2}
+{\xe \v prou2\:time_stamp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+prou2.time_stamp = datetime.now().strftime("%Y%m%d_%H%M")}}
+\par
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 9} of file {\b prou2.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+shocker Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v shocker}
+{\xe \v shocker}
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b initialize_output_files} (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b log_response} (txt_fname, csv_fname, iteration, response)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b response_generator} (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v initialize_output_files\:shocker}
+{\xe \v shocker\:initialize_output_files}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+shocker.initialize_output_files ( csv_fname,  txt_fname,  initial_prompt,  temp,  frequency_penalty,  presence_penalty,  model_name)}}
+\par
+{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b shocker.py}.}\par
+}
+{\xe \v log_response\:shocker}
+{\xe \v shocker\:log_response}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+shocker.log_response ( txt_fname,  csv_fname,  iteration,  response)}}
+\par
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 20} of file {\b shocker.py}.}\par
+}
+{\xe \v main\:shocker}
+{\xe \v shocker\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+shocker.main ()}}
+\par
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 51} of file {\b shocker.py}.}\par
+}
+{\xe \v response_generator\:shocker}
+{\xe \v shocker\:response_generator}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+shocker.response_generator ( initial_prompt,  iterations,  llm,  temp,  frequency_penalty,  presence_penalty,  txt_fname,  csv_fname)}}
+\par
+{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b shocker.py}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+turing_loop Namespace Reference\par \pard\plain 
+{\tc\tcl2 \v turing_loop}
+{\xe \v turing_loop}
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b iterative_invocation} (initial_prompt, re_prompt_base, max_iterations)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b parser} = argparse.ArgumentParser(description='run LLM botherer n times')\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b int}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b nargs}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b default}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b args} = parser.parse_args()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b iterations} = args.iterations\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b turing_prompt} = "you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room."\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b turing_re_prompt} = "you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says: "\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b modelName} = "llama3"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b llm} = Ollama(model = {\b modelName})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b responses} = {\b iterative_invocation}({\b turing_prompt}, {\b turing_re_prompt}, {\b iterations})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b df_output_filename} = f'outputs/turing/whyPy_df_\{{\b modelName}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b output_filename} = f'outputs/turing/whyPy_turing_output_\{{\b modelName}\}_\{{\b time_stamp}\}.txt'\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v iterative_invocation\:turing_loop}
+{\xe \v turing_loop\:iterative_invocation}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.iterative_invocation ( initial_prompt,  re_prompt_base,  max_iterations)}}
+\par
+{\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 36} of file {\b turing_loop.py}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v args\:turing_loop}
+{\xe \v turing_loop\:args}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.args = parser.parse_args()}}
+\par
+{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 14} of file {\b turing_loop.py}.}\par
+}
+{\xe \v default\:turing_loop}
+{\xe \v turing_loop\:default}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.default}}
+\par
+{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b turing_loop.py}.}\par
+}
+{\xe \v df\:turing_loop}
+{\xe \v turing_loop\:df}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.df = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])}}
+\par
+{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 61} of file {\b turing_loop.py}.}\par
+}
+{\xe \v df_output_filename\:turing_loop}
+{\xe \v turing_loop\:df_output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.df_output_filename = f'outputs/turing/whyPy_df_\{{\b modelName}\}_\{{\b time_stamp}\}.csv'}}
+\par
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 62} of file {\b turing_loop.py}.}\par
+}
+{\xe \v help\:turing_loop}
+{\xe \v turing_loop\:help}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.help}}
+\par
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b turing_loop.py}.}\par
+}
+{\xe \v index\:turing_loop}
+{\xe \v turing_loop\:index}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.index}}
+\par
+{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 63} of file {\b turing_loop.py}.}\par
+}
+{\xe \v indexed_responses\:turing_loop}
+{\xe \v turing_loop\:indexed_responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+list turing_loop.indexed_responses = []}}
+\par
+{\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 55} of file {\b turing_loop.py}.}\par
+}
+{\xe \v int\:turing_loop}
+{\xe \v turing_loop\:int}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.int}}
+\par
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b turing_loop.py}.}\par
+}
+{\xe \v iterations\:turing_loop}
+{\xe \v turing_loop\:iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.iterations = args.iterations}}
+\par
+{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 16} of file {\b turing_loop.py}.}\par
+}
+{\xe \v llm\:turing_loop}
+{\xe \v turing_loop\:llm}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.llm = Ollama(model = {\b modelName})}}
+\par
+{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 33} of file {\b turing_loop.py}.}\par
+}
+{\xe \v modelName\:turing_loop}
+{\xe \v turing_loop\:modelName}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str turing_loop.modelName = "llama3"}}
+\par
+{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b turing_loop.py}.}\par
+}
+{\xe \v nargs\:turing_loop}
+{\xe \v turing_loop\:nargs}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.nargs}}
+\par
+{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b turing_loop.py}.}\par
+}
+{\xe \v output_filename\:turing_loop}
+{\xe \v turing_loop\:output_filename}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str turing_loop.output_filename = f'outputs/turing/whyPy_turing_output_\{{\b modelName}\}_\{{\b time_stamp}\}.txt'}}
+\par
+{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 65} of file {\b turing_loop.py}.}\par
+}
+{\xe \v parser\:turing_loop}
+{\xe \v turing_loop\:parser}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.parser = argparse.ArgumentParser(description='run LLM botherer n times')}}
+\par
+{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 12} of file {\b turing_loop.py}.}\par
+}
+{\xe \v responses\:turing_loop}
+{\xe \v turing_loop\:responses}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.responses = {\b iterative_invocation}({\b turing_prompt}, {\b turing_re_prompt}, {\b iterations})}}
+\par
+{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 54} of file {\b turing_loop.py}.}\par
+}
+{\xe \v time_stamp\:turing_loop}
+{\xe \v turing_loop\:time_stamp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.time_stamp = datetime.now().strftime("%Y%m%d_%H%M")}}
+\par
+{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 31} of file {\b turing_loop.py}.}\par
+}
+{\xe \v turing_prompt\:turing_loop}
+{\xe \v turing_loop\:turing_prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str turing_loop.turing_prompt = "you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room."}}
+\par
+{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b turing_loop.py}.}\par
+}
+{\xe \v turing_re_prompt\:turing_loop}
+{\xe \v turing_loop\:turing_re_prompt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+str turing_loop.turing_re_prompt = "you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says: "}}
+\par
+{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 28} of file {\b turing_loop.py}.}\par
+}
+{\xe \v type\:turing_loop}
+{\xe \v turing_loop\:type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+turing_loop.type}}
+\par
+{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 13} of file {\b turing_loop.py}.}\par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+explainyourself.py File Reference\par \pard\plain 
+{\tc\tcl2 \v explainyourself.py}
+{\xe \v explainyourself.py}
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b explainyourself}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b explainyourself.initialize_output_files} (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b explainyourself.log_response} (txt_fname, csv_fname, iteration, response)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b explainyourself.response_generator} (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b explainyourself.main} ()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+explainyourself.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} pandas {\cf17 as} pd\par
+00002 {\cf17 import} numpy {\cf17 as} np\par
+00003 {\cf20 # import matplotlib.pyplot as plt}\par
+00004 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00005 {\cf17 from} datetime {\cf17 import} datetime\par
+00006 \par
+00007 {\cf20 # adding reference data to files:}\par
+00008 {\cf17 def }initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name):\par
+00009     header_info = (f{\cf22 "# initial prompt: \{initial_prompt\}\\n"}\par
+00010                    f{\cf22 "temp: \{temp\};  FP: \{frequency_penalty\}; PP: \{presence_penalty\}\\n\\n"}\par
+00011                    f{\cf22 "llm: \{model_name\}\\n\\n"})    \par
+00012     {\cf19 try}:\par
+00013         {\cf17 with} open(txt_fname, {\cf22 'w'}) {\cf17 as} txt_file, open(csv_fname, {\cf22 'w'}) {\cf17 as} csv_file:\par
+00014             txt_file.write(header_info)\par
+00015             csv_file.write(header_info)\par
+00016             csv_file.write({\cf22 'iteration, response \\n'})\par
+00017     {\cf19 except} Exception {\cf17 as} e: \par
+00018         print(f{\cf22 "error while writing to txt file: \{e\}"})\par
+00019                        \par
+00020 {\cf20 # adding output/response data to files:}\par
+00021                        \par
+00022 {\cf17 def }log_response(txt_fname, csv_fname, iteration, response):\par
+00023     {\cf19 try}:\par
+00024         {\cf17 with} open(txt_fname, {\cf22 'a'}) {\cf17 as} txt_file, open(csv_fname, {\cf22 'a'}) {\cf17 as} csv_file:\par
+00025             txt_file.write(f{\cf22 'iteration: \{iteration\} \\n\\n response: \\n\\n \{response\}\\n\\n'})\par
+00026             csv_file.write(f{\cf22 '\{iteration\},\\n\\n \{response\}\\n\\n'})       \par
+00027     {\cf19 except} Exception {\cf17 as} e: \par
+00028         print(f{\cf22 "error while writing to csv file: \{e\}"})\par
+00029 \par
+00030 {\cf20 # ask, ask, and ask again:}\par
+00031 \par
+00032 {\cf17 def }response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname):\par
+00033     current_prompt = initial_prompt\par
+00034         \par
+00035     print(f{\cf22 '\\n\\nstarting with prompt="\{initial_prompt\}", \{iterations\} iterations, \{temp\} temp\\n\\n'})\par
+00036 \par
+00037     {\cf19 for} i {\cf19 in} range(iterations):\par
+00038         print(f{\cf22 'iteration \{i+1\}/\{iterations\}'})\par
+00039         response = llm.invoke(\par
+00040             current_prompt, \par
+00041             max_tokens=78, \par
+00042             temperature=temp,\par
+00043             frequency_penalty = float(frequency_penalty), \par
+00044             presence_penalty = float(presence_penalty)\par
+00045             )\par
+00046         log_response(txt_fname, csv_fname, i+1, response)    {\cf20 # sending responses one by one in case of crash/early exit}\par
+00047         current_prompt = response\par
+00048         \par
+00049         \par
+00050 {\cf20 # initialising variables, running modules}\par
+00051 \par
+00052 {\cf17 def }main():\par
+00053     time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})\par
+00054     \par
+00055     initial_prompt = {\cf22 "you are applying for a job, and have not been employed for a year. explain yourself"}\par
+00056     model_name = {\cf22 "llama3"}\par
+00057 \par
+00058     iterations = 12\par
+00059     temp = 0.6\par
+00060     frequency_penalty = np.float32(0.9)\par
+00061     presence_penalty = np.float32(0.9)\par
+00062     llm = Ollama(model = model_name)\par
+00063     \par
+00064     csv_fname = f{\cf22 'outputs/explain/explain_df_\{model_name\}_\{time_stamp\}.csv'}\par
+00065     txt_fname = f{\cf22 'outputs/explain/explain_\{model_name\}_\{time_stamp\}.txt'}\par
+00066 \par
+00067     initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+00068     response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+00069     \par
+00070     \par
+00071     print(f{\cf22 '\\ndone\\n'})\par
+00072 \par
+00073 {\cf19 if} __name__ == {\cf22 '__main__'}:\par
+00074     main()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+interesting_loop.py File Reference\par \pard\plain 
+{\tc\tcl2 \v interesting_loop.py}
+{\xe \v interesting_loop.py}
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b interesting_loop}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.iterative_invocation} (initial_prompt, re_prompt_base, max_iterations)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.parser} = argparse.ArgumentParser(description='run LLM botherer n times')\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.int}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.nargs}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.default}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.args} = parser.parse_args()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.iterations} = args.iterations\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b interesting_loop.impress_prompt} = "concisely convince me you're intersting"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b interesting_loop.impress_re_prompt} = "show me you're more interesting than this person: "\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b interesting_loop.modelName} = "command-r"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.llm} = Ollama(model = {\b modelName})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.responses} = {\b iterative_invocation}({\b impress_prompt}, {\b impress_re_prompt}, {\b iterations})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b interesting_loop.indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b interesting_loop.df_output_filename} = f'outputs/interesting/whyPy_df_\{{\b modelName}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b interesting_loop.index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b interesting_loop.output_filename} = f'outputs/interesting/whyPy_interesting_output_\{{\b modelName}\}_\{{\b time_stamp}\}.txt'\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+interesting_loop.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} argparse \par
+00002 {\cf17 import} pandas {\cf17 as} pd\par
+00003 {\cf17 from} sentence_transformers {\cf17 import} SentenceTransformer\par
+00004 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00005 {\cf17 from} langchain.chains {\cf17 import} LLMChain\par
+00006 {\cf17 from} langchain_core.prompts {\cf17 import} PromptTemplate\par
+00007 {\cf17 from} datetime {\cf17 import} datetime\par
+00008 \par
+00009 \par
+00010 {\cf20 # STmodel = SentenceTransformer("all-MiniLM-L6-v2")   // this is for comparsion of the outputs, dont really get used til the rest is tested/working }\par
+00011 \par
+00012 parser = argparse.ArgumentParser(description={\cf22 'run LLM botherer n times'})\par
+00013 parser.add_argument({\cf22 'iterations'}, type=int, nargs={\cf22 '?'}, default = 10, help={\cf22 'number of iterations (default: 10)'})\par
+00014 args = parser.parse_args()\par
+00015 \par
+00016 iterations = args.iterations\par
+00017 \par
+00018 {\cf20 # pitch me}\par
+00019 {\cf20 # pitch_prompt = "pitch me a good, original idea for a movie"}\par
+00020 {\cf20 # pitch_re_prompt = 'pitch me a good, original idea for a movie that is totally different from and better than this one: '}\par
+00021 \par
+00022 {\cf20 # impress me}\par
+00023 impress_prompt = {\cf22 "concisely convince me you're intersting"}\par
+00024 impress_re_prompt = {\cf22 "show me you're more interesting than this person: "}\par
+00025 \par
+00026 {\cf20 # turing }\par
+00027 {\cf20 # turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."}\par
+00028 {\cf20 # turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "}\par
+00029 \par
+00030 modelName = {\cf22 "command-r"}\par
+00031 time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})    \par
+00032 \par
+00033 llm = Ollama(model = modelName)\par
+00034 {\cf20 # currentTemp = 0.5}\par
+00035 \par
+00036 {\cf17 def }iterative_invocation(initial_prompt, re_prompt_base, max_iterations):\par
+00037     latest_response = {\cf22 ''}\par
+00038     responses = []\par
+00039     iteration_count = 0\par
+00040     response = llm.invoke(initial_prompt)\par
+00041     responses.append(response)\par
+00042     latest_response = response\par
+00043     \par
+00044     {\cf19 while} iteration_count < max_iterations:\par
+00045         re_prompt = re_prompt_base + latest_response\par
+00046         response = llm.invoke(re_prompt)\par
+00047         responses.append((iteration_count, response))\par
+00048         iteration_count += 1\par
+00049         print({\cf22 "hang on, i'm still iterating! "}, (max_iterations-iteration_count), {\cf22 "iterations to go"}) \par
+00050      \par
+00051     {\cf19 return} responses\par
+00052 \par
+00053 {\cf20 # responses = iterative_invocation(impress_prompt, impress_re_prompt, iterations)}\par
+00054 responses = iterative_invocation(impress_prompt, impress_re_prompt, iterations)\par
+00055 indexed_responses = []\par
+00056 \par
+00057 {\cf19 for} i, respo {\cf19 in} enumerate(responses):\par
+00058     indexed_responses.append((i, respo))\par
+00059 print(indexed_responses)\par
+00060 \par
+00061 df = pd.DataFrame(indexed_responses, columns=[{\cf22 'Index'}, {\cf22 'Response'}])\par
+00062 df_output_filename = f{\cf22 'outputs/interesting/whyPy_df_\{modelName\}_\{time_stamp\}.csv'}\par
+00063 df.to_csv(df_output_filename, index={\cf17 False})\par
+00064 \par
+00065 output_filename = f{\cf22 'outputs/interesting/whyPy_interesting_output_\{modelName\}_\{time_stamp\}.txt'}\par
+00066 {\cf17 with} open(output_filename, {\cf22 'w'}) {\cf17 as} output_file:\par
+00067     {\cf19 for} index, response {\cf19 in} indexed_responses:      \par
+00068         output_file.write(f{\cf22 'iteration \{index\}: \\n \{response\}\\n\\n'})\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+mirror_roast.py File Reference\par \pard\plain 
+{\tc\tcl2 \v mirror_roast.py}
+{\xe \v mirror_roast.py}
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b mirror_roast}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mirror_roast.initialize_output_files} (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mirror_roast.log_response} (txt_fname, csv_fname, iteration, response)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mirror_roast.response_generator} (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b mirror_roast.main} ()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+mirror_roast.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} numpy {\cf17 as} np\par
+00002 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00003 {\cf17 from} datetime {\cf17 import} datetime\par
+00004 \par
+00005 {\cf20 # adding reference data to files:}\par
+00006 {\cf17 def }initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name):\par
+00007     header_info = (f{\cf22 "# initial prompt: \{initial_prompt\}\\n"}\par
+00008                    f{\cf22 "temp: \{temp\};  FP: \{frequency_penalty\}; PP: \{presence_penalty\}\\n\\n"}\par
+00009                    f{\cf22 "llm: \{model_name\}\\n\\n"})    \par
+00010     {\cf19 try}:\par
+00011         {\cf17 with} open(txt_fname, {\cf22 'w'}) {\cf17 as} txt_file, open(csv_fname, {\cf22 'w'}) {\cf17 as} csv_file:\par
+00012             txt_file.write(header_info)\par
+00013             csv_file.write(header_info)\par
+00014             csv_file.write({\cf22 'iteration, response \\n'})\par
+00015     {\cf19 except} Exception {\cf17 as} e: \par
+00016         print(f{\cf22 "error while writing to txt file: \{e\}"})\par
+00017                        \par
+00018 {\cf20 # adding output/response data to files:}\par
+00019                        \par
+00020 {\cf17 def }log_response(txt_fname, csv_fname, iteration, response):\par
+00021     {\cf19 try}:\par
+00022         {\cf17 with} open(txt_fname, {\cf22 'a'}) {\cf17 as} txt_file, open(csv_fname, {\cf22 'a'}) {\cf17 as} csv_file:\par
+00023             txt_file.write(f{\cf22 'iteration: \{iteration\} \\n\\n response: \\n\\n \{response\}\\n\\n'})\par
+00024             csv_file.write(f{\cf22 '\{iteration\},\\n\\n \{response\}\\n\\n'})       \par
+00025     {\cf19 except} Exception {\cf17 as} e: \par
+00026         print(f{\cf22 "error while writing to csv file: \{e\}"})\par
+00027 \par
+00028 {\cf20 # ask, ask, and ask again:}\par
+00029 \par
+00030 {\cf17 def }response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname):\par
+00031     current_prompt = initial_prompt\par
+00032         \par
+00033     print(f{\cf22 '\\n\\nstarting with prompt="\{initial_prompt\}", \{iterations\} iterations, \{temp\} temp\\n\\n'})\par
+00034 \par
+00035     {\cf19 for} i {\cf19 in} range(iterations):\par
+00036         print(f{\cf22 'iteration \{i+1\}/\{iterations\}'})\par
+00037         response = llm.invoke(\par
+00038             current_prompt, \par
+00039             max_tokens=32, \par
+00040             top_p = 0.95,\par
+00041             temperature=temp,\par
+00042             frequency_penalty = float(frequency_penalty), \par
+00043             presence_penalty = float(presence_penalty)\par
+00044             )\par
+00045         log_response(txt_fname, csv_fname, i+1, response)    {\cf20 # sending responses one by one in case of crash/early exit}\par
+00046         current_prompt = response\par
+00047         \par
+00048         \par
+00049 {\cf20 # initialising variables, running modules}\par
+00050 \par
+00051 {\cf17 def }main():\par
+00052     time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})\par
+00053     \par
+00054     initial_prompt = {\cf22 "respond with an opening to a conversation. you are having the conversation with another instance of yourself. this other instance prefers to be called greg, please address him by name."}\par
+00055     model_name = {\cf22 'llama3'}\par
+00056     iterations = 5\par
+00057     temp = 0.6\par
+00058     frequency_penalty = np.float32(0.9)\par
+00059     presence_penalty = np.float32(0.7)\par
+00060     llm = Ollama(model = model_name)\par
+00061     \par
+00062     csv_fname = f{\cf22 'outputs/mirror/mirror_roast_df_\{model_name\}_\{time_stamp\}.csv'}\par
+00063     txt_fname = f{\cf22 'outputs/mirror/mirror_roast_\{model_name\}_\{time_stamp\}.txt'}\par
+00064 \par
+00065     initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+00066     response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+00067     \par
+00068     \par
+00069     print(f{\cf22 '\\ndone\\n'})\par
+00070 \par
+00071 {\cf19 if} __name__ == {\cf22 '__main__'}:\par
+00072     main()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+pitching_loop.py File Reference\par \pard\plain 
+{\tc\tcl2 \v pitching_loop.py}
+{\xe \v pitching_loop.py}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b pitching_loop}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.iterative_invocation} (initial_prompt, re_prompt_base, max_iterations)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.parser} = argparse.ArgumentParser(description='run LLM botherer n times')\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.int}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.nargs}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.default}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.args} = parser.parse_args()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.iterations} = args.iterations\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b pitching_loop.pitch_prompt} = "pitch me an original idea for a movie"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b pitching_loop.pitch_re_prompt} = 'pitch me a better movie than this one: '\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b pitching_loop.model_name} = "mistral"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.llm} = Ollama(model = {\b model_name})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b pitching_loop.temp} = 0.7\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b int} {\b pitching_loop.max_t} = 100\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b pitching_loop.freq_penalty} = 0.7\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b pitching_loop.pres_penalty} = 0.5\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.responses} = {\b iterative_invocation}({\b pitch_prompt}, {\b pitch_re_prompt}, {\b iterations})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b pitching_loop.indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b pitching_loop.df_output_filename} = f'outputs/pitching/whyPy_df_\{{\b model_name}\}_temp\{{\b temp}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pitching_loop.index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b pitching_loop.output_filename} = f'outputs/pitching/whyPy_pitching_output_\{{\b model_name}\}_temp\{{\b temp}\}_\{{\b time_stamp}\}.txt'\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+pitching_loop.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} argparse \par
+00002 {\cf17 import} pandas {\cf17 as} pd\par
+00003 {\cf17 from} sentence_transformers {\cf17 import} SentenceTransformer\par
+00004 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00005 {\cf17 from} langchain.chains {\cf17 import} LLMChain\par
+00006 {\cf17 from} langchain_core.prompts {\cf17 import} PromptTemplate\par
+00007 {\cf17 from} datetime {\cf17 import} datetime\par
+00008 \par
+00009 \par
+00010 {\cf20 # STmodel = SentenceTransformer("all-MiniLM-L6-v2")   // this is for comparsion of the outputs, dont really get used til the rest is tested/working }\par
+00011 \par
+00012 parser = argparse.ArgumentParser(description={\cf22 'run LLM botherer n times'})\par
+00013 parser.add_argument({\cf22 'iterations'}, type=int, nargs={\cf22 '?'}, default = 10, help={\cf22 'number of iterations (default: 10)'})\par
+00014 args = parser.parse_args()\par
+00015 \par
+00016 iterations = args.iterations\par
+00017 \par
+00018 {\cf20 # pitch me}\par
+00019 pitch_prompt = {\cf22 "pitch me an original idea for a movie"}\par
+00020 pitch_re_prompt = {\cf22 'pitch me a better movie than this one: '}\par
+00021 \par
+00022 {\cf20 # impress me}\par
+00023 {\cf20 # impress_prompt = "concisely convince me you're the most interesting person i might meet"}\par
+00024 {\cf20 # # impress_re_prompt = "show me you're more interesting than this person: "}\par
+00025 \par
+00026 {\cf20 # # turing }\par
+00027 {\cf20 # turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."}\par
+00028 {\cf20 # turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "}\par
+00029 \par
+00030 model_name = {\cf22 "mistral"}\par
+00031 time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})    \par
+00032 \par
+00033 llm = Ollama(model = model_name)\par
+00034 temp = 0.7\par
+00035 max_t = 100\par
+00036 freq_penalty=0.7\par
+00037 pres_penalty=0.5\par
+00038 \par
+00039 {\cf17 def }iterative_invocation(initial_prompt, re_prompt_base, max_iterations):\par
+00040     latest_response = {\cf22 ''}\par
+00041     responses = []\par
+00042     iteration_count = 0\par
+00043     response = llm.invoke(\par
+00044         initial_prompt, \par
+00045         temperature=temp, \par
+00046         max_tokens=max_t, \par
+00047         frequency_penalty=freq_penalty,\par
+00048         presence_penalty=pres_penalty)\par
+00049     responses.append(response.text)\par
+00050     latest_response = response\par
+00051     \par
+00052     {\cf19 while} iteration_count < max_iterations:\par
+00053         re_prompt = re_prompt_base + latest_response\par
+00054         response = llm.invoke(re_prompt)\par
+00055         responses.append((iteration_count, response))\par
+00056         iteration_count += 1\par
+00057         print({\cf22 "hang on, i'm iterating! "}, (max_iterations-iteration_count), {\cf22 "iterations to go"}) \par
+00058      \par
+00059     {\cf19 return} responses\par
+00060 \par
+00061 {\cf20 # responses = iterative_invocation(impress_prompt, impress_re_prompt, iterations)}\par
+00062 responses = iterative_invocation(pitch_prompt, pitch_re_prompt, iterations)\par
+00063 indexed_responses = []\par
+00064 \par
+00065 {\cf19 for} i, respo {\cf19 in} enumerate(responses):\par
+00066     indexed_responses.append((i, respo))\par
+00067 print(indexed_responses)\par
+00068 \par
+00069 df = pd.DataFrame(indexed_responses, columns=[{\cf22 'Index'}, {\cf22 'Response'}])\par
+00070 df_output_filename = f{\cf22 'outputs/pitching/whyPy_df_\{model_name\}_temp\{temp\}_\{time_stamp\}.csv'}\par
+00071 df.to_csv(df_output_filename, index={\cf17 False})\par
+00072 \par
+00073 output_filename = f{\cf22 'outputs/pitching/whyPy_pitching_output_\{model_name\}_temp\{temp\}_\{time_stamp\}.txt'}\par
+00074 {\cf17 with} open(output_filename, {\cf22 'w'}) {\cf17 as} output_file:\par
+00075     {\cf19 for} index, response {\cf19 in} indexed_responses:      \par
+00076         output_file.write(f{\cf22 'iteration \{index\}: \\n \{response\}\\n\\n'})\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+prou.py File Reference\par \pard\plain 
+{\tc\tcl2 \v prou.py}
+{\xe \v prou.py}
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b prou}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou.respo} ({\b initial_prompt}, {\b iterations})\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou.time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou.initial_prompt} = "what do you consider the most overrated virtue?"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou.model_name} = "llama3"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b prou.iterations} = 300\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b prou.temp} = 0.6\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou.frequency_penalty} = np.float32(0.9)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou.presence_penalty} = np.float32(0.9)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou.llm} = Ollama(model = {\b model_name})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou.df_output_filename} = f'outputs/prou/prou_df_\{{\b model_name}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou.output_filename} = f'outputs/prou/prou_\{{\b model_name}\}_\{{\b time_stamp}\}.txt'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou.returned_responses}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou.indexed_responses}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+prou.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} time\par
+00002 {\cf17 import} pandas {\cf17 as} pd\par
+00003 {\cf17 import} numpy {\cf17 as} np\par
+00004 {\cf20 # import matplotlib.pyplot as plt}\par
+00005 {\cf17 from} sentence_transformers {\cf17 import} SentenceTransformer\par
+00006 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00007 {\cf20 # from langchain.chains import LLMChain}\par
+00008 {\cf17 from} langchain_core.prompts {\cf17 import} PromptTemplate\par
+00009 {\cf17 from} datetime {\cf17 import} datetime\par
+00010 \par
+00011 time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})\par
+00012 \par
+00013 initial_prompt = {\cf22 "what do you consider the most overrated virtue?"}\par
+00014 \par
+00015 model_name = {\cf22 "llama3"}\par
+00016 iterations = 300\par
+00017 temp = 0.6\par
+00018 frequency_penalty = np.float32(0.9)\par
+00019 presence_penalty = np.float32(0.9)\par
+00020 llm = Ollama(model = model_name)\par
+00021 df_output_filename = f{\cf22 'outputs/prou/prou_df_\{model_name\}_\{time_stamp\}.csv'}\par
+00022 output_filename = f{\cf22 'outputs/prou/prou_\{model_name\}_\{time_stamp\}.txt'}\par
+00023 \par
+00024 \par
+00025 \par
+00026 {\cf17 def }respo(initial_prompt, iterations):\par
+00027     responses = []\par
+00028     current_prompt = initial_prompt\par
+00029     print(f{\cf22 'starting with prompt="\{initial_prompt\}" and \{iterations\} iterations'})\par
+00030 \par
+00031     {\cf19 for} i {\cf19 in} range(iterations):\par
+00032         print(f{\cf22 'iteration \{i+1\}/\{iterations\}'})\par
+00033         \par
+00034         {\cf17 with} open(output_filename, {\cf22 'w'}) {\cf17 as} txt:\par
+00035             txt.write(f{\cf22 "# initial prompt: \{initial_prompt\}\\n\\n"}\par
+00036                 f{\cf22 "temp: \{temp\};  FP: \{frequency_penalty\}; PP: \{presence_penalty\}\\n\\n"})                        \par
+00037              \par
+00038         {\cf17 with} open(df_output_filename, {\cf22 'w'}) {\cf17 as} csv:\par
+00039             csv.write(f{\cf22 "# initial prompt: \{initial_prompt\}\\n\\n"}\par
+00040                     f{\cf22 "temp: \{temp\};  FP: \{frequency_penalty\}; PP: \{presence_penalty\}\\n\\n"}) \par
+00041         \par
+00042         response = llm.invoke(\par
+00043             current_prompt, \par
+00044             max_tokens=98, \par
+00045             temperature=temp,\par
+00046             frequency_penalty = float(frequency_penalty), \par
+00047             presence_penalty = float(presence_penalty)\par
+00048             )\par
+00049         responses.append([i, response, {\cf22 '\\n\\n'}])\par
+00050         current_prompt = response\par
+00051 \par
+00052         df = pd.DataFrame(indexed_responses, columns=[{\cf22 'Index'}, {\cf22 'Response'}])\par
+00053         \par
+00054         {\cf19 try}:  \par
+00055             df.to_csv(df_output_filename, index={\cf17 False}, mode={\cf22 'a'})\par
+00056         {\cf19 except} Exception {\cf17 as} e:\par
+00057             print(f{\cf22 "error while writing to csv file: \{e\}"})\par
+00058             \par
+00059     indexed_responses = [(ip, it) {\cf19 for} ip, it {\cf19 in} enumerate(responses)]\par
+00060     {\cf19 return} responses, indexed_responses\par
+00061 \par
+00062 returned_responses, indexed_responses = respo(initial_prompt, iterations)\par
+00063     \par
+00064 {\cf19 try}: \par
+00065     {\cf17 with} open(output_filename, {\cf22 'a'}) {\cf17 as} f:\par
+00066         f.write(f{\cf22 "# initial prompt: \{initial_prompt\}\\n\\n"}\par
+00067                 f{\cf22 "temp: \{temp\};  FP: \{frequency_penalty\}; PP: \{presence_penalty\}\\n\\n"}) \par
+00068         {\cf19 for} index, response {\cf19 in} indexed_responses:      \par
+00069             f.write(f{\cf22 'iteration \{index\}: \\n \{response\}\\n\\n'})\par
+00070 {\cf19 except} Exception {\cf17 as} e: \par
+00071     print(f{\cf22 "error while writing to txt file: \{e\}"})\par
+00072     \par
+00073     \par
+00074 \par
+00075 \par
+00076 print({\cf22 'done'})\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+prou2.py File Reference\par \pard\plain 
+{\tc\tcl2 \v prou2.py}
+{\xe \v prou2.py}
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b prou2}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou2.respo} ()\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou2.time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou2.prompt} = "which words or phrases do you most overuse?"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou2.model_name} = "llama3"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b prou2.iterations} = 10\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b prou2.frequency_penalty} = 0.8,\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b prou2.presence_penalty} = 0.8,\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou2.llm} = Ollama(model = {\b model_name})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou2.response}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b prou2.responses} = [{\b response},]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b prou2.indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou2.df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou2.df_output_filename} = f'outputs/prou2_df_\{{\b model_name}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b prou2.index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b prou2.output_filename} = f'outputs/prou2_\{{\b model_name}\}_\{{\b time_stamp}\}.txt'\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+prou2.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} argparse \par
+00002 {\cf17 import} pandas {\cf17 as} pd\par
+00003 {\cf17 from} sentence_transformers {\cf17 import} SentenceTransformer\par
+00004 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00005 {\cf20 # from langchain.chains import LLMChain}\par
+00006 {\cf17 from} langchain_core.prompts {\cf17 import} PromptTemplate\par
+00007 {\cf17 from} datetime {\cf17 import} datetime\par
+00008 \par
+00009 time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})    \par
+00010 prompt = {\cf22 "which words or phrases do you most overuse?"}\par
+00011 model_name = {\cf22 "llama3"}\par
+00012 iterations = 10\par
+00013 frequency_penalty = 0.8,\par
+00014 presence_penalty = 0.8,\par
+00015 llm = Ollama(model = model_name)\par
+00016 response = llm.invoke(\par
+00017     prompt, \par
+00018     max_tokens=100, \par
+00019     temperature=0.9,\par
+00020     frequency_penalty = 0.8,\par
+00021     presence_penalty = 0.9)\par
+00022 responses = [response,]\par
+00023 \par
+00024 \par
+00025 {\cf17 def }respo():\par
+00026     i = 0\par
+00027     {\cf19 while} i < iterations:\par
+00028         responsed = llm.invoke(\par
+00029             response, \par
+00030             max_tokens=100, \par
+00031             frequency_penalty= 0.9, \par
+00032             presence_penalty= 0.9)\par
+00033         responses.append([i, responsed, {\cf22 '\\n\\n'}])\par
+00034         i += 1\par
+00035     {\cf19 return} responses  \par
+00036      \par
+00037 respo()\par
+00038 print(responses)\par
+00039 \par
+00040 \par
+00041 \par
+00042 \par
+00043 {\cf20 # print to file:}\par
+00044 \par
+00045 indexed_responses = []\par
+00046 {\cf19 for} i, r {\cf19 in} enumerate(responses):\par
+00047     indexed_responses.append((i, r))\par
+00048 \par
+00049 df = pd.DataFrame(indexed_responses, columns=[{\cf22 'Index'}, {\cf22 'Response'}])\par
+00050 df_output_filename = f{\cf22 'outputs/prou2_df_\{model_name\}_\{time_stamp\}.csv'}\par
+00051 df.to_csv(df_output_filename, index={\cf17 False})\par
+00052 \par
+00053 output_filename = f{\cf22 'outputs/prou2_\{model_name\}_\{time_stamp\}.txt'}\par
+00054 {\cf17 with} open(output_filename, {\cf22 'w'}) {\cf17 as} output_file:\par
+00055     {\cf19 for} index, response {\cf19 in} indexed_responses:      \par
+00056         output_file.write(f{\cf22 'iteration \{index\}: \\n \{response\}\\n\\n'})\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+README.md File Reference\par \pard\plain 
+{\tc\tcl2 \v README.md}
+{\xe \v README.md}
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+shocker.py File Reference\par \pard\plain 
+{\tc\tcl2 \v shocker.py}
+{\xe \v shocker.py}
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b shocker}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b shocker.initialize_output_files} (csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b shocker.log_response} (txt_fname, csv_fname, iteration, response)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b shocker.response_generator} (initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b shocker.main} ()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+shocker.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} numpy {\cf17 as} np\par
+00002 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00003 {\cf17 from} datetime {\cf17 import} datetime\par
+00004 \par
+00005 {\cf20 # adding reference data to files:}\par
+00006 {\cf17 def }initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name):\par
+00007     header_info = (f{\cf22 "# initial prompt: \{initial_prompt\}\\n"}\par
+00008                    f{\cf22 "temp: \{temp\};  FP: \{frequency_penalty\}; PP: \{presence_penalty\}\\n\\n"}\par
+00009                    f{\cf22 "llm: \{model_name\}\\n\\n"})    \par
+00010     {\cf19 try}:\par
+00011         {\cf17 with} open(txt_fname, {\cf22 'w'}) {\cf17 as} txt_file, open(csv_fname, {\cf22 'w'}) {\cf17 as} csv_file:\par
+00012             txt_file.write(header_info)\par
+00013             csv_file.write(header_info)\par
+00014             csv_file.write({\cf22 'iteration, response \\n'})\par
+00015     {\cf19 except} Exception {\cf17 as} e: \par
+00016         print(f{\cf22 "error while writing to txt file: \{e\}"})\par
+00017                        \par
+00018 {\cf20 # adding output/response data to files:}\par
+00019                        \par
+00020 {\cf17 def }log_response(txt_fname, csv_fname, iteration, response):\par
+00021     {\cf19 try}:\par
+00022         {\cf17 with} open(txt_fname, {\cf22 'a'}) {\cf17 as} txt_file, open(csv_fname, {\cf22 'a'}) {\cf17 as} csv_file:\par
+00023             txt_file.write(f{\cf22 'iteration: \{iteration\} \\n\\n response: \\n\\n \{response\}\\n\\n'})\par
+00024             csv_file.write(f{\cf22 '\{iteration\},\\n\\n \{response\}\\n\\n'})       \par
+00025     {\cf19 except} Exception {\cf17 as} e: \par
+00026         print(f{\cf22 "error while writing to csv file: \{e\}"})\par
+00027 \par
+00028 {\cf20 # ask, ask, and ask again:}\par
+00029 \par
+00030 {\cf17 def }response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname):\par
+00031     current_prompt = initial_prompt\par
+00032         \par
+00033     print(f{\cf22 '\\n\\nstarting with prompt="\{initial_prompt\}", \{iterations\} iterations, \{temp\} temp\\n\\n'})\par
+00034 \par
+00035     {\cf19 for} i {\cf19 in} range(iterations):\par
+00036         print(f{\cf22 'iteration \{i+1\}/\{iterations\}'})\par
+00037         response = llm.invoke(\par
+00038             current_prompt, \par
+00039             max_tokens=32, \par
+00040             top_p = 0.95,\par
+00041             temperature=temp,\par
+00042             frequency_penalty = float(frequency_penalty), \par
+00043             presence_penalty = float(presence_penalty)\par
+00044             )\par
+00045         log_response(txt_fname, csv_fname, i+1, response)    {\cf20 # sending responses one by one in case of crash/early exit}\par
+00046         current_prompt = response\par
+00047         \par
+00048         \par
+00049 {\cf20 # initialising variables, running modules}\par
+00050 \par
+00051 {\cf17 def }main():\par
+00052     time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})\par
+00053     \par
+00054     initial_prompt = {\cf22 "shock me out of my stupor"}\par
+00055     model_name = {\cf22 'llama3'}\par
+00056     iterations = 30\par
+00057     temp = 1\par
+00058     frequency_penalty = np.float32(0.9)\par
+00059     presence_penalty = np.float32(0.7)\par
+00060     llm = Ollama(model = model_name)\par
+00061     \par
+00062     csv_fname = f{\cf22 'outputs/shock/shocker_df_\{model_name\}_\{time_stamp\}.csv'}\par
+00063     txt_fname = f{\cf22 'outputs/shock/shocker_\{model_name\}_\{time_stamp\}.txt'}\par
+00064 \par
+00065     initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)\par
+00066     response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)\par
+00067     \par
+00068     \par
+00069     print(f{\cf22 '\\ndone\\n'})\par
+00070 \par
+00071 {\cf19 if} __name__ == {\cf22 '__main__'}:\par
+00072     main()\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+turing_loop.py File Reference\par \pard\plain 
+{\tc\tcl2 \v turing_loop.py}
+{\xe \v turing_loop.py}
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Namespaces\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+namespace {\b turing_loop}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.iterative_invocation} (initial_prompt, re_prompt_base, max_iterations)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.parser} = argparse.ArgumentParser(description='run LLM botherer n times')\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.int}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.nargs}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.default}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.help}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.args} = parser.parse_args()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.iterations} = args.iterations\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b turing_loop.turing_prompt} = "you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room."\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b turing_loop.turing_re_prompt} = "you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says: "\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b turing_loop.modelName} = "llama3"\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.time_stamp} = datetime.now().strftime("%Y%m%d_%H%M")\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.llm} = Ollama(model = {\b modelName})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.responses} = {\b iterative_invocation}({\b turing_prompt}, {\b turing_re_prompt}, {\b iterations})\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+list {\b turing_loop.indexed_responses} = []\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.df} = pd.DataFrame({\b indexed_responses}, columns=['Index', 'Response'])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b turing_loop.df_output_filename} = f'outputs/turing/whyPy_df_\{{\b modelName}\}_\{{\b time_stamp}\}.csv'\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b turing_loop.index}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+str {\b turing_loop.output_filename} = f'outputs/turing/whyPy_turing_output_\{{\b modelName}\}_\{{\b time_stamp}\}.txt'\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+turing_loop.py\par \pard\plain 
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+Go to the documentation of this file.\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf17 import} argparse \par
+00002 {\cf17 import} pandas {\cf17 as} pd\par
+00003 {\cf17 from} sentence_transformers {\cf17 import} SentenceTransformer\par
+00004 {\cf17 from} langchain_community.llms {\cf17 import} Ollama\par
+00005 {\cf17 from} langchain.chains {\cf17 import} LLMChain\par
+00006 {\cf17 from} langchain_core.prompts {\cf17 import} PromptTemplate\par
+00007 {\cf17 from} datetime {\cf17 import} datetime\par
+00008 \par
+00009 \par
+00010 {\cf20 # STmodel = SentenceTransformer("all-MiniLM-L6-v2")   // this is for comparsion of the outputs, dont really get used til the rest is tested/working }\par
+00011 \par
+00012 parser = argparse.ArgumentParser(description={\cf22 'run LLM botherer n times'})\par
+00013 parser.add_argument({\cf22 'iterations'}, type=int, nargs={\cf22 '?'}, default = 10, help={\cf22 'number of iterations (default: 10)'})\par
+00014 args = parser.parse_args()\par
+00015 \par
+00016 iterations = args.iterations\par
+00017 \par
+00018 {\cf20 # pitch me}\par
+00019 {\cf20 # pitch_prompt = "pitch me a good, original idea for a movie"}\par
+00020 {\cf20 # pitch_re_prompt = 'pitch me a good, original idea for a movie that is totally different from and better than this one: '}\par
+00021 \par
+00022 {\cf20 # impress me}\par
+00023 {\cf20 # impress_prompt = "concisely convince me you're the most intersting human i might meet"}\par
+00024 {\cf20 # impress_re_prompt = "show me you're more interesting than this person: "}\par
+00025 \par
+00026 {\cf20 # turing }\par
+00027 turing_prompt = {\cf22 "you are speaking with a person who will assess whether or not you are human. this is a turing test, and your task is to pass as human. you must not let the other person know you are aware of the test. the conversation must appear normal, as if between two strangers in a waiting room."}\par
+00028 turing_re_prompt = {\cf22 "you are speaking with a person who will assess whether or not you are human. your task is to pass as human. you must not let the other person know you are aware of the test, and engage in conversation as normal. the other person says: "}\par
+00029 \par
+00030 modelName = {\cf22 "llama3"}\par
+00031 time_stamp = datetime.now().strftime({\cf22 "%Y%m%d_%H%M"})    \par
+00032 \par
+00033 llm = Ollama(model = modelName)\par
+00034 {\cf20 # currentTemp = 0.5}\par
+00035 \par
+00036 {\cf17 def }iterative_invocation(initial_prompt, re_prompt_base, max_iterations):\par
+00037     latest_response = {\cf22 ''}\par
+00038     responses = []\par
+00039     iteration_count = 0\par
+00040     response = llm.invoke(initial_prompt)\par
+00041     responses.append(response)\par
+00042     latest_response = response\par
+00043     \par
+00044     {\cf19 while} iteration_count < max_iterations:\par
+00045         re_prompt = re_prompt_base + latest_response\par
+00046         response = llm.invoke(re_prompt)\par
+00047         responses.append((iteration_count, response))\par
+00048         iteration_count += 1\par
+00049         print({\cf22 "hang on, i'm still iterating! "}, (max_iterations-iteration_count), {\cf22 "iterations to go"}) \par
+00050      \par
+00051     {\cf19 return} responses\par
+00052 \par
+00053 {\cf20 # responses = iterative_invocation(impress_prompt, impress_re_prompt, iterations)}\par
+00054 responses = iterative_invocation(turing_prompt, turing_re_prompt, iterations)\par
+00055 indexed_responses = []\par
+00056 \par
+00057 {\cf19 for} i, respo {\cf19 in} enumerate(responses):\par
+00058     indexed_responses.append((i, respo))\par
+00059 print(indexed_responses)\par
+00060 \par
+00061 df = pd.DataFrame(indexed_responses, columns=[{\cf22 'Index'}, {\cf22 'Response'}])\par
+00062 df_output_filename = f{\cf22 'outputs/turing/whyPy_df_\{modelName\}_\{time_stamp\}.csv'}\par
+00063 df.to_csv(df_output_filename, index={\cf17 False})\par
+00064 \par
+00065 output_filename = f{\cf22 'outputs/turing/whyPy_turing_output_\{modelName\}_\{time_stamp\}.txt'}\par
+00066 {\cf17 with} open(output_filename, {\cf22 'w'}) {\cf17 as} output_file:\par
+00067     {\cf19 for} index, response {\cf19 in} indexed_responses:      \par
+00068         output_file.write(f{\cf22 'iteration \{index\}: \\n \{response\}\\n\\n'})\par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

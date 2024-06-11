@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_prou_8py" xml:lang="en-US">
+<title>prou.py File Reference</title>
+<indexterm><primary>prou.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceprou">prou</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou_1adad796204d78a09573d2f3faa4636e21">prou.respo</link> (<link linkend="_namespaceprou_1af07321498c89e197b96d4538c3157ec6">initial_prompt</link>, <link linkend="_namespaceprou_1ad88cb933c3f4f32d05977d3800955885">iterations</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">prou.time_stamp</link> = datetime.now().strftime(&quot;%Y%m%d_%H%M&quot;)</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1af07321498c89e197b96d4538c3157ec6">prou.initial_prompt</link> = &quot;what do you consider the most overrated virtue?&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">prou.model_name</link> = &quot;llama3&quot;</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespaceprou_1ad88cb933c3f4f32d05977d3800955885">prou.iterations</link> = 300</para>
+</listitem>
+            <listitem><para>float <link linkend="_namespaceprou_1af5b5b0dd5ccbb3bcd790ed6b5bd05459">prou.temp</link> = 0.6</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1ae57357985c743c74980e1a750036a120">prou.frequency_penalty</link> = np.float32(0.9)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1aae9369a204404515e5ed5b2320ecf09e">prou.presence_penalty</link> = np.float32(0.9)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1a1112b2251f3050b294f05bb718db3bd6">prou.llm</link> = Ollama(model = <link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>)</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1ab4305f86758ec7814292a6c2d84f3e8f">prou.df_output_filename</link> = f&apos;outputs/prou/prou_df_{<link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>}_{<link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">time_stamp</link>}.csv&apos;</para>
+</listitem>
+            <listitem><para>str <link linkend="_namespaceprou_1ac37908aac1b74578607fe4c8f68da057">prou.output_filename</link> = f&apos;outputs/prou/prou_{<link linkend="_namespaceprou_1a0f364961203e3c8970a2f9d6f1d2a26d">model_name</link>}_{<link linkend="_namespaceprou_1ae6ecf2c97ec12ed12d75b00bb99163ae">time_stamp</link>}.txt&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1a0413ee758f9f548a4ddc5d81fecea261">prou.returned_responses</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprou_1a3381d974a4c234dddcb38fae8e9343d6">prou.indexed_responses</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
