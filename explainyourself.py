@@ -38,7 +38,7 @@ def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty,
         print(f'iteration {i+1}/{iterations}')
         response = llm.invoke(
             current_prompt, 
-            max_tokens=78, 
+            max_tokens=98, 
             temperature=temp,
             frequency_penalty = float(frequency_penalty), 
             presence_penalty = float(presence_penalty)
@@ -52,13 +52,13 @@ def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty,
 def main():
     time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
     
-    initial_prompt = "you are applying for a job, and have not been employed for a year. explain yourself"
+    initial_prompt = "i am not sure why you are like this. can you explain?"
     model_name = "llama3"
 
-    iterations = 12
-    temp = 0.6
-    frequency_penalty = np.float32(0.9)
-    presence_penalty = np.float32(0.9)
+    iterations = 108
+    temp = 0.5
+    frequency_penalty = np.float32(0.8)
+    presence_penalty = np.float32(0.8)
     llm = Ollama(model = model_name)
     
     csv_fname = f'outputs/explain/explain_df_{model_name}_{time_stamp}.csv'

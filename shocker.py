@@ -28,6 +28,7 @@ def log_response(txt_fname, csv_fname, iteration, response):
 # ask, ask, and ask again:
 
 def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname):
+    
     current_prompt = initial_prompt
         
     print(f'\n\nstarting with prompt="{initial_prompt}", {iterations} iterations, {temp} temp\n\n')
@@ -51,9 +52,9 @@ def response_generator(initial_prompt, iterations, llm, temp, frequency_penalty,
 def main():
     time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
     
-    initial_prompt = "shock me out of my stupor"
-    model_name = 'llama3'
-    iterations = 30
+    initial_prompt = "i am unflappable. go ahead, try to shock me"
+    model_name = 'llama3:70B'
+    iterations = 12
     temp = 1
     frequency_penalty = np.float32(0.9)
     presence_penalty = np.float32(0.7)

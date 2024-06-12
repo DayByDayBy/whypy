@@ -46,7 +46,7 @@ def iterative_invocation(initial_prompt, re_prompt_base, max_iterations):
         max_tokens=max_t, 
         frequency_penalty=freq_penalty,
         presence_penalty=pres_penalty)
-    responses.append(response.text)
+    responses.append(response)
     latest_response = response
     
     while iteration_count < max_iterations:
