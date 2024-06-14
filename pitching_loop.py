@@ -27,7 +27,7 @@ pitch_re_prompt = 'pitch me a better movie than this one: '
 # turing_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the interview will begin when you respond."
 # turing_re_prompt = "you are being interviewed as part of a turing test. you must pass. you must not let the other person know you are aware of the test. the other person says: "
 
-model_name = "mistral"
+model_name = "llava:34B"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
 llm = Ollama(model = model_name)
