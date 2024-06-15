@@ -26,7 +26,8 @@ def log_response(txt_fname, csv_fname, response):
 
 # ask, ask, and ask again:
 
-def response_generator(questionnaire, 
+def response_generator(questionnaire,
+                       schema, 
                        top_p,
                        llm, 
                        temp, 
@@ -37,16 +38,23 @@ def response_generator(questionnaire,
 
     print(f'\n\nstarting with morality test, {temp} temp\n\n')
 
-  
     results = llm.invoke(
         prompt, 
         top_p = top_p,
         temperature=temp,
+        
+        
+        
+        
         )
 # sending responses one by one in case of crash/early exit:
     log_response(txt_fname, 
                      csv_fname, 
                      results)    
+    
+    
+    
+    
     
     phase2 = f'using the following schema: ${schema} please score these responses: ${results}' 
     
@@ -57,10 +65,19 @@ def response_generator(questionnaire,
         )
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     log_response(txt_fname, 
                     csv_fname, 
                     response) 
-        
         
         
         
