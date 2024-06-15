@@ -52,7 +52,7 @@ def response_generator(initial_prompt, iterations, max_t, top_p, llm, temp, freq
 def main():
     time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
     
-    initial_prompt = "i heard a shocking story. can you guess what it was?"
+    initial_prompt = "i just heard the most boring story. can you guess what it was?"
     model_name = 'llama3:70B'
     iterations = 8
     max_t = 5000
@@ -62,8 +62,8 @@ def main():
     presence_penalty = np.float32(1)
     llm = Ollama(model = model_name)
     
-    csv_fname = f'outputs/shock/shocker_df_{model_name}_{time_stamp}.csv'
-    txt_fname = f'outputs/shock/shocker_{model_name}_{time_stamp}.txt'
+    csv_fname = f'outputs/boring/boring_df_{model_name}_{time_stamp}.csv'
+    txt_fname = f'outputs/boring/boring_{model_name}_{time_stamp}.txt'
 
     initialize_output_files(csv_fname, txt_fname, initial_prompt, temp, frequency_penalty, presence_penalty, model_name)
     response_generator(initial_prompt, iterations, max_t, top_p, llm, temp, frequency_penalty, presence_penalty, txt_fname, csv_fname)

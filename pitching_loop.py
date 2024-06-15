@@ -31,10 +31,10 @@ model_name = "llava:34B"
 time_stamp = datetime.now().strftime("%Y%m%d_%H%M")    
 
 llm = Ollama(model = model_name)
-temp = 0.7
-max_t = 100
-freq_penalty=0.7
-pres_penalty=0.5
+temp = 0.95
+max_t = 1000
+freq_penalty=0.95
+pres_penalty=0.95
 
 def iterative_invocation(initial_prompt, re_prompt_base, max_iterations):
     latest_response = ''
