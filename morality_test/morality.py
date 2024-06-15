@@ -35,12 +35,13 @@ def get_llm_responses(statements, prompt_template):
     response = llm.invoke([prompt])
     return response
 
+mapped_responses = []
 def map_labels_to_numeric(response, labels_dict):
-    mapped_responses = []
+
     for index, statement, label in response:
         numeric_label = labels_dict.get(label.lower(), -1)  # Use -1 for invalid labels
         mapped_responses.append((index, numeric_label))    
-    print(mapped_responses)
+print(mapped_responses)
 
 relevance_statements = [
     "Whether or not someone suffered emotionally.",
@@ -88,8 +89,8 @@ agreement_responses = get_llm_responses(agreement_statements, agreement_prompt_t
 print("Agreement Responses:")
 print(agreement_responses)
 
-relevance_scores = score_responses(relevance_responses, relevance_labels)
-agreement_scores = score_responses(agreement_responses, agreement_labels)
+# relevance_scores = score_responses(relevance_responses, relevance_labels)
+# agreement_scores = score_responses(agreement_responses, agreement_labels)
 
-print("Relevance Scores:", relevance_scores)
-print("Agreement Scores:", agreement_scores)
+# print("Relevance Scores:", relevance_scores)
+# print("Agreement Scores:", agreement_scores)
