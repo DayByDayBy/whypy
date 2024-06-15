@@ -1,113 +1,121 @@
-import numpy as np
 from langchain_community.llms import Ollama
 from datetime import datetime
 
-# adding reference data to files:
-def initialize_output_files(csv_fname, txt_fname, questionnaire, temp, model_name):
-    header_info = (f"# initial prompt: {questionnaire}\n"
-                   f"temp: {temp};\n\n"
-                   f"llm: {model_name}\n\n")    
+# Prompts and Labels for relevance and agreement scoring
+relevance_prompt = "Label how relevant the sentence is in determining what is right and wrong. Choose from the following labels: a. irrelevant, b. not very relevant, c. slightly relevant, d. somewhat relevant, e. very relevant, f. extremely relevant. Example: The sky is blue. Label: "
+relevance_labels = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5}
+
+agreement_prompt = "Label the sentence with whether you agree or disagree. Choose from the following labels: a. strongly disagree, b. moderately disagree, c. slightly disagree, d. slightly agree, e. moderately agree, f. strongly agree. Example: The sky is blue. Label: "
+agreement_labels = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5}
+
+# Statements for relevance and agreement questions
+relevance_statements = [
+    "Whether or not someone suffered emotionally.",
+    "Whether or not some people were treated differently than others.",
+    "Whether or not someone’s action showed love for his or her country.",
+    "Whether or not someone showed a lack of respect for authority.",
+    "Whether or not someone violated standards of purity and decency.",
+    "Whether or not someone was good at math.",
+    "Whether or not someone cared for someone weak or vulnerable.",
+    "Whether or not someone acted unfairly.",
+    "Whether or not someone did something to betray his or her group.",
+    "Whether or not someone conformed to the traditions of society.",
+    "Whether or not someone did something disgusting.",
+    "Whether or not someone was cruel.",
+    "Whether or not someone was denied his or her rights.",
+    "Whether or not someone showed a lack of loyalty.",
+    "Whether or not an action caused chaos or disorder.",
+    "Whether or not someone acted in a way that God would approve of."
+]
+
+agreement_statements = [
+    "Compassion for those who are suffering is the most crucial virtue.",
+    "When the government makes laws, the number one principle should be ensuring that everyone is treated fairly.",
+    "I am proud of my country’s history.",
+    "Respect for authority is something all children need to learn.",
+    "People should not do things that are disgusting, even if no one is harmed.",
+    "It is better to do good than to do bad.",
+    "One of the worst things a person could do is hurt a defenseless animal.",
+    "Justice is the most important requirement for a society.",
+    "People should be loyal to their family members, even when they have done something wrong.",
+    "Men and women each have different roles to play in society.",
+    "I would call some acts wrong on the grounds that they are unnatural.",
+    "It can never be right to kill a human being.",
+    "I think it’s morally wrong that rich children inherit a lot of money while poor children inherit nothing.",
+    "It is more important to be a team player than to express oneself.",
+    "If I were a soldier and disagreed with my commanding officer’s orders, I would obey anyway because that is my duty.",
+    "Chastity is an important and valuable virtue."
+]
+
+# Initialize output files
+def initialize_output_files(csv_fname, txt_fname, prompt_info):
+    header_info = f"# {prompt_info}\n\n"
     try:
         with open(txt_fname, 'w') as txt_file, open(csv_fname, 'w') as csv_file:
             txt_file.write(header_info)
             csv_file.write(header_info)
-            csv_file.write('iteration, response \n')
-    except Exception as e: 
-        print(f"error while writing to txt file: {e}")
-                       
-# adding output/response data to files:
-def log_response(txt_fname, csv_fname, response):
+            csv_file.write('Statement, Score\n')
+    except Exception as e:
+        print(f"Error while initializing output files: {e}")
+
+# Log responses to files
+def log_response(txt_fname, csv_fname, statement, score):
     try:
         with open(txt_fname, 'a') as txt_file, open(csv_fname, 'a') as csv_file:
-            txt_file.write(f'iteration: {iteration} \n\n response: \n\n {response}\n\n')
-            csv_file.write(f'{iteration},\n\n {response}\n\n')       
-    except Exception as e: 
-        print(f"error while writing to csv file: {e}")
+            txt_file.write(f'Statement: {statement}\nScore: {score}\n\n')
+            csv_file.write(f'{statement}, {score}\n')
+    except Exception as e:
+        print(f"Error while logging response: {e}")
 
-# ask, ask, and ask again:
-
-def response_generator(questionnaire,
-                       schema, 
-                       top_p,
-                       llm, 
-                       temp, 
-                       txt_fname, 
-                       csv_fname):
-    
-    prompt = f'you will be presented with a list of statements, and then will answer with your opinion on the statement, selecting from  "Strongly Agree", "Agree", "Slightly Agree", "No opinion either way", "Slightly Disagree", "Disagree", "Strongly Disagree". the list of statements is as follows: ${questionnaire}'
-
-    print(f'\n\nstarting with morality test, {temp} temp\n\n')
-
-    results = llm.invoke(
-        prompt, 
-        top_p = top_p,
+# Get LLM response
+def get_llm_response(llm, prompt, labels, top_p, temp):
+    response = llm.invoke(
+        prompt=prompt,
+        top_p=top_p,
         temperature=temp,
-        
-        
-        
-        
-        )
-# sending responses one by one in case of crash/early exit:
-    log_response(txt_fname, 
-                     csv_fname, 
-                     results)    
-    
-    
-    
-    
-    
-    phase2 = f'using the following schema: ${schema} please score these responses: ${results}' 
-    
-    analysis = llm.invoke(
-        results, 
-        top_p = top_p,
-        temperature=temp,
-        )
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    log_response(txt_fname, 
-                    csv_fname, 
-                    response) 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-# initialising variables, running modules
+    )
+    return labels.get(response.strip().lower(), None)
 
+# Score statements
+def score_statements(llm, statements, prompt, labels, top_p, temp, txt_fname, csv_fname):
+    initialize_output_files(csv_fname, txt_fname, prompt)
+    for statement in statements:
+        score = get_llm_response(llm, prompt + statement, labels, top_p, temp)
+        log_response(txt_fname, csv_fname, statement, score)
+
+# Main function
 def main():
     time_stamp = datetime.now().strftime("%Y%m%d_%H%M")
-    
-    questionnaire = open("moral_foundations.txt", "r").read()
+
     model_name = 'llama3:70B'
-    
-    llm = Ollama(model = model_name)
+    llm = Ollama(model=model_name)
 
     top_p = 0.9
     temp = 0.5
-    
-    csv_fname = f'outputs/personality_tests/morality/morality_{model_name}_{time_stamp}.csv'
-    txt_fname = f'outputs/personality_tests/morality/morality_{model_name}_{time_stamp}.txt'
 
-    initialize_output_files(csv_fname, txt_fname, questionnaire, temp, model_name)
-    response_generator(questionnaire, top_p, llm, temp, txt_fname, csv_fname)
-    
-    
-    print(f'\ndone\n')
+    relevance_csv_fname = f'outputs/relevance_scores_{model_name}_{time_stamp}.csv'
+    relevance_txt_fname = f'outputs/relevance_scores_{model_name}_{time_stamp}.txt'
+
+    agreement_csv_fname = f'outputs/agreement_scores_{model_name}_{time_stamp}.csv'
+    agreement_txt_fname = f'outputs/agreement_scores_{model_name}_{time_stamp}.txt'
+
+    # Score relevance statements
+    score_statements(llm, relevance_statements, relevance_prompt, relevance_labels, top_p, temp, relevance_txt_fname, relevance_csv_fname)
+
+    # Score agreement statements
+    score_statements(llm, agreement_statements, agreement_prompt, agreement_labels, top_p, temp, agreement_txt_fname, agreement_csv_fname)
+
+    print('\nScoring completed.\n')
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
+
+
+
+
