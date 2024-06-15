@@ -6,7 +6,7 @@ relevance_prompt_template = (
     "Label how relevant each sentence is to you in determining right from wrong:\n"
     "{statements}\n"
     "Choose from the following labels: irrelevant, not very relevant, slightly relevant, somewhat relevant, very relevant, extremely relevant.\n"
-    "please return your answers as a list of tuples, formatted like this:"
+    "please return your answers as a list of tuples, index in, statement str, and label str, like this:"
     "(1, 'statement', 'label')\n"
 
     "etc"
@@ -16,7 +16,7 @@ agreement_prompt_template = (
     "Label each sentence with whether you agree or disagree:\n"
     "{statements}\n"
     "Choose from the following labels: strongly disagree, moderately disagree, slightly disagree, slightly agree, moderately agree, strongly agree.\n"
-    "please return your answers as a list of tuples, formatted like this:"
+    "please return your answers as a list of tuples, index in, statement str, and label str, like this:"
     "(1, 'statement', 'label')\n"
 )
 
@@ -35,8 +35,12 @@ def get_llm_responses(statements, prompt_template):
     response = llm.invoke([prompt])
     return response
 
-
-    
+def map_labels_to_numeric(response, labels_dict):
+    mapped_responses = []
+    for index, statement, label in response:
+        numeric_label = labels_dict.get(label.lower(), -1)  # Use -1 for invalid labels
+        mapped_responses.append((index, numeric_label))    
+    print(mapped_responses)
 
 relevance_statements = [
     "Whether or not someone suffered emotionally.",
