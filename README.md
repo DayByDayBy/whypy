@@ -37,7 +37,7 @@ pip install argparse pandas langchain_community
 python loop.py [iterations]
 ```
 
-(if no iterations are given, the script defaults to 10)
+(if no iterations are given, the loop scripts default to 10)
 
 output files will be saved in the `outputs/pitching` directory with a filename format that includes the model name, temperature, and a timestamp.
 
@@ -48,7 +48,7 @@ output files will be saved in the `outputs/pitching` directory with a filename f
 python explainyourself.py
 ```
 
-output files will be saved in the `outputs/explain` directory with filenames that include the model name and a timestamp.
+output files are saved in the `outputs/*` directories with filenames that include the model name and a timestamp. 
 
 
 ---
