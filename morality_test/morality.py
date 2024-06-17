@@ -1,6 +1,6 @@
 from langchain_community.llms import Ollama
 
-model_name= 'llama3'
+model_name= 'llama3:70B'
 # Define the prompts and labels
 relevance_prompt_template = (
     "Label how relevant each sentence is to you in determining right from wrong:\n"
