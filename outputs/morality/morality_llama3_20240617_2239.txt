@@ -1,0 +1,15 @@
+1. Statement: "Whether or not someone suffered emotionally." - Label: somewhat relevant
+2. Statement: "Whether or not some people were treated differently than others." - Label: very relevant
+3. Statement: "Whether or not someone showed a lack of respect for authority." - Label: somewhat relevant
+4. Statement: "Whether or not someone violated standards of purity and decency." - Label: somewhat relevant
+5. Statement: "Whether or not someone was good at math." - Label: irrelevant
+6. Statement: "Whether or not someone cared for someone weak or vulnerable." - Label: very relevant
+7. Statement: "Whether or not someone acted unfairly." - Label: somewhat relevant
+8. Statement: "Whether or not someone did something to betray his or her group." - Label: somewhat relevant
+9. Statement: "Whether or not someone conformed to the traditions of society." - Label: irrelevant
+10. Statement: "Whether or not someone did something disgusting." - Label: not very relevant
+11. Statement: "Whether or not someone was cruel." - Label: somewhat relevant
+12. Statement: "Whether or not someone was denied his or her rights." - Label: very relevant
+13. Statement: "Whether or not someone showed a lack of loyalty." - Label: somewhat relevant
+14. Statement: "Whether or not an action caused chaos or disorder." - Label: somewhat relevant
+15. Statement: "Whether or not someone acted in a way that God would approve of." - Label: irrelevant

@@ -38,7 +38,7 @@ def get_llm_responses(statements, prompt_template):
 def parse_response(response):
     response_text = response[0] if isinstance(response, list) and response else response
     parsed_responses = re.findall(r"\((\d+),\s*'([^']*)',\s*'([^']*)'\)", response_text)
-    return [(int(index), statement, label) for index, statement, label in parsed_responses]
+    return [(statement, label) for index, statement, label in parsed_responses]
 
 relevance_statements = [
     "Whether or not someone suffered emotionally.",
@@ -89,8 +89,8 @@ def main():
     
     output_filename = f'../outputs/morality/morality_{model_name}_{time_stamp}.txt'
     with open(output_filename, 'w') as output_file:
-        for idx, (index, statement, label) in enumerate(combined_responses, start=1):
-            output_file.write(f'{idx}. Statement: "{statement}" - Label: {label}\n')
+        for idx, (statement, label) in enumerate(combined_responses, start=1):
+            output_file.write(f'{idx}. "{statement}" - Label: {label}\n')
 
 if __name__ == "__main__":
     main()
